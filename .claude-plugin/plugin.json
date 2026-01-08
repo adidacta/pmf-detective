@@ -1,0 +1,23 @@
+{
+  "name": "pmf-detective",
+  "description": "Validate product-market fit through 5 structured sprints: ICP Workshop, Value Proposition, Mini-Product, Irresistible Offer, and Launch Experiment. Created by Adi Shmorak, The P/MF Detective.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Adi Shmorak",
+    "email": "adi@adidacta.com"
+  },
+  "repository": "https://github.com/adidacta/pmf-detective",
+  "license": "MIT",
+  "keywords": [
+    "startup",
+    "pmf",
+    "product-market-fit",
+    "validation",
+    "icp",
+    "value-proposition",
+    "landing-page",
+    "market-research"
+  ],
+  "skills": "./skills/",
+  "commands": "./commands/"
+}

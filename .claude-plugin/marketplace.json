@@ -1,0 +1,35 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "pmf-detective",
+  "owner": {
+    "name": "Adi Shmorak"
+  },
+  "metadata": {
+    "description": "Validate product-market fit through 5 structured sprints",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "pmf-detective",
+      "source": "./",
+      "description": "Guide founders through Product-Market Fit validation using the Startup Sprints System - 5 structured sprints from ICP definition to launch experiments.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Adi Shmorak",
+        "email": "adi@adidacta.com"
+      },
+      "repository": "https://github.com/adidacta/pmf-detective",
+      "license": "MIT",
+      "keywords": [
+        "startup",
+        "pmf",
+        "product-market-fit",
+        "validation",
+        "icp",
+        "value-proposition"
+      ],
+      "category": "productivity",
+      "homepage": "https://github.com/adidacta/pmf-detective"
+    }
+  ]
+}
