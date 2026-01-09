@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What This Is
 
-PMF Detective is a Claude Code plugin that guides founders through Product-Market Fit validation using a 5-sprint workflow. It's a pure markdown-based plugin with no build system or tests.
+PMF Detective is a Claude Code plugin that guides founders through Product-Market Fit validation using a goal-driven 5-sprint workflow. It's a pure markdown-based plugin with no build system or tests.
 
 ## Architecture
 
@@ -19,6 +19,7 @@ PMF Detective is a Claude Code plugin that guides founders through Product-Marke
 **Skill Hierarchy:**
 ```
 pmf-detective (coordinator)
+├── validation-goal        (Goal Setup - FIRST)
 ├── icp-investigation      (Sprint 1)
 ├── value-prop-builder     (Sprint 2)
 ├── mini-mvp-builder       (Sprint 3)
@@ -29,9 +30,31 @@ pmf-detective (coordinator)
     └── campaign-assets
 ```
 
+**Goal-First Flow:** Users MUST set a validation goal before starting sprints. The goal determines:
+- Mini-MVP type (landing page, outreach script, beta access, etc.)
+- Offer approach (cold outreach, organic content, paid ads)
+- Success thresholds (GO/ITERATE/PIVOT numbers)
+
+**Stage → Goal Mapping:**
+| Stage | Example Goals |
+|-------|---------------|
+| Idea | 100 Waitlist Signups, 50 Interest Conversations |
+| Prototype | 30 Beta Testers, 50 Interest Conversations |
+| MVP (no users) | 10 Paying Customers, 30 Beta Testers |
+| MVP (beta testers) | 10 Paying Customers, 30 New Segment Users |
+| Product (paying) | 50 More Customers, 5 Enterprise LOIs |
+
 **Phase Files Pattern:** Each sprint skill has a `phases/` subdirectory with separate markdown files for each phase. The SKILL.md reads phase files via `Read phases/phase-X-name.md` instructions.
 
-**Progress Tracking:** Sprints detect completion by checking for files in user's `pmf/` directory (e.g., `pmf/icp-profile.md` = Sprint 1 complete).
+**Progress Tracking:** Sprints detect completion by checking for files in user's `pmf/` directory:
+- `pmf/validation-goal.md` → Goal set (required before sprints)
+- `pmf/icp-profile.md` → Sprint 1 complete
+- `pmf/value-proposition.md` → Sprint 2 complete
+- `pmf/mini-mvp-plan.md` → Sprint 3 complete
+- `pmf/offer/strategy.md` → Sprint 4 complete
+- `pmf/experiment/results.md` → Sprint 5 complete
+
+**Automatic Success Criteria:** GO/ITERATE/PIVOT is determined automatically by comparing results to preset thresholds from validation-goal.md. Do not subjectively assess success.
 
 ## Key Conventions
 
