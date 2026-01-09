@@ -10,18 +10,26 @@ Check the user's progress through the PMF Detective validation sprints.
 ## Instructions
 
 1. Use Glob to check for files in the `pmf/` directory
-2. Determine which sprints are complete based on existing files:
+2. **FIRST** check for `pmf/validation-goal.md` - if exists, read it to get the goal
+3. Determine which sprints are complete based on existing files:
+   - `pmf/validation-goal.md` → Validation Goal set
    - `pmf/icp-profile.md` → Sprint 1 (ICP Investigation) complete
    - `pmf/value-proposition.md` → Sprint 2 (Value Prop Builder) complete
    - `pmf/mini-mvp-plan.md` → Sprint 3 (Mini-MVP Builder) complete
    - `pmf/offer/strategy.md` → Sprint 4 (Irresistible Offer) complete
    - `pmf/experiment/results.md` → Sprint 5 (Launch Experiment) complete
 
-3. Display progress using a visual format:
+4. Display progress with **GOAL at the top**:
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
 │  📊 PMF DETECTIVE STATUS                                    │
+├─────────────────────────────────────────────────────────────┤
+│                                                             │
+│  🎯 Goal: [Goal from validation-goal.md]                    │
+│     Target: [Number]                                        │
+│     GO: [X]+ | ITERATE: [Y-Z] | PIVOT: <[Y]                 │
+│                                                             │
 ├─────────────────────────────────────────────────────────────┤
 │                                                             │
 │  [✓] Sprint 1: ICP Investigation                            │
@@ -45,33 +53,35 @@ Check the user's progress through the PMF Detective validation sprints.
 └─────────────────────────────────────────────────────────────┘
 ```
 
-4. If no pmf/ folder exists:
+5. If no pmf/ folder exists or no validation-goal.md:
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
 │  📊 PMF DETECTIVE STATUS                                    │
 ├─────────────────────────────────────────────────────────────┤
 │                                                             │
-│  No validation sprints started yet.                         │
+│  No validation journey started yet.                         │
 │                                                             │
-│  The PMF Detective helps you validate your startup idea     │
-│  through 5 structured sprints:                              │
+│  PMF Detective helps you validate your startup idea         │
+│  with a clear, goal-driven approach:                        │
+│                                                             │
+│  First, you'll set a validation goal (e.g., 100 signups,    │
+│  10 paying customers). Then 5 sprints help you get there:   │
 │                                                             │
 │  1. ICP Investigation - Who is your customer?               │
 │  2. Value Prop Builder - What should you say?               │
 │  3. Mini-MVP Builder - What should you build?               │
 │  4. Irresistible Offer - How do you present it?             │
-│  5. Launch Experiment - Does it work?                       │
+│  5. Launch Experiment - Did you hit your goal?              │
 │                                                             │
 ├─────────────────────────────────────────────────────────────┤
-│  📍 Start: "help me validate my startup idea" or use:       │
-│     /start-sprint icp                                       │
+│  📍 Start: "help me validate my startup idea"               │
 └─────────────────────────────────────────────────────────────┘
 
 Created by Adi Shmorak, The P/MF Detective
 ```
 
-5. If all sprints complete:
+6. If all sprints complete:
 
 ```
 ┌─────────────────────────────────────────────────────────────┐

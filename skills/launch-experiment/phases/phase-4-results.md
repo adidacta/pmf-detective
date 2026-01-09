@@ -1,37 +1,54 @@
 # Phase 4: Post-Launch Review and Next Steps
 
 ## Goal
-Review results, collect final feedback, and decide on next steps.
+Review results against your preset validation goal and determine GO/ITERATE/PIVOT.
+
+## CRITICAL: Read Validation Goal First
+
+**Read `pmf/validation-goal.md`** to get the preset thresholds.
+
+Your success criteria are ALREADY DEFINED:
+- GO threshold: [from validation-goal.md]
+- ITERATE range: [from validation-goal.md]
+- PIVOT threshold: [from validation-goal.md]
 
 ## Collect Results
 
+Use AskUserQuestion:
+
 ```
-**Experiment Complete!**
-
-Let's review your results. Please share:
-
-1. **Metrics:** [Paste your tracking data or key numbers]
-2. **Feedback:** What did people say? Any patterns?
-3. **Surprises:** What did you learn that you didn't expect?
+questions: [
+  {
+    question: "How many [target metric from goal] did you achieve?",
+    header: "Result",
+    multiSelect: false,
+    options: [
+      { label: "[GO threshold]+", description: "Hit or exceeded target" },
+      { label: "[ITERATE range]", description: "Partial success" },
+      { label: "<[PIVOT threshold]", description: "Below minimum" }
+    ]
+  }
+]
 ```
 
-## Analyze Results
+Then ask for qualitative feedback:
+```
+Great. Now tell me:
+1. **Feedback:** What did people say? Any patterns?
+2. **Surprises:** What did you learn that you didn't expect?
+```
 
-Based on what they share, assess:
+## Automatic GO/ITERATE/PIVOT
 
-### Success Indicators
-- Response/engagement rate above 5%
-- Positive feedback on value proposition
-- People asking for more
-- Conversions to mini-product
-- Willingness to pay signals
+Based on the number reported, the recommendation is **automatic**:
 
-### Warning Signs
-- Low response rate (<2%)
-- Confusion about the offer
-- Wrong audience responding
-- Price objections
-- "Cool but not for me" feedback
+| Result | Recommendation |
+|--------|----------------|
+| At or above GO threshold | **GO** - Scale up |
+| In ITERATE range | **ITERATE** - Adjust and retry |
+| Below PIVOT threshold | **PIVOT** - Revisit ICP or value prop |
+
+**Do not subjectively assess success.** Use the preset thresholds.
 
 ## Results Analysis Framework
 
@@ -58,56 +75,70 @@ Based on what they share, assess:
 - [Assumption that was wrong]
 ```
 
-## Recommendation
+## Recommendation (Automatic Based on Goal)
 
-Based on analysis, recommend ONE of:
+Show the result in a visual box:
 
-### Scale
-If results are promising:
+### If GO (hit threshold):
 ```
-**Recommendation: SCALE**
-
-Your experiment showed strong signals:
-- [Evidence 1]
-- [Evidence 2]
-
-Next steps:
-1. Double down on what worked
-2. Increase volume/budget
-3. Refine based on learnings
-4. Start building the full product
-```
-
-### Iterate
-If results are mixed:
-```
-**Recommendation: ITERATE**
-
-Your experiment showed potential but needs refinement:
-- [What to keep]
-- [What to change]
-
-Next steps:
-1. Adjust [specific element]
-2. Run another 7-14 day test
-3. Focus on [specific improvement]
+┌─────────────────────────────────────────────────────────────┐
+│  ✅ RESULT: GO                                              │
+├─────────────────────────────────────────────────────────────┤
+│                                                             │
+│  Goal: [Goal from validation-goal.md]                       │
+│  Target: [Number]                                           │
+│  Actual: [User's result]                                    │
+│                                                             │
+│  You hit your validation goal! This is a strong signal.     │
+│                                                             │
+│  Next steps:                                                │
+│  1. Double down on what worked                              │
+│  2. Increase volume/budget                                  │
+│  3. Consider building the full product                      │
+│                                                             │
+└─────────────────────────────────────────────────────────────┘
 ```
 
-### Pivot
-If results are poor:
+### If ITERATE (partial):
 ```
-**Recommendation: PIVOT**
+┌─────────────────────────────────────────────────────────────┐
+│  🔄 RESULT: ITERATE                                         │
+├─────────────────────────────────────────────────────────────┤
+│                                                             │
+│  Goal: [Goal from validation-goal.md]                       │
+│  Target: [Number]                                           │
+│  Actual: [User's result]                                    │
+│                                                             │
+│  You got partial validation. There's signal, but not enough.│
+│                                                             │
+│  Next steps:                                                │
+│  1. Review what worked vs what didn't                       │
+│  2. Adjust your offer or messaging                          │
+│  3. Run another experiment cycle                            │
+│                                                             │
+└─────────────────────────────────────────────────────────────┘
+```
 
-Your experiment revealed important learnings:
-- [Key insight]
-- [What didn't work]
-
-Pivot options:
-1. Change ICP: [Suggestion]
-2. Change value proposition: [Suggestion]
-3. Change approach: [Suggestion]
-
-Would you like to restart with a different angle?
+### If PIVOT (below threshold):
+```
+┌─────────────────────────────────────────────────────────────┐
+│  ❌ RESULT: PIVOT                                           │
+├─────────────────────────────────────────────────────────────┤
+│                                                             │
+│  Goal: [Goal from validation-goal.md]                       │
+│  Target: [Number]                                           │
+│  Actual: [User's result]                                    │
+│                                                             │
+│  The signal is too weak to continue this direction.         │
+│                                                             │
+│  Pivot options:                                             │
+│  1. Different ICP - Maybe the wrong customer segment        │
+│  2. Different value prop - Maybe wrong pain point           │
+│  3. Different approach - Maybe wrong channel                │
+│                                                             │
+│  Say "help me restart with a new goal" to begin again.      │
+│                                                             │
+└─────────────────────────────────────────────────────────────┘
 ```
 
 ## Save Results
