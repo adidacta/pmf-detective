@@ -6,6 +6,7 @@
     "name": "Adi Shmorak",
     "email": "adi@adidacta.com"
   },
+  "homepage": "https://github.com/adidacta/pmf-detective",
   "repository": "https://github.com/adidacta/pmf-detective",
   "license": "MIT",
   "keywords": [
@@ -17,7 +18,5 @@
     "value-proposition",
     "landing-page",
     "market-research"
-  ],
-  "skills": "./skills/",
-  "commands": "./commands/"
+  ]
 }

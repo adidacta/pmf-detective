@@ -2,7 +2,8 @@
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "pmf-detective",
   "owner": {
-    "name": "Adi Shmorak"
+    "name": "Adi Shmorak",
+    "email": "adi@adidacta.com"
   },
   "metadata": {
     "description": "Validate product-market fit through 5 structured sprints",
