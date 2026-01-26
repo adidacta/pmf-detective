@@ -13,8 +13,8 @@
     {
       "name": "pmf-detective",
       "source": {
-        "source": "github",
-        "repo": "adidacta/pmf-detective"
+        "source": "url",
+        "url": "https://github.com/adidacta/pmf-detective.git"
       },
       "description": "Guide founders through Product-Market Fit validation using the Startup Sprints System - 5 structured sprints from ICP definition to launch experiments.",
       "version": "1.0.0",
