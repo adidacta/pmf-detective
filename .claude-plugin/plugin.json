@@ -1,6 +1,6 @@
 {
-  "name": "pmf-detective",
-  "description": "Validate product-market fit through 5 structured sprints: ICP Workshop, Value Proposition, Mini-Product, Irresistible Offer, and Launch Experiment. Created by Adi Shmorak, The P/MF Detective.",
+  "name": "plan-pmf",
+  "description": "Define your project's PMF context through 5 structured sprints: ICP Definition, Value Proposition, Mini-MVP, Irresistible Offer, and Launch Experiment. Created by Adi Shmorak, The P/MF Detective.",
   "version": "1.0.0",
   "author": {
     "name": "Adi Shmorak",

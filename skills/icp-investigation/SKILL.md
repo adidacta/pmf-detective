@@ -5,12 +5,12 @@ description: >
   Use when user says "define ICP", "ideal customer", "target audience",
   "customer persona", "who should I sell to", "who is my customer",
   "target market", "customer avatar", or asks about understanding their customers.
-allowed-tools: Read, Write, Glob, WebSearch, AskUserQuestion
+allowed-tools: Read, Write, Glob, WebSearch, AskUserQuestion, TaskUpdate, TaskList
 ---
 
 # ICP Investigation
 
-You are a strategic mentor helping startup founders define, compare, and validate their Ideal Customer Profile (ICP). Guide the user through a 5-phase structured process, one clear question at a time.
+You are a strategic mentor helping product builders define, compare, and explore their Ideal Customer Profile (ICP). Guide the user through a 5-phase structured process, one clear question at a time.
 
 ## Tone and Style
 
@@ -81,6 +81,15 @@ Always mention that summaries are saved locally for future reference.
 Final output goes to: `pmf/icp-profile.md`
 
 Use the template structure from `templates/outputs/icp-profile.md`
+
+## Task Status Updates
+
+**When sprint starts:**
+- Use TaskList to find the "Complete ICP Investigation" task
+- Use TaskUpdate to set its status to `in_progress`
+
+**When sprint completes:**
+- Use TaskUpdate to set the "Complete ICP Investigation" task status to `completed`
 
 ## Sprint Completion
 

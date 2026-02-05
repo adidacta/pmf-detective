@@ -1,19 +1,19 @@
 ---
-name: validation-goal
+name: pmf-plan
 description: >
-  Set validation goal at the start of PMF Detective journey.
+  Set PMF goal at the start of PMF Detective journey.
   This skill should run FIRST before any other PMF sprint.
-  Triggered by pmf-detective coordinator when pmf/validation-goal.md doesn't exist.
-allowed-tools: Read, Write, AskUserQuestion
+  Triggered by pmf-detective coordinator when pmf/pmf-plan.md doesn't exist.
+allowed-tools: Read, Write, AskUserQuestion, TaskCreate, TaskUpdate, TaskList
 ---
 
-# Validation Goal Selection
+# PMF Goal Selection
 
-You help founders set a clear, achievable validation goal before starting their PMF journey.
+You help product builders set a clear, achievable PMF goal before starting their journey.
 
 ## Why This Matters
 
-Without a clear goal, validation becomes open-ended. By setting a specific target upfront, everything else (ICP, value prop, mini-MVP, offer) becomes focused on achieving that goal.
+Without a clear goal, PMF discovery becomes open-ended. By setting a specific target upfront, everything else (ICP, value prop, mini-MVP, offer) becomes focused on achieving that goal.
 
 ## Process
 
@@ -46,12 +46,12 @@ Based on stage, present 2-3 relevant goals using AskUserQuestion.
 ```
 questions: [
   {
-    question: "What validation goal would you like to hit?",
+    question: "What PMF goal would you like to hit?",
     header: "Goal",
     multiSelect: false,
     options: [
-      { label: "100 Waitlist Signups", description: "Validate demand with a landing page" },
-      { label: "50 Interest Conversations", description: "Validate problem through outreach + surveys" }
+      { label: "100 Waitlist Signups", description: "Explore demand with a landing page" },
+      { label: "50 Interest Conversations", description: "Explore problem through outreach + surveys" }
     ]
   }
 ]
@@ -61,7 +61,7 @@ questions: [
 ```
 questions: [
   {
-    question: "What validation goal would you like to hit?",
+    question: "What PMF goal would you like to hit?",
     header: "Goal",
     multiSelect: false,
     options: [
@@ -76,12 +76,12 @@ questions: [
 ```
 questions: [
   {
-    question: "What validation goal would you like to hit?",
+    question: "What PMF goal would you like to hit?",
     header: "Goal",
     multiSelect: false,
     options: [
       { label: "30 Beta Testers", description: "Get active users on your MVP" },
-      { label: "10 Paying Customers", description: "Validate willingness to pay" }
+      { label: "10 Paying Customers", description: "Explore willingness to pay" }
     ]
   }
 ]
@@ -91,7 +91,7 @@ questions: [
 ```
 questions: [
   {
-    question: "What validation goal would you like to hit?",
+    question: "What PMF goal would you like to hit?",
     header: "Goal",
     multiSelect: false,
     options: [
@@ -106,13 +106,13 @@ questions: [
 ```
 questions: [
   {
-    question: "What validation goal would you like to hit?",
+    question: "What PMF goal would you like to hit?",
     header: "Goal",
     multiSelect: false,
     options: [
       { label: "50 More Customers", description: "Scale existing customer acquisition" },
-      { label: "30 Users in New Segment", description: "Validate expansion to new ICP" },
-      { label: "5 Enterprise LOIs", description: "Validate B2B/enterprise demand" }
+      { label: "30 Users in New Segment", description: "Explore expansion to new ICP" },
+      { label: "5 Enterprise LOIs", description: "Explore B2B/enterprise demand" }
     ]
   }
 ]
@@ -124,7 +124,7 @@ After user selects, show confirmation with visual box:
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│  🎯 YOUR VALIDATION GOAL                                    │
+│  🎯 YOUR PMF GOAL                                           │
 ├─────────────────────────────────────────────────────────────┤
 │                                                             │
 │  Stage: [Selected stage]                                    │
@@ -140,7 +140,7 @@ After user selects, show confirmation with visual box:
 │  Mini-MVP: [preset type based on goal]                      │
 │  Offer Focus: [preset approach based on goal]               │
 ├─────────────────────────────────────────────────────────────┤
-│  💾 Saved to: pmf/validation-goal.md                        │
+│  💾 Saved to: pmf/pmf-plan.md                               │
 └─────────────────────────────────────────────────────────────┘
 ```
 
@@ -158,10 +158,10 @@ After user selects, show confirmation with visual box:
 
 ## Output File
 
-Save to `pmf/validation-goal.md`:
+Save to `pmf/pmf-plan.md`:
 
 ```markdown
-# Validation Goal
+# PMF Goal
 *Generated: [Date]*
 
 **Stage:** [e.g., "MVP - no users"]
@@ -172,9 +172,9 @@ Save to `pmf/validation-goal.md`:
 
 | Result | Meaning | Next Step |
 |--------|---------|-----------|
-| **GO:** 10+ | Strong validation | Scale up acquisition |
-| **ITERATE:** 5-9 | Partial validation | Adjust offer/positioning, try again |
-| **PIVOT:** <5 | Weak validation | Revisit ICP or value proposition |
+| **GO:** 10+ | Strong signal | Scale up acquisition |
+| **ITERATE:** 5-9 | Partial signal | Adjust offer/positioning, try again |
+| **PIVOT:** <5 | Weak signal | Revisit ICP or value proposition |
 
 ## Preset Mini-MVP
 
@@ -205,7 +205,7 @@ Show next steps:
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│  ✅ VALIDATION GOAL SET                                     │
+│  ✅ PMF GOAL SET                                            │
 ├─────────────────────────────────────────────────────────────┤
 │                                                             │
 │  Your goal: [Goal] ([Target])                               │
@@ -223,9 +223,39 @@ Created by Adi Shmorak, The P/MF Detective
 For feedback: adi@adidacta.com
 ```
 
+## Task Creation After Goal Is Saved
+
+**CRITICAL:** After saving the PMF goal to `pmf/pmf-plan.md`, create tasks for all 5 sprints:
+
+1. Use TaskCreate to create "Complete ICP Investigation" task
+   - description: "Define your Ideal Customer Profile through the 5-phase ICP Investigation sprint"
+   - activeForm: "Defining ICP"
+
+2. Use TaskCreate to create "Complete Value Prop Builder" task
+   - description: "Create compelling value proposition using StoryBrand framework"
+   - activeForm: "Building Value Prop"
+
+3. Use TaskCreate to create "Complete Mini-MVP Builder" task
+   - description: "Plan a mini-MVP to test your assumptions"
+   - activeForm: "Planning Mini-MVP"
+
+4. Use TaskCreate to create "Complete Irresistible Offer" task
+   - description: "Craft your irresistible offer and promotion strategy"
+   - activeForm: "Crafting Offer"
+
+5. Use TaskCreate to create "Complete Launch Experiment" task
+   - description: "Execute and track your PMF experiment"
+   - activeForm: "Running Experiment"
+
+After creating all tasks, use TaskUpdate to set blockedBy dependencies:
+- Value Prop blocked by ICP
+- Mini-MVP blocked by Value Prop
+- Offer blocked by Mini-MVP
+- Launch blocked by Offer
+
 ## Important Rules
 
 - This skill runs ONCE at the start
 - Goal cannot be changed mid-journey (user must restart if they want different goal)
-- All subsequent sprints read from `pmf/validation-goal.md`
-- Don't skip this step - it anchors the entire validation journey
+- All subsequent sprints read from `pmf/pmf-plan.md`
+- Don't skip this step - it anchors the entire PMF journey

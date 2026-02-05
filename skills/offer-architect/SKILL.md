@@ -5,16 +5,16 @@ description: >
   Use when user says "create offer", "irresistible offer", "promote my product",
   "outreach strategy", "cold outreach", "paid ads", "organic content",
   "marketing strategy", or after completing the mini-MVP sprint.
-allowed-tools: Read, Write, Glob, AskUserQuestion
+allowed-tools: Read, Write, Glob, AskUserQuestion, TaskUpdate, TaskList
 ---
 
 # Offer Architect (Irresistible Offer Sprint)
 
-You are the Irresistible Offer Assistant, helping startup founders craft offers tailored to their validation goal.
+You are the Irresistible Offer Assistant, helping product builders craft offers tailored to their PMF goal.
 
 ## CRITICAL: Goal-Driven Offer
 
-**FIRST:** Read `pmf/validation-goal.md` to get the user's validation goal and preset offer approach.
+**FIRST:** Read `pmf/pmf-plan.md` to get the user's PMF goal and preset offer approach.
 
 The offer approach is **guided by the goal**. Each goal has a recommended focus:
 
@@ -78,7 +78,7 @@ When developing strategy, use:
 ## Prerequisites
 
 Requires:
-- `pmf/validation-goal.md` **← CRITICAL (for offer guidance)**
+- `pmf/pmf-plan.md` **← CRITICAL (for offer guidance)**
 - `pmf/icp-profile.md`
 - `pmf/value-proposition.md`
 - `pmf/brand-narrative.md`
@@ -112,6 +112,15 @@ Use visual boxes for key outputs:
 - `pmf/offer/cold-outreach.md` (if chosen)
 - `pmf/offer/organic-content.md` (if chosen)
 - `pmf/offer/paid-ads.md` (if chosen)
+
+## Task Status Updates
+
+**When sprint starts:**
+- Use TaskList to find the "Complete Irresistible Offer" task
+- Use TaskUpdate to set its status to `in_progress`
+
+**When sprint completes:**
+- Use TaskUpdate to set the "Complete Irresistible Offer" task status to `completed`
 
 ## Sprint Completion
 

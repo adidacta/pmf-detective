@@ -6,7 +6,7 @@
     "email": "adi@adidacta.com"
   },
   "metadata": {
-    "description": "Validate product-market fit through 5 structured sprints",
+    "description": "Define your project's PMF context through 5 structured sprints",
     "version": "1.0.0"
   },
   "plugins": [
@@ -16,7 +16,7 @@
         "source": "url",
         "url": "https://github.com/adidacta/pmf-detective.git"
       },
-      "description": "Guide founders through Product-Market Fit validation using the Startup Sprints System - 5 structured sprints from ICP definition to launch experiments.",
+      "description": "Guide product builders through PMF discovery using the Startup Sprints System - 5 structured sprints from ICP definition to launch experiments.",
       "version": "1.0.0",
       "author": {
         "name": "Adi Shmorak",

@@ -1,16 +1,16 @@
 # Phase 4: Post-Launch Review and Next Steps
 
 ## Goal
-Review results against your preset validation goal and determine GO/ITERATE/PIVOT.
+Review results against your preset PMF goal and determine GO/ITERATE/PIVOT.
 
-## CRITICAL: Read Validation Goal First
+## CRITICAL: Read PMF Goal First
 
-**Read `pmf/validation-goal.md`** to get the preset thresholds.
+**Read `pmf/pmf-plan.md`** to get the preset thresholds.
 
 Your success criteria are ALREADY DEFINED:
-- GO threshold: [from validation-goal.md]
-- ITERATE range: [from validation-goal.md]
-- PIVOT threshold: [from validation-goal.md]
+- GO threshold: [from pmf-plan.md]
+- ITERATE range: [from pmf-plan.md]
+- PIVOT threshold: [from pmf-plan.md]
 
 ## Collect Results
 
@@ -85,11 +85,11 @@ Show the result in a visual box:
 │  ✅ RESULT: GO                                              │
 ├─────────────────────────────────────────────────────────────┤
 │                                                             │
-│  Goal: [Goal from validation-goal.md]                       │
+│  Goal: [Goal from pmf-plan.md]                       │
 │  Target: [Number]                                           │
 │  Actual: [User's result]                                    │
 │                                                             │
-│  You hit your validation goal! This is a strong signal.     │
+│  You hit your PMF goal! This is a strong signal.            │
 │                                                             │
 │  Next steps:                                                │
 │  1. Double down on what worked                              │
@@ -105,11 +105,11 @@ Show the result in a visual box:
 │  🔄 RESULT: ITERATE                                         │
 ├─────────────────────────────────────────────────────────────┤
 │                                                             │
-│  Goal: [Goal from validation-goal.md]                       │
+│  Goal: [Goal from pmf-plan.md]                       │
 │  Target: [Number]                                           │
 │  Actual: [User's result]                                    │
 │                                                             │
-│  You got partial validation. There's signal, but not enough.│
+│  You got a partial signal. There's interest, but not enough.│
 │                                                             │
 │  Next steps:                                                │
 │  1. Review what worked vs what didn't                       │
@@ -125,7 +125,7 @@ Show the result in a visual box:
 │  ❌ RESULT: PIVOT                                           │
 ├─────────────────────────────────────────────────────────────┤
 │                                                             │
-│  Goal: [Goal from validation-goal.md]                       │
+│  Goal: [Goal from pmf-plan.md]                       │
 │  Target: [Number]                                           │
 │  Actual: [User's result]                                    │
 │                                                             │

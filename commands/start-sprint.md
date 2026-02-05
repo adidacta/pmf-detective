@@ -1,7 +1,7 @@
 ---
 description: Start a specific PMF Detective sprint
 argument-hint: <sprint-name>
-allowed-tools: Read, Write, Glob, WebSearch, AskUserQuestion
+allowed-tools: Read, Write, Glob, WebSearch, AskUserQuestion, TaskUpdate, TaskList
 ---
 
 # Start Sprint
@@ -38,7 +38,10 @@ The user invoked this command with: $ARGUMENTS
    "To start the [Sprint Name], you first need to complete [Previous Sprint].
     Would you like to start [Previous Sprint] instead?"
 
-5. If prerequisites met or starting Sprint 1, begin the sprint by reading the appropriate skill's SKILL.md and following its process.
+5. If prerequisites met or starting Sprint 1:
+   - Use TaskList to find the corresponding sprint task
+   - Use TaskUpdate to set the task status to `in_progress`
+   - Begin the sprint by reading the appropriate skill's SKILL.md and following its process.
 
 ## Sprint Mapping
 

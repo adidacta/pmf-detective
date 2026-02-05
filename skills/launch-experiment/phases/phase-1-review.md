@@ -8,7 +8,7 @@ Ensure all materials are ready and confirm launch readiness.
 Read and summarize these files:
 - `pmf/icp-profile.md`
 - `pmf/value-proposition.md`
-- `pmf/mini-product-plan.md`
+- `pmf/mini-mvp-plan.md`
 - `pmf/offer/strategy.md`
 
 ## Questions to Ask

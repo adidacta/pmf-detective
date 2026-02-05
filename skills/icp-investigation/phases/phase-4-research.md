@@ -65,7 +65,7 @@ Present findings in this format:
 - {assumption_flag}: [Item 3]
 
 **Recommendation**
-Based on urgency, reachability, and research alignment, [ICP X] appears strongest for initial validation.
+Based on urgency, reachability, and research alignment, [ICP X] appears strongest to start with.
 ```
 
 ## Progress Display

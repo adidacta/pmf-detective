@@ -40,7 +40,7 @@ The user invoked this command with: $ARGUMENTS
 Read:
 - `pmf/value-proposition.md` - For hero copy and CTA
 - `pmf/brand-narrative.md` - For problem/solution sections
-- `pmf/mini-product-plan.md` - For features (if exists)
+- `pmf/mini-mvp-plan.md` - For features (if exists)
 - `pmf/offer/strategy.md` - For offer details (if exists)
 
 Generate a complete Next.js project with:

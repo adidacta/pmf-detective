@@ -1,6 +1,6 @@
 ---
 description: Show PMF Detective sprint progress
-allowed-tools: Read, Glob
+allowed-tools: Read, Glob, TaskList
 ---
 
 # PMF Status
@@ -10,23 +10,24 @@ Check the user's progress through the PMF Detective validation sprints.
 ## Instructions
 
 1. Use Glob to check for files in the `pmf/` directory
-2. **FIRST** check for `pmf/validation-goal.md` - if exists, read it to get the goal
-3. Determine which sprints are complete based on existing files:
-   - `pmf/validation-goal.md` → Validation Goal set
+2. **FIRST** check for `pmf/pmf-plan.md` - if exists, read it to get the goal
+3. Use TaskList to show sprint task status alongside the ASCII progress display
+4. Determine which sprints are complete based on existing files:
+   - `pmf/pmf-plan.md` → PMF Goal set
    - `pmf/icp-profile.md` → Sprint 1 (ICP Investigation) complete
    - `pmf/value-proposition.md` → Sprint 2 (Value Prop Builder) complete
    - `pmf/mini-mvp-plan.md` → Sprint 3 (Mini-MVP Builder) complete
    - `pmf/offer/strategy.md` → Sprint 4 (Irresistible Offer) complete
    - `pmf/experiment/results.md` → Sprint 5 (Launch Experiment) complete
 
-4. Display progress with **GOAL at the top**:
+4. Display progress with **GOAL at the top**, showing BOTH file-based status AND Tasks:
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
 │  📊 PMF DETECTIVE STATUS                                    │
 ├─────────────────────────────────────────────────────────────┤
 │                                                             │
-│  🎯 Goal: [Goal from validation-goal.md]                    │
+│  🎯 Goal: [Goal from pmf-plan.md]                           │
 │     Target: [Number]                                        │
 │     GO: [X]+ | ITERATE: [Y-Z] | PIVOT: <[Y]                 │
 │                                                             │
@@ -53,19 +54,26 @@ Check the user's progress through the PMF Detective validation sprints.
 └─────────────────────────────────────────────────────────────┘
 ```
 
-5. If no pmf/ folder exists or no validation-goal.md:
+5. Also call TaskList to show task-level progress. Display it alongside:
+
+```
+📋 Task Progress:
+[Show TaskList output here - tasks with status indicators]
+```
+
+6. If no pmf/ folder exists or no pmf-plan.md:
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
 │  📊 PMF DETECTIVE STATUS                                    │
 ├─────────────────────────────────────────────────────────────┤
 │                                                             │
-│  No validation journey started yet.                         │
+│  No PMF journey started yet.                                │
 │                                                             │
-│  PMF Detective helps you validate your startup idea         │
+│  PMF Detective helps you define your project's PMF context  │
 │  with a clear, goal-driven approach:                        │
 │                                                             │
-│  First, you'll set a validation goal (e.g., 100 signups,    │
+│  First, you'll set a PMF goal (e.g., 100 signups,           │
 │  10 paying customers). Then 5 sprints help you get there:   │
 │                                                             │
 │  1. ICP Investigation - Who is your customer?               │
@@ -75,13 +83,13 @@ Check the user's progress through the PMF Detective validation sprints.
 │  5. Launch Experiment - Did you hit your goal?              │
 │                                                             │
 ├─────────────────────────────────────────────────────────────┤
-│  📍 Start: "help me validate my startup idea"               │
+│  📍 Start: "help me define my PMF context"                  │
 └─────────────────────────────────────────────────────────────┘
 
 Created by Adi Shmorak, The P/MF Detective
 ```
 
-6. If all sprints complete:
+7. If all sprints complete:
 
 ```
 ┌─────────────────────────────────────────────────────────────┐

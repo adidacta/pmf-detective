@@ -1,10 +1,10 @@
-# Validation Goal Template
+# PMF Plan Template
 
-Use this template structure when generating `pmf/validation-goal.md`
+Use this template structure when generating `pmf/pmf-plan.md`
 
 ---
 
-# Validation Goal
+# PMF Goal
 *Generated: [Date]*
 
 **Stage:** [User's selected stage]
@@ -15,9 +15,9 @@ Use this template structure when generating `pmf/validation-goal.md`
 
 | Result | Meaning | Next Step |
 |--------|---------|-----------|
-| **GO:** [threshold]+ | Strong validation | Scale up acquisition |
-| **ITERATE:** [range] | Partial validation | Adjust offer/positioning, try again |
-| **PIVOT:** <[threshold] | Weak validation | Revisit ICP or value proposition |
+| **GO:** [threshold]+ | Strong signal | Scale up acquisition |
+| **ITERATE:** [range] | Partial signal | Adjust offer/positioning, try again |
+| **PIVOT:** <[threshold] | Weak signal | Revisit ICP or value proposition |
 
 ## Preset Mini-MVP
 
