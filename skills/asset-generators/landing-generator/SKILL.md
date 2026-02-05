@@ -1,26 +1,34 @@
 ---
 name: landing-generator
 description: >
-  Generate Next.js or React landing page from PMF documents.
+  Generate Next.js or React landing page from PMF context files.
   Use when user says "build landing page", "generate landing", "create website",
-  "make a page", "landing page for my product", or wants to test with a real page.
+  "make a page", "landing page for my product", or wants to create a marketing page.
 allowed-tools: Read, Write, Glob, Bash
 ---
 
 # Landing Page Generator
 
-Generate a complete, production-ready landing page based on the user's PMF documents.
+Generate a complete, production-ready landing page based on the user's PMF context layer.
 
 ## Prerequisites
 
-Requires at minimum:
-- `pmf/value-proposition.md`
-- `pmf/brand-narrative.md`
+Requires the PMF context layer:
+- `pmf/icp.md` - Who the customer is
+- `pmf/value-prop.md` - Why they should care
+- `pmf/aha-moments.md` - Key benefits to highlight
 
-Optional (enhances the page):
-- `pmf/icp-profile.md`
-- `pmf/mini-product-plan.md`
-- `pmf/offer/strategy.md`
+If any are missing, inform the user:
+```
+To generate a landing page, I need your PMF context layer.
+
+Missing:
+[ ] pmf/icp.md
+[✓] pmf/value-prop.md
+[ ] pmf/aha-moments.md
+
+Use /pmf-plan to build your context layer first.
+```
 
 ## Framework Options
 
@@ -43,38 +51,38 @@ Reply with 1 or 2.
 
 ## Page Structure
 
-Generate these sections:
+Generate these sections using the PMF context:
 
 ### 1. Hero Section
-- Headline: From value proposition
-- Subheadline: Problem statement from narrative
-- CTA button: Based on offer
+- **Headline:** Core Message from `pmf/value-prop.md`
+- **Subheadline:** Problem statement from StoryBrand
+- **CTA button:** Based on Plan from StoryBrand
 - Optional: Hero image placeholder
 
 ### 2. Problem Section
-- From StoryBrand "problem" component
-- Agitate the pain
-- Show you understand
+- From StoryBrand "Problem" in `pmf/value-prop.md`
+- Agitate the pain using language from `pmf/icp.md`
+- Show you understand their frustration
 
 ### 3. Solution Section
-- From StoryBrand "guide" and "plan" components
+- From StoryBrand "Guide" and "Plan" components
 - How you solve it
 - Your unique approach
 
-### 4. Features/Benefits
-- From mini-product deliverables
-- 3-4 key benefits
+### 4. Benefits Section
+- From `pmf/aha-moments.md` Must-Deliver Benefits
+- 3 key benefits with explanations
 - Icon placeholders
 
 ### 5. Social Proof (Placeholder)
+- From `pmf/aha-moments.md` Proof Points
 - Testimonial placeholders
-- "As seen in" section
 - Trust indicators
 
 ### 6. CTA Section
-- Repeat main value prop
+- Repeat Core Message from `pmf/value-prop.md`
 - Clear action button
-- Urgency element from offer
+- Reference Success from StoryBrand
 
 ### 7. Footer
 - Simple contact/links
@@ -107,7 +115,7 @@ landing/
 │   ├── Hero.tsx
 │   ├── Problem.tsx
 │   ├── Solution.tsx
-│   ├── Features.tsx
+│   ├── Benefits.tsx
 │   ├── CTA.tsx
 │   └── Footer.tsx
 ├── package.json
@@ -130,11 +138,25 @@ landing/
 
 ## Generation Process
 
-1. Read all available PMF documents
-2. Extract content for each section
-3. Generate component files with content
+1. Read all PMF context files:
+   - `pmf/icp.md`
+   - `pmf/value-prop.md`
+   - `pmf/aha-moments.md`
+
+2. Extract content for each section:
+   - Hero: Core Message, Problem
+   - Problem: Pain points, current frustrations
+   - Solution: Guide, Plan
+   - Benefits: Must-Deliver Benefits
+   - Social Proof: Proof Points
+   - CTA: Success, call to action
+
+3. Generate component files with real content
+
 4. Create package.json with dependencies
+
 5. Create Tailwind config
+
 6. Generate README with run instructions
 
 ## After Generation
@@ -152,12 +174,16 @@ npm run dev
 - Connect to Vercel
 - Auto-deploy on every push
 
-The page uses your:
-- Value proposition as the headline
-- Brand narrative for problem/solution
-- [Other elements based on what existed]
+The page uses your PMF context:
+- ICP from pmf/icp.md
+- Value Prop from pmf/value-prop.md
+- Benefits from pmf/aha-moments.md
 
 Feel free to customize the design and copy!
 
 Created by Adi Shmorak, The P/MF Detective
 ```
+
+## Attribution
+
+Created by Adi Shmorak, The P/MF Detective. For feedback: adi@adidacta.com

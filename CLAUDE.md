@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What This Is
 
-PMF Detective is a Claude Code plugin that guides product builders through PMF discovery using a goal-driven 5-sprint workflow. It's a pure markdown-based plugin with no build system or tests.
+PMF Context is a Claude Code plugin that helps product builders create their PMF context layer - a set of reference files that capture the "WHY" behind their product. Claude references these files when building anything for the product.
 
 ## Architecture
 
@@ -18,45 +18,43 @@ PMF Detective is a Claude Code plugin that guides product builders through PMF d
 
 **Skill Hierarchy:**
 ```
-pmf-detective (coordinator)
-├── pmf-plan               (Goal Setup - FIRST)
-├── icp-investigation      (Sprint 1)
-├── value-prop-builder     (Sprint 2)
-├── mini-mvp-builder       (Sprint 3)
-├── offer-architect        (Sprint 4)
-├── launch-experiment      (Sprint 5)
+pmf-context (coordinator)
+├── pmf-plan-mode          (Full context builder)
+├── icp-builder            (ICP section)
+├── value-prop-builder     (Value Proposition section)
+├── aha-moments-builder    (Aha Moments section)
 └── asset-generators/
-    ├── landing-generator
-    └── campaign-assets
+    └── landing-generator
 ```
 
-**Goal-First Flow:** Users MUST set a PMF goal before starting sprints. The goal determines:
-- Mini-MVP type (landing page, outreach script, beta access, etc.)
-- Offer approach (cold outreach, organic content, paid ads)
-- Success thresholds (GO/ITERATE/PIVOT numbers)
+## The Context Layer
 
-**Task Integration:** After the PMF goal is set, tasks are created for all 5 sprints with dependencies. Each sprint updates task status (in_progress when starting, completed when done).
+The PMF context layer consists of 3 files in the `pmf/` folder:
 
-**Stage → Goal Mapping:**
-| Stage | Example Goals |
-|-------|---------------|
-| Idea | 100 Waitlist Signups, 50 Interest Conversations |
-| Prototype | 30 Beta Testers, 50 Interest Conversations |
-| MVP (no users) | 10 Paying Customers, 30 Beta Testers |
-| MVP (beta testers) | 10 Paying Customers, 30 New Segment Users |
-| Product (paying) | 50 More Customers, 5 Enterprise LOIs |
+```
+pmf/
+├── icp.md           # Who you believe your customer is
+├── value-prop.md    # Why they should care
+└── aha-moments.md   # Key benefits the product must deliver
+```
 
-**Phase Files Pattern:** Each sprint skill has a `phases/` subdirectory with separate markdown files for each phase. The SKILL.md reads phase files via `Read phases/phase-X-name.md` instructions.
+**These files become your market thesis that Claude references when building anything.**
 
-**Progress Tracking:** Sprints detect completion by checking for files in user's `pmf/` directory:
-- `pmf/pmf-plan.md` → Goal set (required before sprints)
-- `pmf/icp-profile.md` → Sprint 1 complete
-- `pmf/value-proposition.md` → Sprint 2 complete
-- `pmf/mini-mvp-plan.md` → Sprint 3 complete
-- `pmf/offer/strategy.md` → Sprint 4 complete
-- `pmf/experiment/results.md` → Sprint 5 complete
+**Progress Tracking:** Context completion is detected by checking for files in user's `pmf/` directory:
+- `pmf/icp.md` → ICP defined
+- `pmf/value-prop.md` → Value proposition defined
+- `pmf/aha-moments.md` → Aha moments captured
 
-**Automatic Success Criteria:** GO/ITERATE/PIVOT is determined automatically by comparing results to preset thresholds from pmf-plan.md. Do not subjectively assess success.
+## Commands
+
+| Command | Description |
+|---------|-------------|
+| `/pmf-plan` | Start full context layer build |
+| `/update-icp` | Update ICP section only |
+| `/update-value-prop` | Update value prop only |
+| `/update-aha` | Update aha moments only |
+| `/pmf-status` | Show context completion status |
+| `/generate-assets landing` | Generate a landing page |
 
 ## Key Conventions
 
@@ -66,20 +64,24 @@ pmf-detective (coordinator)
 name: skill-name
 description: >
   Trigger conditions and purpose.
-allowed-tools: Read, Write, Glob, WebSearch, AskUserQuestion, TaskUpdate, TaskList
+allowed-tools: Read, Write, Glob, WebSearch, AskUserQuestion
 ---
 ```
 
 **UI Patterns:**
-- Use `AskUserQuestion` tool for user choices (with multiSelect, options arrays)
-- Always include "Not sure" option that routes to research
+- Use `AskUserQuestion` tool for user choices
+- Always include "Not sure" option that adds to Open Questions
 - Visual boxes using Unicode box-drawing characters (┌─┐│└─┘)
-- Progress bars: `████████░░░░░░░░░░░░ X/Y phases`
-- Show progress only at phase END, not after every message
+- Progress bars: `████████░░░░░░░░░░░░ X/Y sections`
+- Show progress only at section END, not after every message
 
 **Output Files:** All user outputs go to `pmf/` folder using templates from `templates/outputs/`
 
-**No Time Estimates:** Task lists use phases (Setup → Execute → Track → Analyze), never day-by-day schedules.
+**Core Rules:**
+- Ask ONE question at a time
+- Wait for response before continuing
+- No sprints, no tasks, no validation metrics
+- Keep it simple - we're building context, not running experiments
 
 ## Attribution
 

@@ -1,6 +1,6 @@
-# PMF Detective
+# PMF Context
 
-A Claude Code plugin that guides product builders through **PMF discovery** using the **Startup Sprints System** - a structured 5-sprint workflow.
+A Claude Code plugin that helps you build your **PMF context layer** - reference files that capture the "WHY" behind your product.
 
 Created by **Adi Shmorak, The P/MF Detective**
 
@@ -10,17 +10,33 @@ Created by **Adi Shmorak, The P/MF Detective**
 /plugin install github:adidacta/pmf-detective
 ```
 
-## What is PMF Detective?
+## What is PMF Context?
 
-PMF Detective helps you define your project's PMF context through 5 structured sprints:
+PMF Context helps you define your market thesis through 3 structured sections:
 
-1. **ICP Investigation** - Define your Ideal Customer Profile
-2. **Value Prop Builder** - Create compelling value propositions using StoryBrand
-3. **Mini-MVP Builder** - Plan a testable mini-MVP based on your skills
-4. **Irresistible Offer** - Craft offers and choose your outreach strategy
-5. **Launch Experiment** - Execute, track, and iterate on your PMF experiment
+1. **ICP (Ideal Customer Profile)** - Who your customer is
+2. **Value Proposition** - Why they should care (using StoryBrand)
+3. **Aha Moments** - Key benefits your product must deliver
 
-Each sprint builds on the previous one, creating a complete PMF journey from idea to market feedback.
+**The context layer = your market thesis that Claude references when building anything.**
+
+## The Context Layer
+
+All outputs are saved to a `pmf/` folder in your project:
+
+```
+pmf/
+├── icp.md           # Who you believe your customer is
+├── value-prop.md    # Why they should care
+└── aha-moments.md   # Key benefits the product must deliver
+```
+
+Claude will reference these files when:
+- Building landing pages
+- Writing copy
+- Designing features
+- Creating documentation
+- Any other product work
 
 ## Quick Start
 
@@ -29,106 +45,64 @@ Just tell Claude what you want to do:
 - "Help me define my PMF context"
 - "I need to define my ICP"
 - "Create a value proposition for my product"
-- "What mini-MVP should I build?"
-- "Help me create an irresistible offer"
-- "Launch my PMF experiment"
+- "Build me a landing page"
 
 Or use slash commands:
 
-- `/pmf-status` - Check your sprint progress
-- `/start-sprint icp` - Start a specific sprint
-- `/generate-assets landing` - Generate campaign assets
+- `/pmf-plan` - Build your full context layer
+- `/pmf-status` - Check your context status
+- `/update-icp` - Update your ICP
+- `/update-value-prop` - Update your value proposition
+- `/update-aha` - Update your aha moments
+- `/generate-assets landing` - Generate a landing page
 
-## The 5 Sprints
+## The 3 Sections
 
-### Sprint 1: ICP Investigation
-Define your Ideal Customer Profile through a structured 5-phase process:
-- Context gathering
-- Starting point detection
-- ICP generation (top-down or bottom-up)
-- Comparison matrix
-- Deep research exploration
-- Final selection
+### 1. ICP (Ideal Customer Profile)
 
-**Output:** `pmf/icp-profile.md`
+Define who your customer is:
+- Who they are
+- What they experience (pain, current solutions)
+- What they want
+- How they talk about it
+- Where to find them
 
-### Sprint 2: Value Prop Builder
-Create compelling value propositions using the StoryBrand framework:
-- 7-part brand narrative
-- 4 value proposition variations
-- Research exploration
-- Final selection
+**Output:** `pmf/icp.md`
 
-**Outputs:** `pmf/brand-narrative.md`, `pmf/value-proposition.md`
+### 2. Value Proposition
 
-### Sprint 3: Mini-MVP Builder
-Plan a testable mini-MVP to explore your assumptions:
-- Mini-MVP selection (Claude can help build most options)
-- Deliverables breakdown
-- Task list for execution
+Define why they should care using StoryBrand:
+- Core message (headline)
+- 7-part StoryBrand narrative
+- Alternative angles
 
-**Note:** If you already have a product, this sprint focuses on landing page and positioning instead.
+**Output:** `pmf/value-prop.md`
 
-**Output:** `pmf/mini-mvp-plan.md`
+### 3. Aha Moments
 
-### Sprint 4: Irresistible Offer
-Craft your offer and choose your outreach strategy:
-- Cold Outreach (LinkedIn, email)
-- Organic Content (posts, videos)
-- Paid Ads (Facebook, Instagram, LinkedIn)
+Define the key benefits you must deliver:
+- Core aha moment
+- 3 must-deliver benefits
+- When users "get it"
+- Proof points
 
-**Output:** `pmf/offer/strategy.md` + approach-specific materials
-
-### Sprint 5: Launch Experiment
-Execute and track your PMF experiment:
-- Phase-based execution plan (Setup → Execute → Track → Analyze)
-- Metrics tracking by approach
-- Results analysis
-- Scale / Iterate / Pivot guidance
-
-**Output:** `pmf/experiment/plan.md`, `pmf/experiment/results.md`
-
-## Output Files
-
-All sprint outputs are saved to a `pmf/` folder in your project:
-
-```
-pmf/
-├── pmf-plan.md
-├── icp-profile.md
-├── brand-narrative.md
-├── value-proposition.md
-├── mini-mvp-plan.md
-├── offer/
-│   ├── strategy.md
-│   ├── cold-outreach.md
-│   ├── organic-content.md
-│   └── paid-ads.md
-└── experiment/
-    ├── plan.md
-    ├── metrics.md
-    └── results.md
-```
+**Output:** `pmf/aha-moments.md`
 
 ## Asset Generation
 
-After completing the sprints, you can generate:
+After building your context layer, generate marketing assets:
 
 - **Landing Pages** - Next.js or React+Vite projects
-- **Email Sequences** - Campaign email templates
-- **Campaign Assets** - Ad copy, targeting, visual briefs
 
-Use `/generate-assets [type]` to create assets.
+Use `/generate-assets landing` to create assets.
 
 ## Key Features
 
 - **One question at a time** - Never overwhelming
 - **Visual progress tracking** - Clear boxes show your progress
-- **Task integration** - Claude Tasks track sprint progress
-- **"Not sure" is always an option** - Uncertainties get researched, not guessed
-- **Deep research integration** - Uses Claude's web search for exploration
-- **Skills-based recommendations** - Mini-MVPs match your abilities
-- **AskUserQuestion interface** - Clean selection UI for choices
+- **"Not sure" is always an option** - Uncertainties become open questions
+- **Research support** - Uses Claude's web search when you need it
+- **Update anytime** - Refine sections as you learn
 
 ## Feedback
 
@@ -137,11 +111,9 @@ For questions, suggestions, or feedback:
 
 ## Acknowledgments
 
-**Methodology:** Startup Sprints System by Adi Shmorak
-
 **Frameworks Used:** StoryBrand 7-part narrative framework by Donald Miller
 
-**Built With:** Claude Code plugin system, Claude's WebSearch for market research
+**Built With:** Claude Code plugin system
 
 ## License
 

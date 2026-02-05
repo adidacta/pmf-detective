@@ -14,13 +14,22 @@ Generate complete marketing campaign assets for paid advertising.
 
 ## Prerequisites
 
-Requires:
-- `pmf/icp-profile.md`
-- `pmf/value-proposition.md`
-- `pmf/offer/strategy.md`
+Requires the PMF context layer:
+- `pmf/icp.md` - Who the customer is
+- `pmf/value-prop.md` - Why they should care
+- `pmf/aha-moments.md` - Key benefits to highlight
 
-Optional:
-- `pmf/brand-narrative.md`
+If any are missing, inform the user:
+```
+To generate campaign assets, I need your PMF context layer.
+
+Missing:
+[ ] pmf/icp.md
+[✓] pmf/value-prop.md
+[ ] pmf/aha-moments.md
+
+Use /pmf-plan to build your context layer first.
+```
 
 ## Platform Options
 
@@ -175,11 +184,12 @@ Week 2: [Test Y]
 
 ## Generation Process
 
-1. Read ICP profile for targeting
-2. Read value proposition for messaging
-3. Read offer strategy for approach
-4. Generate platform-specific assets
-5. Save to campaign folder
+1. Read PMF context files:
+   - `pmf/icp.md` - For targeting
+   - `pmf/value-prop.md` - For messaging
+   - `pmf/aha-moments.md` - For benefits
+2. Generate platform-specific assets
+3. Save to campaign folder
 
 ## After Generation
 

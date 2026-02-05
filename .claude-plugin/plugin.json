@@ -1,7 +1,7 @@
 {
-  "name": "plan-pmf",
-  "description": "Define your project's PMF context through 5 structured sprints: ICP Definition, Value Proposition, Mini-MVP, Irresistible Offer, and Launch Experiment. Created by Adi Shmorak, The P/MF Detective.",
-  "version": "1.0.0",
+  "name": "pmf-context",
+  "description": "Build your PMF context layer - reference files that capture the 'WHY' behind your product. Claude uses these files when building anything for your product.",
+  "version": "2.0.0",
   "author": {
     "name": "Adi Shmorak",
     "email": "adi@adidacta.com"
@@ -13,10 +13,9 @@
     "startup",
     "pmf",
     "product-market-fit",
-    "validation",
     "icp",
     "value-proposition",
-    "landing-page",
-    "market-research"
+    "context",
+    "landing-page"
   ]
 }
