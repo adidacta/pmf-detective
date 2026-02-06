@@ -19,31 +19,34 @@ PMF Context is a Claude Code plugin that helps product builders create their PMF
 **Skill Hierarchy:**
 ```
 pmf-context (coordinator)
-├── pmf-plan-mode          (Full context builder)
-├── icp-builder            (ICP section)
-├── value-prop-builder     (Value Proposition section)
-├── aha-moments-builder    (Aha Moments section)
+├── pmf-plan-mode             (Full context builder)
+├── icp-builder               (ICP section)
+├── value-prop-builder        (Value Proposition section)
+├── aha-moments-builder       (Aha Moments section)
+├── validation-plan-builder   (Validation Plan section)
 └── asset-generators/
     └── landing-generator
 ```
 
 ## The Context Layer
 
-The PMF context layer consists of 3 files in the `pmf/` folder:
+The PMF context layer consists of 4 files in the `pmf/` folder:
 
 ```
 pmf/
-├── icp.md           # Who you believe your customer is
-├── value-prop.md    # Why they should care
-└── aha-moments.md   # Key benefits the product must deliver
+├── icp.md              # Who you believe your customer is (assumption)
+├── value-prop.md       # Why they should care (assumption)
+├── aha-moments.md      # Key benefits the product must deliver (assumption)
+└── validation-plan.md  # How you'll test these assumptions
 ```
 
-**These files become your market thesis that Claude references when building anything.**
+**The first 3 files are assumptions. The validation plan helps test them with real market signals.**
 
 **Progress Tracking:** Context completion is detected by checking for files in user's `pmf/` directory:
 - `pmf/icp.md` → ICP defined
 - `pmf/value-prop.md` → Value proposition defined
 - `pmf/aha-moments.md` → Aha moments captured
+- `pmf/validation-plan.md` → Validation plan set
 
 ## Commands
 

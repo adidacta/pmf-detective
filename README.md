@@ -12,13 +12,14 @@ Created by **Adi Shmorak, The P/MF Detective**
 
 ## What is PMF Context?
 
-PMF Context helps you define your market thesis through 3 structured sections:
+PMF Context helps you define your market thesis through 4 structured sections:
 
-1. **ICP (Ideal Customer Profile)** - Who your customer is
-2. **Value Proposition** - Why they should care (using StoryBrand)
-3. **Aha Moments** - Key benefits your product must deliver
+1. **ICP (Ideal Customer Profile)** - Who your customer is (assumption)
+2. **Value Proposition** - Why they should care (assumption)
+3. **Aha Moments** - Key benefits your product must deliver (assumption)
+4. **Validation Plan** - How you'll test these assumptions
 
-**The context layer = your market thesis that Claude references when building anything.**
+**The first 3 sections are assumptions. The validation plan helps you test them with real market signals (pre-orders, beta signups, conversations, etc.)**
 
 ## The Context Layer
 
@@ -26,9 +27,10 @@ All outputs are saved to a `pmf/` folder in your project:
 
 ```
 pmf/
-├── icp.md           # Who you believe your customer is
-├── value-prop.md    # Why they should care
-└── aha-moments.md   # Key benefits the product must deliver
+├── icp.md              # Who you believe your customer is (assumption)
+├── value-prop.md       # Why they should care (assumption)
+├── aha-moments.md      # Key benefits the product must deliver (assumption)
+└── validation-plan.md  # How you'll test these assumptions
 ```
 
 Claude will reference these files when:
@@ -56,11 +58,11 @@ Or use slash commands:
 - `/update-aha` - Update your aha moments
 - `/generate-assets landing` - Generate a landing page
 
-## The 3 Sections
+## The 4 Sections
 
 ### 1. ICP (Ideal Customer Profile)
 
-Define who your customer is:
+Define who your customer is (assumption):
 - Who they are
 - What they experience (pain, current solutions)
 - What they want
@@ -71,7 +73,7 @@ Define who your customer is:
 
 ### 2. Value Proposition
 
-Define why they should care using StoryBrand:
+Define why they should care using StoryBrand (assumption):
 - Core message (headline)
 - 7-part StoryBrand narrative
 - Alternative angles
@@ -80,13 +82,25 @@ Define why they should care using StoryBrand:
 
 ### 3. Aha Moments
 
-Define the key benefits you must deliver:
+The "aha moment" is when a user first feels they're getting real value from your product - the moment everything clicks.
+
+Define:
 - Core aha moment
 - 3 must-deliver benefits
 - When users "get it"
 - Proof points
 
 **Output:** `pmf/aha-moments.md`
+
+### 4. Validation Plan
+
+Test your assumptions with real market signals:
+- Validation metric (pre-orders, beta signups, conversations, etc.)
+- Target number and GO/ITERATE/PIVOT thresholds
+- Validation approach (landing page, outreach, etc.)
+- Timeline
+
+**Output:** `pmf/validation-plan.md`
 
 ## Asset Generation
 

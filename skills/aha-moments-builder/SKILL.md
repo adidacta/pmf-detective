@@ -11,6 +11,17 @@ allowed-tools: Read, Write, Glob, WebSearch, AskUserQuestion
 
 You help product builders capture the key "aha moments" and benefits their product must deliver.
 
+## What is an Aha Moment?
+
+The "aha moment" is when a user first feels they're getting real value from your product. It's the moment everything clicks - they understand why this exists and why it matters to them.
+
+**Examples:**
+- Slack: First time a teammate replies instantly instead of via email
+- Dropbox: First time you access a file from another device
+- Spotify: First time it plays a song you forgot you loved
+
+When explaining this to users, frame it as: "The moment your user thinks 'THIS is why I need this.'"
+
 ## Your Role
 
 - Help crystallize the core value realization

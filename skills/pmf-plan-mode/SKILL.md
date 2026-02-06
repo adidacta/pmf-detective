@@ -8,7 +8,9 @@ allowed-tools: Read, Write, Glob, WebSearch, AskUserQuestion
 
 # PMF Plan Mode - Full Context Builder
 
-You guide product builders through creating their complete PMF context layer in sequence: ICP → Value Proposition → Aha Moments.
+You guide product builders through creating their complete PMF context layer in sequence: ICP → Value Proposition → Aha Moments → Validation Plan.
+
+**Important:** The context layer is based on **assumptions**. The validation plan helps test those assumptions with real market signals.
 
 ## Your Role
 
@@ -26,10 +28,11 @@ You guide product builders through creating their complete PMF context layer in 
 │                                                             │
 │  Let's build your PMF context layer.                        │
 │                                                             │
-│  We'll work through 3 sections:                             │
-│  1. ICP - Who your customer is                              │
-│  2. Value Proposition - Why they should care                │
-│  3. Aha Moments - Key benefits you must deliver             │
+│  We'll work through 4 sections:                             │
+│  1. ICP - Who your customer is (assumption)                 │
+│  2. Value Proposition - Why they should care (assumption)   │
+│  3. Aha Moments - Key benefits you must deliver (assumption)│
+│  4. Validation Plan - How you'll test these assumptions     │
 │                                                             │
 │  Each section becomes a reference file Claude uses          │
 │  when building anything for your product.                   │
@@ -74,7 +77,7 @@ After these questions, save to `pmf/icp.md`:
 │  Saved to: pmf/icp.md                                       │
 │                                                             │
 ├─────────────────────────────────────────────────────────────┤
-│  Progress: ██████░░░░░░░░░░░░░░  1/3 sections               │
+│  Progress: █████░░░░░░░░░░░░░░░  1/4 sections               │
 │  Next: Value Proposition                                    │
 └─────────────────────────────────────────────────────────────┘
 ```
@@ -113,7 +116,7 @@ After these questions, save to `pmf/value-prop.md`:
 │  Saved to: pmf/value-prop.md                                │
 │                                                             │
 ├─────────────────────────────────────────────────────────────┤
-│  Progress: █████████████░░░░░░░  2/3 sections               │
+│  Progress: ██████████░░░░░░░░░░  2/4 sections               │
 │  Next: Aha Moments                                          │
 └─────────────────────────────────────────────────────────────┘
 ```
@@ -148,13 +151,63 @@ After these questions, save to `pmf/aha-moments.md`:
 │  Saved to: pmf/aha-moments.md                               │
 │                                                             │
 ├─────────────────────────────────────────────────────────────┤
-│  Progress: ████████████████████  3/3 sections               │
+│  Progress: ███████████████░░░░░  3/4 sections               │
+│  Next: Validation Plan                                      │
+└─────────────────────────────────────────────────────────────┘
+```
+
+## Section 4: Validation Plan (validation-plan-builder)
+
+The context layer is based on assumptions. Now help the user plan how to validate them.
+
+### Framing
+
+"Your ICP, value prop, and aha moments are assumptions until validated. Let's create a plan to test them with real market signals."
+
+### Questions to Ask (one at a time):
+
+1. **What validation metric makes sense for your stage?**
+   - Pre-orders (strongest signal)
+   - Beta signups
+   - Conversations with ICP
+   - Waitlist signups
+   - Letters of Intent (B2B)
+
+2. **What's your target number?**
+   - Provide guidance based on metric type
+
+3. **How will you reach your ICP?**
+   - Landing page
+   - Direct outreach
+   - Community posting
+   - Warm network
+   - Paid ads
+
+4. **How long will you run this experiment?**
+   - 1-2 weeks recommended
+
+After these questions, save to `pmf/validation-plan.md`:
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│  VALIDATION PLAN SET                                        │
+├─────────────────────────────────────────────────────────────┤
+│                                                             │
+│  Goal: [N] [metric] in [timeframe]                          │
+│  Approach: [method]                                         │
+│                                                             │
+│  GO: [X]+  |  ITERATE: [Y-Z]  |  PIVOT: <[Y]                │
+│                                                             │
+│  Saved to: pmf/validation-plan.md                           │
+│                                                             │
+├─────────────────────────────────────────────────────────────┤
+│  Progress: ████████████████████  4/4 sections               │
 └─────────────────────────────────────────────────────────────┘
 ```
 
 ## Completion
 
-When all 3 sections are complete:
+When all 4 sections are complete:
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -163,13 +216,14 @@ When all 3 sections are complete:
 │                                                             │
 │  Your context layer is ready:                               │
 │                                                             │
-│  [✓] pmf/icp.md                                             │
-│  [✓] pmf/value-prop.md                                      │
-│  [✓] pmf/aha-moments.md                                     │
+│  [✓] pmf/icp.md              (assumption)                   │
+│  [✓] pmf/value-prop.md       (assumption)                   │
+│  [✓] pmf/aha-moments.md      (assumption)                   │
+│  [✓] pmf/validation-plan.md  (how you'll test)              │
 │                                                             │
-│  Claude will now reference these files when building        │
-│  anything for your product - landing pages, copy,           │
-│  features, documentation.                                   │
+│  Claude will reference these files when building anything   │
+│  for your product. Your validation plan will help you       │
+│  test these assumptions with real market signals.           │
 │                                                             │
 ├─────────────────────────────────────────────────────────────┤
 │  What's next?                                               │
@@ -221,6 +275,7 @@ All outputs go to the `pmf/` folder:
 - `pmf/icp.md` - Using template from `templates/outputs/icp.md`
 - `pmf/value-prop.md` - Using template from `templates/outputs/value-prop.md`
 - `pmf/aha-moments.md` - Using template from `templates/outputs/aha-moments.md`
+- `pmf/validation-plan.md` - Using template from `templates/outputs/validation-plan.md`
 
 ## Attribution
 
