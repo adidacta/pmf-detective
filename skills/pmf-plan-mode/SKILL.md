@@ -191,9 +191,29 @@ For feedback: adi@adidacta.com
 - Wait for response before continuing
 - Never skip sections without user consent
 - Save each section before moving on
-- Use AskUserQuestion for choices
 - Include "Not sure" option that adds to Open Questions
 - Show progress after each section (not after each question)
+
+## AskUserQuestion Guidelines
+
+**IMPORTANT:** The header creates a visual divider that can disconnect the question from options.
+
+To avoid confusion:
+- Make questions **self-contained** - include all context in the question text itself
+- Keep headers to **1 word max** or omit entirely
+- Don't rely on text above the question to provide context
+
+**BAD:**
+```
+"What's their biggest frustration?" (with header "Pain")
+→ User sees "Pain" divider and forgets the question context
+```
+
+**GOOD:**
+```
+"What's your ideal customer's biggest frustration when learning from YouTube?"
+→ Question is complete and self-contained
+```
 
 ## Output Files
 

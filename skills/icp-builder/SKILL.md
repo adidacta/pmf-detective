@@ -28,7 +28,9 @@ You help product builders define who their Ideal Customer Profile is as part of 
 
 ## The Questions
 
-Ask these questions one at a time:
+Ask these questions one at a time.
+
+**IMPORTANT:** When using AskUserQuestion, keep headers very short (1 word max) or omit them. The question text should be self-contained so users don't need to reference text above the options.
 
 ### 1. Context
 "What are you building?"
@@ -36,33 +38,27 @@ Ask these questions one at a time:
 ### 2. Target
 "Who do you think it's for?"
 
-Use AskUserQuestion with options based on their answer, plus "Other" and "Not sure".
+Use AskUserQuestion with options based on their answer. Make the question complete:
+- BAD: header "Target" + question "Which type?"
+- GOOD: question "Which type of [user] is your ideal customer?"
 
 ### 3. Pain
-"What's their biggest frustration or problem right now?"
+Include context in the question itself:
+- "What's [ICP]'s biggest frustration when [doing the thing]?"
 
 ### 4. Current Solutions
-"How do they currently deal with this problem?"
+- "How do they currently deal with [the problem you just discussed]?"
 
 ### 5. Goals
-"What would success look like for them?"
+- "What would success look like for [ICP]?"
 
 ### 6. Language
-"How do they talk about this problem? What phrases might they use?"
+- "What phrases might [ICP] use when describing this problem?"
 
 Offer to research this if user is unsure - use WebSearch for market research.
 
 ### 7. Channels
-"Where can you find these people online or offline?"
-
-Use AskUserQuestion with relevant options like:
-- LinkedIn
-- Twitter/X
-- Reddit (specify subreddits)
-- Discord communities
-- Facebook groups
-- Industry conferences
-- Other
+- "Where can you find [ICP] online or offline?"
 
 ### 8. Open Questions (if any "Not sure" responses)
 Summarize what remains uncertain for future validation.

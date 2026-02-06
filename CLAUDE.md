@@ -75,6 +75,13 @@ allowed-tools: Read, Write, Glob, WebSearch, AskUserQuestion
 - Progress bars: `████████░░░░░░░░░░░░ X/Y sections`
 - Show progress only at section END, not after every message
 
+**AskUserQuestion Best Practices:**
+- The `header` field creates a visual divider - use sparingly (1 word max) or omit
+- Make questions **self-contained** - include all context in the question text
+- Don't rely on text above the question to provide context
+- BAD: "Which type?" with header "Target"
+- GOOD: "Which type of YouTube learner is your ideal customer?"
+
 **Output Files:** All user outputs go to `pmf/` folder using templates from `templates/outputs/`
 
 **Core Rules:**
