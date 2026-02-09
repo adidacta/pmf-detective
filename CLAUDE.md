@@ -22,10 +22,10 @@ pmf-context (coordinator)
 ├── plan-pmf-mode             (Full context builder)
 ├── icp-builder               (ICP section)
 ├── value-prop-builder        (Value Proposition section)
-├── aha-moments-builder       (Aha Moments section)
+├── aha-moments-builder       (MVP PRD — reverse-engineers scope from aha moment)
 ├── validation-plan-builder   (Validation Plan section)
 └── asset-generators/
-    └── landing-generator
+    └── landing-generator     (Landing page — uses all context files)
 ```
 
 ## The Context Layer
@@ -36,7 +36,7 @@ The PMF context layer consists of 4 files in the `pmf/` folder:
 pmf/
 ├── icp.md              # Who you believe your customer is (assumption)
 ├── value-prop.md       # Why they should care (assumption)
-├── aha-moments.md      # Key benefits the product must deliver (assumption)
+├── aha-moments.md      # MVP PRD — reverse-engineered path to aha moment (assumption)
 └── validation-plan.md  # How you'll test these assumptions
 ```
 
@@ -45,7 +45,7 @@ pmf/
 **Progress Tracking:** Context completion is detected by checking for files in user's `pmf/` directory:
 - `pmf/icp.md` → ICP defined
 - `pmf/value-prop.md` → Value proposition defined
-- `pmf/aha-moments.md` → Aha moments captured
+- `pmf/aha-moments.md` → MVP PRD defined (aha moment + path)
 - `pmf/validation-plan.md` → Validation plan set
 
 ## Commands

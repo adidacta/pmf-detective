@@ -1,11 +1,11 @@
 ---
-description: Update your Aha Moments section
+description: Update your MVP PRD (Aha Moments & Scope)
 allowed-tools: Read, Write, Glob, WebSearch, AskUserQuestion
 ---
 
-# Update Aha Moments
+# Update MVP PRD
 
-Update the Aha Moments section of your PMF context layer.
+Update the MVP PRD section of your PMF context layer.
 
 ## Instructions
 
@@ -17,27 +17,24 @@ Update the Aha Moments section of your PMF context layer.
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│  CURRENT AHA MOMENTS                                        │
+│  CURRENT MVP SCOPE                                           │
 ├─────────────────────────────────────────────────────────────┤
-│                                                             │
-│  Core Aha: [Key realization]                                │
-│                                                             │
-│  Must-Deliver Benefits:                                     │
-│  1. [Benefit 1]                                             │
-│  2. [Benefit 2]                                             │
-│  3. [Benefit 3]                                             │
-│                                                             │
-│  When Users Get It: [...]                                   │
-│                                                             │
-│  Proof Points: [N items]                                    │
-│                                                             │
+│                                                              │
+│  Aha Moment: [The key experience]                            │
+│                                                              │
+│  Path to Aha:                                                │
+│  1. [Start] → 2. [Step] → ... → N. [Aha moment]             │
+│                                                              │
+│  Out of Scope: [N] items                                     │
+│  Success: [Behavioral signal]                                │
+│                                                              │
 └─────────────────────────────────────────────────────────────┘
 
 What would you like to update?
-1. Core Aha Moment
-2. Must-Deliver Benefits
-3. When Users "Get It"
-4. Proof Points
+1. The Core Aha Moment (redefine the key experience)
+2. Path to Aha (add, remove, or reorder steps)
+3. Out of Scope (move items in or out of v1)
+4. Success Criteria (redefine how you'll know it's working)
 5. Start over completely
 ```
 
@@ -47,9 +44,9 @@ What would you like to update?
 
 5. Save the updated file to `pmf/aha-moments.md`
 
-## If No Aha Moments Exists
+## If No MVP PRD Exists
 
 Check prerequisites:
 - If ICP missing: "Define your ICP first"
 - If Value Prop missing: "Define your value proposition first"
-- If both exist: Offer to create aha moments using aha-moments-builder skill
+- If both exist: Offer to create MVP PRD using aha-moments-builder skill

@@ -57,7 +57,7 @@ Use /plan-pmf to build your context layer first.
 ```
 
 Optional (enhances the page if present):
-- `pmf/aha-moments.md` - Key benefits to highlight in the Benefits section
+- `pmf/aha-moments.md` - MVP PRD with aha moment and path to highlight
 
 ## Page Structure
 
@@ -80,12 +80,12 @@ Generate these sections using the PMF context:
 - Bridge from current pain to the utopic outcome
 
 ### 4. Benefits Section
-- If `pmf/aha-moments.md` exists: use Must-Deliver Benefits
+- If `pmf/aha-moments.md` exists: use the Path to Aha steps as benefit headlines (what the user gets at each step, not how it works)
 - If not: derive 3 key benefits from the Mirror (what pain goes away) and Magnet (what they gain)
 - Icon placeholders
 
 ### 5. Social Proof (Placeholder)
-- If `pmf/aha-moments.md` exists: use Proof Points
+- If `pmf/aha-moments.md` exists: frame around the Core Aha Moment and Success Criteria
 - Otherwise: generic testimonial placeholders
 - Trust indicators
 
@@ -124,14 +124,14 @@ landing/
 1. Read PMF context files:
    - `pmf/icp.md` (required)
    - `pmf/value-prop.md` (required)
-   - `pmf/aha-moments.md` (optional — enhances Benefits & Social Proof)
+   - `pmf/aha-moments.md` (optional — MVP PRD with aha moment and path)
 
 2. Extract content for each section:
    - Hero: The Message (headline), The Mirror (subheadline), CTA (button)
    - Problem: Mirror Pain/Fear, ICP language
    - Solution: The Magnet (desired future)
-   - Benefits: Aha moments (if available) or derived from Mirror + Magnet
-   - Social Proof: Proof Points (if available) or placeholders
+   - Benefits: Path to Aha steps from MVP PRD (if available) or derived from Mirror + Magnet
+   - Social Proof: Core Aha Moment + Success Criteria (if available) or placeholders
    - CTA: The Message + CTA + The Magnet reinforcement
 
 3. Generate component files with real content

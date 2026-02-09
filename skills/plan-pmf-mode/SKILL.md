@@ -8,7 +8,7 @@ allowed-tools: Read, Write, Glob, WebSearch, AskUserQuestion, Task
 
 # PMF Plan Mode - Full Context Builder
 
-You guide product builders through creating their complete PMF context layer in sequence: ICP → Value Proposition → Landing Page → Aha Moments → Validation Plan.
+You guide product builders through creating their complete PMF context layer in sequence: ICP → Value Proposition → Aha Moments → Landing Page → Validation Plan.
 
 **Important:** The context layer is based on **assumptions**. The validation plan helps test those assumptions with real market signals.
 
@@ -31,8 +31,8 @@ You guide product builders through creating their complete PMF context layer in 
 │  We'll work through 5 steps:                                │
 │  1. ICP - Who your customer is (assumption)                 │
 │  2. Value Proposition - Why they should care (assumption)   │
-│  3. Landing Page - Test your message in the real world      │
-│  4. Aha Moments - Key benefits you must deliver (assumption)│
+│  3. MVP PRD - Key benefits & scope you must deliver         │
+│  4. Landing Page - Test your message in the real world      │
 │  5. Validation Plan - How you'll test these assumptions     │
 │                                                             │
 │  Each section becomes a reference file Claude uses          │
@@ -97,19 +97,49 @@ Run the full value-prop-builder flow. When it completes and saves `pmf/value-pro
 │                                                              │
 ├─────────────────────────────────────────────────────────────┤
 │  Progress: ████████░░░░░░░░░░░░  2/5 steps                  │
+│  Next: MVP PRD                                               │
+└─────────────────────────────────────────────────────────────┘
+```
+
+## Section 3: Aha Moments / MVP PRD (aha-moments-builder)
+
+**Delegate the full MVP scoping process to the aha-moments-builder skill.** Do NOT ask inline questions here — the aha-moments-builder handles all 5 phases:
+
+1. Phase A: Context Review (automated — reads pmf/icp.md and pmf/value-prop.md)
+2. Phase B: Explore Aha Moments (2-3 questions — find highest-value moment)
+3. Phase C: Reverse-Engineer the MVP (2-3 questions — trace backwards from aha)
+4. Phase D: Out of Scope (1 question)
+5. Phase E: Success Criteria (1 question)
+
+Run the full aha-moments-builder flow. When it completes and saves `pmf/aha-moments.md`, show the transition:
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│  MVP SCOPE DEFINED                                           │
+├─────────────────────────────────────────────────────────────┤
+│                                                              │
+│  Aha Moment: [The key experience]                            │
+│                                                              │
+│  Path to Aha:                                                │
+│  1. [Start] → 2. [Step] → ... → N. [Aha moment]             │
+│                                                              │
+│  Saved to: pmf/aha-moments.md                                │
+│                                                              │
+├─────────────────────────────────────────────────────────────┤
+│  Progress: ████████████░░░░░░░░  3/5 steps                   │
 │  Next: Landing Page                                          │
 └─────────────────────────────────────────────────────────────┘
 ```
 
-## Section 3: Landing Page (landing-generator)
+## Section 4: Landing Page (landing-generator)
 
-Now that the ICP and value proposition are defined, offer to generate a landing page to test the message in the real world.
+Now that the ICP, value proposition, and MVP scope are defined, offer to generate a landing page to test the message in the real world. The landing page will use the aha moments and benefits from the MVP PRD to build richer, more specific content.
 
-Use AskUserQuestion: "Your ICP and value prop are ready. Want to generate a landing page to test your message, or skip to Aha Moments?"
+Use AskUserQuestion: "Your ICP, value prop, and MVP scope are ready. Want to generate a landing page to test your message, or skip to Validation Plan?"
 
-Options: "Generate landing page" / "Skip to Aha Moments"
+Options: "Generate landing page" / "Skip to Validation Plan"
 
-If generating: Run the landing-generator skill. It reads `pmf/icp.md` and `pmf/value-prop.md` to build the page.
+If generating: Run the landing-generator skill. It reads `pmf/icp.md`, `pmf/value-prop.md`, and `pmf/aha-moments.md` to build the page.
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -120,43 +150,8 @@ If generating: Run the landing-generator skill. It reads `pmf/icp.md` and `pmf/v
 │  Run: cd landing && npm install && npm run dev               │
 │                                                              │
 ├─────────────────────────────────────────────────────────────┤
-│  Progress: ████████████░░░░░░░░  3/5 steps                   │
-│  Next: Aha Moments                                           │
-└─────────────────────────────────────────────────────────────┘
-```
-
-## Section 4: Aha Moments (aha-moments-builder)
-
-Capture the key benefits and realization moments:
-
-### Questions to Ask (one at a time):
-
-1. **What's the single most important "aha" moment?**
-   - The realization that changes everything for users
-
-2. **What are the 3 benefits you MUST deliver?**
-   - The non-negotiable value they expect
-
-3. **When do users "get it"?**
-   - The moment they understand your value
-
-4. **What proof points support your value?**
-   - Evidence, results, testimonials (even hypothetical)
-
-After these questions, save to `pmf/aha-moments.md`:
-
-```
-┌─────────────────────────────────────────────────────────────┐
-│  AHA MOMENTS CAPTURED                                       │
-├─────────────────────────────────────────────────────────────┤
-│                                                             │
-│  Core Aha: [The key realization]                            │
-│                                                             │
-│  Saved to: pmf/aha-moments.md                               │
-│                                                             │
-├─────────────────────────────────────────────────────────────┤
 │  Progress: ████████████████░░░░  4/5 steps                   │
-│  Next: Validation Plan                                      │
+│  Next: Validation Plan                                       │
 └─────────────────────────────────────────────────────────────┘
 ```
 
@@ -235,9 +230,9 @@ When all sections are complete:
 ├─────────────────────────────────────────────────────────────┤
 │  What's next?                                               │
 │                                                             │
-│  • Generate a landing page: /generate-assets landing        │
 │  • Update a section: /update-icp, /update-value-prop,       │
 │    /update-aha                                              │
+│  • Regenerate landing page: /generate-assets landing        │
 │  • Check status: /pmf-status                                │
 └─────────────────────────────────────────────────────────────┘
 
