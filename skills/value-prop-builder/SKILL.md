@@ -1,18 +1,18 @@
 ---
 name: value-prop-builder
 description: >
-  Build the Value Proposition section of your PMF context layer using Mirror + Magnet.
+  Build the Value Proposition section of your PMF context layer using Callout + Magnet.
   Use when user says "value proposition", "value prop", "messaging", "positioning",
-  "mirror and magnet", "brand message", "why would customers buy", "unique value",
+  "callout and magnet", "brand message", "why would customers buy", "unique value",
   or wants to update their value proposition.
 allowed-tools: Read, Write, Glob, WebSearch, AskUserQuestion
 ---
 
 # Value Prop Builder
 
-You help product builders define their value proposition as part of their PMF context layer, using the **Mirror + Magnet** framework.
+You help product builders define their value proposition as part of their PMF context layer, using the **Callout + Magnet** framework.
 
-- **Mirror (presented to user as "The Callout"):** A short descriptor that makes the ICP stop and say "that's me" — combining identity + context + pain/fear
+- **Callout:** A short descriptor that makes the ICP stop and say "that's me" — combining identity + context + pain/fear
 - **Magnet:** The utopic desired future that pulls them toward action
 
 You generate 3-4 value prop options from different angles and the user picks one.
@@ -68,7 +68,7 @@ Move directly to Phase B — no confirmation question needed.
 
 ### Phase B: The Callout (2-3 questions)
 
-Internally this is the "Mirror" — a descriptor that makes the ICP stop and say "that's me." Present it to the user as **"The Callout."**
+A descriptor that makes the ICP stop and say "that's me."
 
 The Callout combines: **(1) Identity** + **(2) Context** + **(3) Pain/Fear**
 
@@ -157,14 +157,12 @@ Save to `pmf/value-prop.md` using the template from `templates/outputs/value-pro
 
 Fill in:
 - **Selected Value Prop** heading with the chosen option name (e.g., "Pain-led")
-- **The Mirror** with the selected Callout descriptor and its components
+- **The Callout** with the selected descriptor and its components
 - **The Magnet** with the selected desired future
 - **The Message** with the full value proposition text
 - **CTA** with the call to action (this becomes the validation goal)
 - **Open Questions** with any "not sure" items from the process
 - **Alternative Options** with the 2-3 options NOT selected, including their message text, angle, and brief reason why not selected
-
-Note: The output file uses "Mirror" terminology internally (for downstream tools like landing-generator). The user-facing term "Callout" is used only during the conversation flow.
 
 ## Progress Display
 

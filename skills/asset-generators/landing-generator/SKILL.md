@@ -43,7 +43,7 @@ This page has one job — get the visitor to click the CTA. Every section exists
 
 Requires the PMF context layer:
 - `pmf/icp.md` - Who the customer is
-- `pmf/value-prop.md` - Why they should care (Mirror + Magnet + Message)
+- `pmf/value-prop.md` - Why they should care (Callout + Magnet + Message)
 
 If any are missing, inform the user:
 ```
@@ -65,12 +65,12 @@ Generate these sections using the PMF context:
 
 ### 1. Hero Section
 - **Headline:** "The Message" from `pmf/value-prop.md`
-- **Subheadline:** "The Mirror" — the 3-part descriptor that makes the ICP say "that's me"
+- **Subheadline:** "The Callout" — the 3-part descriptor that makes the ICP say "that's me"
 - **CTA button:** "CTA" from `pmf/value-prop.md`
 - Optional: Hero image placeholder
 
 ### 2. Problem Section
-- From "The Mirror" Pain/Fear in `pmf/value-prop.md`
+- From "The Callout" Pain/Fear in `pmf/value-prop.md`
 - Agitate the pain using language from `pmf/icp.md` "How They Talk About It"
 - Show you understand their frustration
 
@@ -81,7 +81,7 @@ Generate these sections using the PMF context:
 
 ### 4. Benefits Section
 - If `pmf/aha-moments.md` exists: use the Path to Aha steps as benefit headlines (what the user gets at each step, not how it works)
-- If not: derive 3 key benefits from the Mirror (what pain goes away) and Magnet (what they gain)
+- If not: derive 3 key benefits from the Callout (what pain goes away) and Magnet (what they gain)
 - Icon placeholders
 
 ### 5. Social Proof (Placeholder)
@@ -127,10 +127,10 @@ landing/
    - `pmf/aha-moments.md` (optional — MVP PRD with aha moment and path)
 
 2. Extract content for each section:
-   - Hero: The Message (headline), The Mirror (subheadline), CTA (button)
-   - Problem: Mirror Pain/Fear, ICP language
+   - Hero: The Message (headline), The Callout (subheadline), CTA (button)
+   - Problem: Callout Pain/Fear, ICP language
    - Solution: The Magnet (desired future)
-   - Benefits: Path to Aha steps from MVP PRD (if available) or derived from Mirror + Magnet
+   - Benefits: Path to Aha steps from MVP PRD (if available) or derived from Callout + Magnet
    - Social Proof: Core Aha Moment + Success Criteria (if available) or placeholders
    - CTA: The Message + CTA + The Magnet reinforcement
 
@@ -159,7 +159,7 @@ npm run dev
 
 The page uses your PMF context:
 - ICP from pmf/icp.md
-- Value Prop (Mirror + Magnet) from pmf/value-prop.md
+- Value Prop (Callout + Magnet) from pmf/value-prop.md
 
 Feel free to customize the design and copy!
 

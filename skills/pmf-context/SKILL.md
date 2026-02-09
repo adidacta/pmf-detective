@@ -133,7 +133,7 @@ When showing status:
 When user wants to work on a specific section:
 
 - ICP, customer, target audience → icp-builder
-- Value prop, messaging, Mirror + Magnet → value-prop-builder
+- Value prop, messaging, Callout + Magnet → value-prop-builder
 - Aha moments, benefits, MVP, PRD, scope, features → aha-moments-builder
 - Full context build → plan-pmf-mode
 

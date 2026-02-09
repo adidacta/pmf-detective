@@ -1,2 +1,11 @@
 # macOS
 .DS_Store
+
+# User-generated output (not part of the plugin)
+pmf/
+landing/
+test/
+
+# Build artifacts
+node_modules/
+*.png

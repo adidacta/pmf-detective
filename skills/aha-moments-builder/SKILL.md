@@ -53,7 +53,7 @@ Use /plan-pmf to build your context layer first.
 
 Read `pmf/icp.md` and `pmf/value-prop.md`. Extract:
 - ICP identity, pain, desired outcome
-- The full value proposition message (Mirror + Magnet)
+- The full value proposition message (Callout + Magnet)
 - CTA
 
 Display the value proposition back to the user as the anchor for everything that follows:

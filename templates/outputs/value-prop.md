@@ -6,7 +6,7 @@
 
 ## Selected Value Prop: [Option Name]
 
-### The Mirror
+### The Callout
 > [3-part descriptor: identity + context + pain/fear]
 
 - **Identity:** [Who they are]
@@ -17,7 +17,7 @@
 > [Utopic desired future]
 
 ### The Message
-> [Full value proposition combining Mirror + Magnet]
+> [Full value proposition combining Callout + Magnet]
 
 ### CTA
 [Primary call to action]
