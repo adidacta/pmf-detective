@@ -1,7 +1,7 @@
 ---
 name: landing-generator
 description: >
-  Generate Next.js or React landing page from PMF context files.
+  Generate a React + Vite landing page from PMF context files.
   Use when user says "build landing page", "generate landing", "create website",
   "make a page", "landing page for my product", or wants to create a marketing page.
 allowed-tools: Read, Write, Glob, Bash
@@ -10,6 +10,34 @@ allowed-tools: Read, Write, Glob, Bash
 # Landing Page Generator
 
 Generate a complete, production-ready landing page based on the user's PMF context layer.
+
+## The Goal: Conversion
+
+This page has one job — get the visitor to click the CTA. Every section exists to move them closer to that action. The CTA from `pmf/value-prop.md` is the validation goal — conversions on this page are the signal that tests whether the value prop is working.
+
+## Design Principles
+
+**Visual design:**
+- Clean, modern, and professional — not generic or templated
+- Strong visual hierarchy — headline dominates, supporting text recedes
+- Generous whitespace — let the copy breathe
+- Consistent color system — one primary action color for all CTAs, muted tones elsewhere
+- Smooth transitions and subtle hover states — the page should feel alive
+- Mobile-first responsive — most ICP traffic will come from mobile/social
+
+**Persuasive copy:**
+- Write in the ICP's language — use phrases from "How They Talk About It" in `pmf/icp.md`
+- Problem section should make the reader feel understood, not attacked (seen, not judged)
+- Solution section paints the Magnet — make the desired future feel tangible and inevitable
+- Each section should answer "why should I keep reading?" and end with a reason to scroll down
+- CTA copy should be action-oriented and low-friction — match the CTA from value-prop.md exactly
+
+**Conversion focus:**
+- CTA appears at least twice — hero and bottom. Consider a sticky header CTA for long pages.
+- Remove all friction — no navigation links that lead away from the page
+- Every section builds toward the CTA — problem → solution → proof → act
+- Social proof reduces perceived risk — even placeholder testimonials set the right structure
+- The bottom CTA should feel like the natural conclusion, not an afterthought
 
 ## Prerequisites
 
@@ -30,25 +58,6 @@ Use /plan-pmf to build your context layer first.
 
 Optional (enhances the page if present):
 - `pmf/aha-moments.md` - Key benefits to highlight in the Benefits section
-
-## Framework Options
-
-Ask user:
-```
-Which framework would you like for your landing page?
-
-1. **Next.js** (Recommended)
-   - App Router structure
-   - Easy deployment to Vercel
-   - Best for full websites
-
-2. **React + Vite**
-   - Lightweight and fast
-   - Quick local development
-   - Good for simple pages
-
-Reply with 1 or 2.
-```
 
 ## Page Structure
 
@@ -91,45 +100,18 @@ Generate these sections using the PMF context:
 
 ## Tech Stack
 
-### Next.js Version
-- App Router (`app/` directory)
+- React + Vite (lightweight, fast to generate and run)
 - Tailwind CSS
 - TypeScript
-- Shadcn/UI components (optional)
-
-### React + Vite Version
-- Single page component
-- Tailwind CSS
-- JavaScript or TypeScript
 - Minimal dependencies
 
 ## Output Structure
 
-### For Next.js
-```
-landing/
-├── app/
-│   ├── layout.tsx
-│   ├── page.tsx
-│   └── globals.css
-├── components/
-│   ├── Hero.tsx
-│   ├── Problem.tsx
-│   ├── Solution.tsx
-│   ├── Benefits.tsx
-│   ├── CTA.tsx
-│   └── Footer.tsx
-├── package.json
-├── tailwind.config.js
-└── README.md
-```
-
-### For React + Vite
 ```
 landing/
 ├── src/
-│   ├── App.jsx
-│   ├── main.jsx
+│   ├── App.tsx
+│   ├── main.tsx
 │   └── index.css
 ├── index.html
 ├── package.json
