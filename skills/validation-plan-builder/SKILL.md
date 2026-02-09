@@ -1,82 +1,112 @@
 ---
 name: validation-plan-builder
 description: >
-  Create a validation plan to test your PMF assumptions.
+  Create a validation plan to test your PMF assumptions, then route to the right next step.
   Use when user says "validate", "test my assumptions", "validation plan",
-  "how do I know if this works", or after completing the PMF context layer.
+  "how do I know if this works", or after completing the MVP PRD.
 allowed-tools: Read, Write, Glob, AskUserQuestion
 ---
 
 # Validation Plan Builder
 
-You help product builders create a plan to validate their PMF assumptions.
+You help product builders decide HOW to test their PMF assumptions and create a concrete plan. The validation plan is a decision point — it determines what happens next (landing page, outreach, or build).
 
 ## Context
 
-The PMF context layer (ICP, Value Prop, Aha Moments) is based on **assumptions**. This skill helps users define how they'll test those assumptions with real signals from the market.
+The PMF context layer (ICP, Value Prop, MVP PRD) is based on **assumptions**. This skill helps users choose a validation method, define success criteria, and route to the right execution skill.
 
 ## Prerequisites
 
 Check if the context layer exists:
-- `pmf/icp.md`
-- `pmf/value-prop.md`
-- `pmf/aha-moments.md`
+- `pmf/icp.md` (required)
+- `pmf/value-prop.md` (required)
+- `pmf/aha-moments.md` (required — the MVP PRD)
 
 If missing, inform user: "Let's build your PMF context first, then create a validation plan."
 
-## The Questions
+## Core Rules
 
-### Question 1: What's the core assumption to test?
+- Ask ONE question at a time
+- Wait for response before continuing
+- Ground options in ICP data (where to find them, how they talk, pain intensity)
+- Include "Not sure" option that adds to Open Questions
 
-Read the context files and summarize the key assumption:
+## The Flow
 
-"Based on your PMF context, the core assumption to test is:
+### Phase A: Summarize Assumptions (automated — no questions)
 
-**[ICP] will [take action] because [value prop]**
+Read all three context files and extract the core assumptions being tested:
 
-Does this capture what you want to validate?"
+1. **ICP assumption:** [This person] experiences [this pain]
+2. **Value prop assumption:** [This message] will make them say "that's me" and take action
+3. **MVP assumption:** [This aha moment] is what they need to experience
 
-### Question 2: What validation metric makes sense?
+Display:
 
-"How do you want to measure validation? What signal would tell you this is working?"
+```
+┌─────────────────────────────────────────────────────────────┐
+│  YOUR ASSUMPTIONS                                            │
+├─────────────────────────────────────────────────────────────┤
+│                                                              │
+│  1. [ICP identity] experiences "[pain]"                      │
+│  2. "[Value prop message]" will grab their attention          │
+│  3. "[Aha moment]" is the experience that converts them      │
+│                                                              │
+│  Everything you've built so far is based on these.           │
+│  Now let's figure out how to test them.                      │
+│                                                              │
+└─────────────────────────────────────────────────────────────┘
+```
 
-Options based on their stage:
-- **Pre-orders** - People pay before the product exists (strongest signal)
-- **Beta signups** - People give email/info to get early access
-- **Conversations** - People agree to talk about the problem
-- **Waitlist signups** - People express interest via landing page
-- **Letter of Intent (LOI)** - Companies express formal interest
+### Phase B: Choose Validation Method (1-2 questions)
 
-### Question 3: What's your target number?
+The validation method determines what you do next. Each tests different assumptions at different confidence levels.
 
-"How many [metric] would be a strong signal?"
+**Q1:** Use AskUserQuestion: "How do you want to test these assumptions? Each method gives you a different type of signal."
 
-Provide guidance:
+Options:
+- **"Landing page"** — "Put your value prop in front of real people. Measure signups, waitlist, or pre-orders. Tests whether your message resonates. Fastest to set up."
+- **"Conversations"** — "Talk to 15-30 people who match your ICP. Validate the pain is real and acute. Deepest learning. Uses the Mom Test — no pitching, just listening."
+- **"Build & test"** — "Build the MVP and put it in people's hands. Tests the aha moment directly. Highest effort, highest signal."
+- **"Not sure"** — "Add to open questions and help me decide."
+
+**If "Not sure":** Help them decide based on:
+- How confident they are the pain exists → Low confidence = conversations first
+- Whether they have access to ICP → Easy access = conversations; hard to reach = landing page
+- Time/budget → Landing page is fastest; build is slowest but most definitive
+
+### Phase C: Define Success Criteria (2-3 questions)
+
+**Q2:** Based on the chosen method, ask about the success metric:
+
+**If landing page:**
+Use AskUserQuestion: "What action on the landing page counts as validation?"
+Options: "Email signup / waitlist" / "Pre-order / deposit" / "Free trial signup" / "Something else"
+
+**If conversations:**
+Use AskUserQuestion: "What would you need to hear in conversations to feel confident the pain is real?"
+Options: "They've tried to solve it before (spent time/money)" / "They describe the pain unprompted" / "They ask when they can use the product" / "Something else"
+
+**If build & test:**
+Use AskUserQuestion: "What user behavior would prove the aha moment is working?"
+Options: Pull from success criteria in `pmf/aha-moments.md` if it exists, plus "Something else"
+
+**Q3:** "How many [signals] would be a strong enough signal?"
+
+Provide guidance by method:
+- Landing page signups: 50-100+ for consumer, 20-30+ for B2B
 - Pre-orders: 10+ is strong for most products
-- Beta signups: 30-50 is a good signal
-- Conversations: 20-30 quality conversations
-- Waitlist: 100+ for consumer, 30+ for B2B
-- LOI: 3-5 for enterprise
+- Conversations: 15-30 quality conversations
+- Active users (build): 10-20 who return after first use
 
-### Question 4: What's your validation approach?
+Define GO / ITERATE / PIVOT thresholds with the user.
 
-"How will you reach your ICP to get this signal?"
+**Q4:** "How long will you run this validation?"
 
 Options:
-- **Landing page** - Drive traffic to capture signups/pre-orders
-- **Direct outreach** - Cold email/LinkedIn to ICP
-- **Community posting** - Share in relevant communities (Reddit, Discord, etc.)
-- **Warm network** - Leverage existing connections
-- **Paid ads** - Run targeted ads to ICP
-
-### Question 5: Timeline
-
-"How long will you run this validation experiment?"
-
-Options:
-- 1 week (fast learning, smaller numbers)
-- 2 weeks (recommended for most)
-- 4 weeks (larger sample, more patience needed)
+- "1 week" — "Fast learning, smaller numbers. Good for landing pages with paid traffic."
+- "2 weeks" — "Recommended for most. Enough time for organic reach and conversations."
+- "4 weeks" — "Larger sample. Good for build & test or if you need time to set up outreach."
 
 ## Output
 
@@ -85,48 +115,79 @@ Save to `pmf/validation-plan.md`:
 ```markdown
 # Validation Plan
 
-## What We're Testing
-[ICP] will [action] because [value prop]
+<!-- AI_INSTRUCTION: This plan determines the next step in the PMF process.
+     Check the Validation Method to know which execution skill to use. -->
 
-This is an assumption. This plan will help us validate it with real market signals.
+## Assumptions Being Tested
+
+1. **ICP:** [Identity] experiences "[pain]"
+2. **Value Prop:** "[Message]" will make them say "that's me"
+3. **MVP:** "[Aha moment]" is the experience that converts them
+
+## Validation Method
+
+**Method:** [Landing page / Conversations / Build & test]
 
 ## Success Metric
+
+**Signal:** [What counts as validation]
 **Goal:** [N] [metric] in [timeframe]
 
-| Result | Meaning | Next Step |
-|--------|---------|-----------|
-| **GO:** [threshold]+ | Strong signal | Scale up acquisition |
-| **ITERATE:** [range] | Partial signal | Adjust approach and retry |
-| **PIVOT:** <[threshold] | Weak signal | Revisit ICP or value prop |
-
-## Validation Approach
-**Method:** [approach]
-**Channels:** [specific channels from ICP]
+| Result | Threshold | Next Step |
+|--------|-----------|-----------|
+| **GO** | [X]+ | Invest in building / scaling |
+| **ITERATE** | [Y]-[X] | Adjust message, channel, or approach and retry |
+| **PIVOT** | <[Y] | Revisit ICP or value prop assumptions |
 
 ## Timeline
+
 [X] weeks starting [date or "when ready"]
 
-## What You'll Learn
-If successful: [assumption] is validated - invest more
-If not: Learn why and adjust [ICP/value prop/approach]
+## What's Next
+
+Based on your validation method:
+
+- **Landing page** → Use the landing page generator to create your page
+- **Conversations** → Use the outreach builder for your outreach plan + Mom Test questions
+- **Build & test** → Use the build & test guide to set up BMAD with your PMF context
+
+## Open Questions
+
+[Unresolved items]
 ```
 
-## Progress Display
+## Progress Display & Routing
+
+Show at the END, then route to the next skill:
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│  VALIDATION PLAN SET                                        │
+│  VALIDATION PLAN SET                                         │
 ├─────────────────────────────────────────────────────────────┤
-│                                                             │
-│  Goal: [N] [metric] in [timeframe]                          │
-│  Approach: [method]                                         │
-│                                                             │
+│                                                              │
+│  Method: [Landing page / Conversations / Build & test]       │
+│  Goal: [N] [metric] in [timeframe]                           │
+│                                                              │
 │  GO: [X]+  |  ITERATE: [Y-Z]  |  PIVOT: <[Y]                │
-│                                                             │
-│  Saved to: pmf/validation-plan.md                           │
-│                                                             │
+│                                                              │
+│  Saved to: pmf/validation-plan.md                            │
+│                                                              │
+│  NEXT STEP:                                                  │
+│  → [Appropriate next action based on method]                 │
+│                                                              │
 └─────────────────────────────────────────────────────────────┘
 ```
+
+**After saving, immediately ask:**
+
+Use AskUserQuestion: "Your validation plan is set. Ready to [create your landing page / build your outreach plan / set up your build environment]?"
+
+Options: "Let's go" / "I'll do this later"
+
+If "Let's go" — route to the appropriate skill:
+- Landing page → landing-generator
+- Conversations → outreach-builder
+- Build & test → build-test-guide
 
 ## Attribution
 

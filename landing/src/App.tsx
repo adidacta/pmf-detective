@@ -78,22 +78,22 @@ function App() {
               A 45-minute tutorial on a new framework. You nod at all the right moments. But an hour later? You can't reconstruct the logic. The code won't come. The confidence was an illusion.
             </p>
             <p>
-              Your notes — if you took them — live in a different app. The timestamps are gone. That key insight from minute 23? Buried. The video is an hour long and you're not scrubbing through it again.
+              YouTube is built for engagement, not learning. Recommendations pull you sideways. Comments distract. Your notes — if you took them — live in a different app, disconnected from the video.
             </p>
             <p className="text-gray-900 font-medium text-xl border-b-2 border-indigo-100 pb-8">
-              There has to be a better way to learn from videos.
+              The problem isn't you. It's the environment.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Solution */}
+      {/* Solution — The Focus Shift */}
       <section className="px-6 py-24">
         <div className="max-w-3xl mx-auto text-center">
           <p className="text-sm font-semibold text-indigo-600 uppercase tracking-widest mb-4">The fix</p>
-          <h2 className="text-3xl sm:text-4xl font-bold mb-6 leading-tight">Turn passive watching into active learning</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold mb-6 leading-tight">A workspace built for learning, not browsing</h2>
           <p className="text-lg text-gray-500 mb-14 max-w-2xl mx-auto leading-relaxed">
-            YouNote lives inside YouTube. Take timestamped notes without ever leaving the video. Every insight is captured, organized, and searchable. Your learning compounds instead of evaporating.
+            YouNote gives you a clean, distraction-free player with your notes right alongside the video. No recommendations. No sidebar. No comments. Just the tutorial and your thoughts — timestamped to the exact moment.
           </p>
           <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl p-16 flex items-center justify-center border border-gray-200">
             <div className="text-center">
@@ -108,69 +108,88 @@ function App() {
         </div>
       </section>
 
-      {/* Benefits */}
+      {/* Benefits — Path to Aha */}
       <section className="bg-gray-50 px-6 py-24">
         <div className="max-w-5xl mx-auto">
           <p className="text-sm font-semibold text-indigo-600 uppercase tracking-widest text-center mb-4">How it works</p>
-          <h2 className="text-3xl sm:text-4xl font-bold mb-16 text-center leading-tight">Everything clicks into place</h2>
-          <div className="grid md:grid-cols-3 gap-10">
-            <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-100">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-center leading-tight">From video to insight in 4 steps</h2>
+          <p className="text-lg text-gray-500 mb-16 text-center max-w-2xl mx-auto leading-relaxed">
+            Everything in YouNote exists to deliver one moment — the shift from passive watching to active learning.
+          </p>
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-100 relative">
+              <div className="absolute -top-3 -left-3 w-8 h-8 rounded-full bg-indigo-600 text-white text-sm font-bold flex items-center justify-center shadow-md">1</div>
               <div className="w-12 h-12 rounded-xl bg-indigo-50 flex items-center justify-center mb-5">
                 <svg className="w-6 h-6 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold mb-3">Search across all notes</h3>
+              <h3 className="text-xl font-bold mb-3">Drop in a YouTube link</h3>
               <p className="text-gray-500 leading-relaxed">
-                Find any insight from any video instantly. Nothing is lost. Your knowledge is always one search away.
+                Paste any tutorial URL. No setup, no extensions, no friction. Just the video you want to learn from.
               </p>
             </div>
-            <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-100">
+            <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-100 relative">
+              <div className="absolute -top-3 -left-3 w-8 h-8 rounded-full bg-indigo-600 text-white text-sm font-bold flex items-center justify-center shadow-md">2</div>
               <div className="w-12 h-12 rounded-xl bg-indigo-50 flex items-center justify-center mb-5">
                 <svg className="w-6 h-6 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold mb-3">Organize by topic, not by video</h3>
+              <h3 className="text-xl font-bold mb-3">Watch without distractions</h3>
               <p className="text-gray-500 leading-relaxed">
-                Structure your learning by what matters — projects, languages, concepts — not by which video it came from.
+                No recommendations. No comments. No sidebar. A clean player that keeps your focus on the content.
               </p>
             </div>
-            <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-100">
+            <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-100 relative">
+              <div className="absolute -top-3 -left-3 w-8 h-8 rounded-full bg-indigo-600 text-white text-sm font-bold flex items-center justify-center shadow-md">3</div>
               <div className="w-12 h-12 rounded-xl bg-indigo-50 flex items-center justify-center mb-5">
                 <svg className="w-6 h-6 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold mb-3">Notes alongside the video</h3>
+              <h3 className="text-xl font-bold mb-3">Take notes as you watch</h3>
               <p className="text-gray-500 leading-relaxed">
-                No context switching. Capture thoughts right there on YouTube. Click any note to jump back to that exact moment.
+                Your note panel sits right alongside the video. Capture insights without leaving the tutorial. No app-switching.
+              </p>
+            </div>
+            <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-100 relative">
+              <div className="absolute -top-3 -left-3 w-8 h-8 rounded-full bg-indigo-600 text-white text-sm font-bold flex items-center justify-center shadow-md">4</div>
+              <div className="w-12 h-12 rounded-xl bg-indigo-50 flex items-center justify-center mb-5">
+                <svg className="w-6 h-6 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold mb-3">Every note is timestamped</h3>
+              <p className="text-gray-500 leading-relaxed">
+                Each note auto-links to the exact moment in the video. Click any note later and you're right back there.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Social Proof */}
+      {/* The Aha — Focus Shift */}
       <section className="px-6 py-24">
-        <div className="max-w-4xl mx-auto">
-          <p className="text-sm font-semibold text-indigo-600 uppercase tracking-widest text-center mb-4">The "aha" moment</p>
-          <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-center leading-tight">
-            Click a note. Jump right back to that moment.
+        <div className="max-w-3xl mx-auto text-center">
+          <p className="text-sm font-semibold text-indigo-600 uppercase tracking-widest mb-4">The moment it clicks</p>
+          <h2 className="text-3xl sm:text-4xl font-bold mb-6 leading-tight">
+            "This is how I should've been<br />learning all along."
           </h2>
-          <p className="text-lg text-gray-500 mb-16 text-center max-w-2xl mx-auto leading-relaxed">
-            Take notes on your first video. That's when it clicks — this is how YouTube learning should have always felt.
+          <p className="text-lg text-gray-500 mb-14 max-w-2xl mx-auto leading-relaxed">
+            No distractions. Your notes right there. Timestamped. By the end of your first video, you'll feel the difference between watching and actually learning.
           </p>
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
             <div className="bg-gradient-to-br from-indigo-50 to-white p-8 rounded-2xl border border-indigo-100">
               <div className="text-4xl font-extrabold text-indigo-600 mb-3">3x</div>
               <p className="text-gray-700 font-medium mb-1">Better retention</p>
               <p className="text-gray-500 text-sm leading-relaxed">Active note-taking increases retention by 300% compared to passive watching.</p>
             </div>
             <div className="bg-gradient-to-br from-indigo-50 to-white p-8 rounded-2xl border border-indigo-100">
-              <div className="text-4xl font-extrabold text-indigo-600 mb-3">1 click</div>
-              <p className="text-gray-700 font-medium mb-1">Back to the source</p>
-              <p className="text-gray-500 text-sm leading-relaxed">Every note is timestamped. Click it and you're right back at that moment in the video.</p>
+              <div className="text-4xl font-extrabold text-indigo-600 mb-3">0</div>
+              <p className="text-gray-700 font-medium mb-1">Distractions</p>
+              <p className="text-gray-500 text-sm leading-relaxed">No recommendations, no comments, no sidebar. Just the video and your learning.</p>
             </div>
           </div>
         </div>

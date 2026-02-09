@@ -136,14 +136,14 @@ HYPOTHESIS:
 - Product context: [What the product does]
 
 RESEARCH TASKS:
-1. Search for communities/forums where this persona gathers
-2. Search for evidence the pain is real and actively discussed
-3. Search for existing solutions they use (validates pain worth solving)
-4. Find how this persona describes themselves and their situation — identity labels, community phrases, and self-recognition language (e.g., "I'm a senior dev who...", "as someone who..."). These will be used later for value proposition targeting.
+1. Search for evidence the pain is real and actively discussed
+2. Search for existing solutions they use (validates pain worth solving)
+3. Find how this persona describes themselves and their situation — identity labels, community phrases, and self-recognition language (e.g., "I'm a senior dev who...", "as someone who..."). These will be used later for value proposition targeting.
+4. Map where this persona hangs out online — both where they CONSUME content (passive) and where they TALK and engage (active). Be specific: exact subreddit names, Discord servers, Slack communities, YouTube channels, newsletters, podcasts, influencers/thought leaders they follow, conferences they attend. This data is critical for outreach and ad targeting later.
 
 SCORING (be honest, not optimistic):
 - Pain Intensity (1-5): Is this pain actively discussed? Are people paying for imperfect solutions?
-- Market Accessibility (1-5): Are there clear channels to reach this persona?
+- Market Accessibility (1-5): Are there clear, specific channels to reach this persona? Can you name them?
 - Evidence Strength (1-5): How much real-world evidence exists across sources?
 
 RETURN FORMAT (use exactly this structure):
@@ -161,6 +161,15 @@ SELF-RECOGNITION LANGUAGE:
 - [How they describe themselves in forums/communities]
 - [Identity labels and phrases they use]
 - [What would make them stop and say "that's me"]
+
+WHERE THEY HANG OUT:
+Passive (consume content):
+- [Specific YouTube channels, newsletters, podcasts, blogs]
+- [Influencers/thought leaders they follow]
+
+Active (talk and engage):
+- [Specific subreddits, Discord servers, Slack communities, forums]
+- [Conferences, meetups, Twitter/X communities]
 
 OVERALL ASSESSMENT:
 [One-sentence assessment]

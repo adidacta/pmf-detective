@@ -24,7 +24,14 @@
 - **Self-recognition:** [How they describe themselves — identity labels, community phrases, what makes them stop and say "that's me"]
 
 ### Where To Find Them
-[Communities, platforms, channels]
+
+**Passive (they consume content here):**
+- [YouTube channels, newsletters, podcasts, blogs they follow]
+- [Influencers/thought leaders they pay attention to]
+
+**Active (they talk and engage here):**
+- [Specific subreddits, Discord servers, Slack communities, forums]
+- [Conferences, meetups, Twitter/X communities]
 
 ### Research Validation
 - **Pain Intensity:** [X]/5 — [justification]

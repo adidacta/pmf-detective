@@ -19,34 +19,54 @@ PMF Context is a Claude Code plugin that helps product builders create their PMF
 **Skill Hierarchy:**
 ```
 pmf-context (coordinator)
-├── plan-pmf-mode             (Full context builder)
+├── plan-pmf-mode             (Full context builder — orchestrates the flow)
+│
+│   Context Layer (assumptions):
 ├── icp-builder               (ICP section)
-├── value-prop-builder        (Value Proposition section)
-├── aha-moments-builder       (MVP PRD — reverse-engineers scope from aha moment)
-├── validation-plan-builder   (Validation Plan section)
-└── asset-generators/
-    └── landing-generator     (Landing page — uses all context files)
+├── value-prop-builder        (Value Proposition — Callout + Magnet)
+├── aha-moments-builder       (MVP PRD — aha moment → steps → features → requirements)
+│
+│   Validation:
+├── validation-plan-builder   (Choose method + success criteria → routes to execution)
+│
+│   Execution (based on validation method):
+├── asset-generators/
+│   └── landing-generator     (Landing page — if validating with signups)
+├── outreach-builder          (Outreach plan + Mom Test — if validating with conversations)
+└── build-test-guide          (BMAD Method setup — if validating by building)
 ```
 
-## The Context Layer
+## The Flow
 
-The PMF context layer consists of 4 files in the `pmf/` folder:
+```
+1. ICP                → pmf/icp.md           (assumption)
+2. Value Proposition  → pmf/value-prop.md     (assumption)
+3. MVP PRD            → pmf/aha-moments.md    (assumption)
+4. Validation Plan    → pmf/validation-plan.md (decides HOW to test)
+   │
+   ├─→ Landing Page     → landing/              (signups/pre-orders)
+   ├─→ Outreach         → pmf/outreach-plan.md  (Mom Test conversations)
+   └─→ Build & Test     → BMAD Method setup      (build the MVP)
+```
+
+**The first 3 files are assumptions. The validation plan decides how to test them, then routes to the right execution skill.**
+
+## The Context Layer
 
 ```
 pmf/
 ├── icp.md              # Who you believe your customer is (assumption)
 ├── value-prop.md       # Why they should care (assumption)
-├── aha-moments.md      # MVP PRD — reverse-engineered path to aha moment (assumption)
-└── validation-plan.md  # How you'll test these assumptions
+├── aha-moments.md      # MVP PRD — aha moment, steps, features & requirements (assumption)
+├── validation-plan.md  # How you'll test these assumptions + chosen method
+└── outreach-plan.md    # (if conversations) Mom Test questions + outreach approach
 ```
-
-**The first 3 files are assumptions. The validation plan helps test them with real market signals.**
 
 **Progress Tracking:** Context completion is detected by checking for files in user's `pmf/` directory:
 - `pmf/icp.md` → ICP defined
 - `pmf/value-prop.md` → Value proposition defined
-- `pmf/aha-moments.md` → MVP PRD defined (aha moment + path)
-- `pmf/validation-plan.md` → Validation plan set
+- `pmf/aha-moments.md` → MVP PRD defined (aha moment → steps → features → requirements)
+- `pmf/validation-plan.md` → Validation plan set + method chosen
 
 ## Commands
 
@@ -55,7 +75,7 @@ pmf/
 | `/plan-pmf` | Start full context layer build |
 | `/update-icp` | Update ICP section only |
 | `/update-value-prop` | Update value prop only |
-| `/update-aha` | Update aha moments only |
+| `/update-aha` | Update aha moments / MVP PRD only |
 | `/pmf-status` | Show context completion status |
 | `/generate-assets landing` | Generate a landing page |
 
@@ -90,7 +110,6 @@ allowed-tools: Read, Write, Glob, WebSearch, AskUserQuestion
 **Core Rules:**
 - Ask ONE question at a time
 - Wait for response before continuing
-- No sprints, no tasks, no validation metrics
 - Keep it simple - we're building context, not running experiments
 
 ## Attribution
