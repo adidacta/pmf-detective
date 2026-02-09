@@ -6,8 +6,8 @@
     "email": "adi@adidacta.com"
   },
   "metadata": {
-    "description": "Define your project's PMF context through 5 structured sprints",
-    "version": "1.0.0"
+    "description": "Build your PMF context layer — ICP, value prop, MVP PRD — then validate with landing pages, conversations, or BMAD.",
+    "version": "3.0.0"
   },
   "plugins": [
     {
@@ -16,8 +16,8 @@
         "source": "url",
         "url": "https://github.com/adidacta/pmf-detective.git"
       },
-      "description": "Guide product builders through PMF discovery using the Startup Sprints System - 5 structured sprints from ICP definition to launch experiments.",
-      "version": "1.0.0",
+      "description": "Build your PMF context layer — ICP, value prop, MVP PRD — then validate with landing pages, Mom Test conversations, or the BMAD Method.",
+      "version": "3.0.0",
       "author": {
         "name": "Adi Shmorak",
         "email": "adi@adidacta.com"
