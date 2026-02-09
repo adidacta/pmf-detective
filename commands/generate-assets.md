@@ -32,7 +32,7 @@ The user invoked this command with: $ARGUMENTS
    [✓] pmf/value-prop.md
    [ ] pmf/aha-moments.md
 
-   Use /pmf-plan to build your context layer first.
+   Use /plan-pmf to build your context layer first.
    ```
 
 4. If prerequisites met, read the PMF context files and generate assets using the landing-generator skill.

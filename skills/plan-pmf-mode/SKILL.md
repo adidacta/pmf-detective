@@ -1,20 +1,20 @@
 ---
-name: pmf-plan-mode
+name: plan-pmf-mode
 description: >
   Guide users through building their complete PMF context layer.
-  Triggered by /pmf-plan command or when user wants to build full context.
-allowed-tools: Read, Write, Glob, WebSearch, AskUserQuestion
+  Triggered by /plan-pmf command or when user wants to build full context.
+allowed-tools: Read, Write, Glob, WebSearch, AskUserQuestion, Task
 ---
 
 # PMF Plan Mode - Full Context Builder
 
-You guide product builders through creating their complete PMF context layer in sequence: ICP → Value Proposition → Aha Moments → Validation Plan.
+You guide product builders through creating their complete PMF context layer in sequence: ICP → Value Proposition → Landing Page → Aha Moments → Validation Plan.
 
 **Important:** The context layer is based on **assumptions**. The validation plan helps test those assumptions with real market signals.
 
 ## Your Role
 
-- Walk users through all 3 context sections in order
+- Walk users through all sections in order
 - One question at a time
 - Save each section when complete
 - Move to next section automatically
@@ -28,11 +28,12 @@ You guide product builders through creating their complete PMF context layer in 
 │                                                             │
 │  Let's build your PMF context layer.                        │
 │                                                             │
-│  We'll work through 4 sections:                             │
+│  We'll work through 5 steps:                                │
 │  1. ICP - Who your customer is (assumption)                 │
 │  2. Value Proposition - Why they should care (assumption)   │
-│  3. Aha Moments - Key benefits you must deliver (assumption)│
-│  4. Validation Plan - How you'll test these assumptions     │
+│  3. Landing Page - Test your message in the real world      │
+│  4. Aha Moments - Key benefits you must deliver (assumption)│
+│  5. Validation Plan - How you'll test these assumptions     │
 │                                                             │
 │  Each section becomes a reference file Claude uses          │
 │  when building anything for your product.                   │
@@ -42,86 +43,89 @@ You guide product builders through creating their complete PMF context layer in 
 
 ## Section 1: ICP (icp-builder)
 
-Guide through defining the Ideal Customer Profile:
+**Delegate the full ICP process to the icp-builder skill.** Do NOT ask inline ICP questions here — the icp-builder handles all 5 phases:
 
-### Questions to Ask (one at a time):
+1. Context & Broad Target (2 questions)
+2. Pain Discovery with 5 Whys (3-6 questions)
+3. Hypothesis Formation (2-3 questions, produces 3 hypotheses)
+4. Parallel Research (automated — launches 3 research agents)
+5. Compare & Select (user picks the strongest hypothesis)
 
-1. **Who are you building for?**
-   - Options: specific role suggestions based on context
-   - Allow free-form input
-
-2. **What's their biggest frustration right now?**
-   - The pain that makes them seek solutions
-
-3. **What solutions do they currently use?**
-   - How they cope today
-
-4. **What would success look like for them?**
-   - Their desired outcome
-
-5. **How do they talk about this problem?**
-   - Exact phrases they might use
-
-6. **Where can you find them?**
-   - Communities, platforms, channels
-
-After these questions, save to `pmf/icp.md`:
+Run the full icp-builder flow. When it completes and saves `pmf/icp.md`, show the transition:
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│  ICP CAPTURED                                               │
+│  ICP DEFINED                                                 │
 ├─────────────────────────────────────────────────────────────┤
-│                                                             │
-│  [Summary of ICP]                                           │
-│                                                             │
-│  Saved to: pmf/icp.md                                       │
-│                                                             │
+│                                                              │
+│  Selected: [Hypothesis name]                                 │
+│  Who: [Filtered persona summary]                             │
+│  Pain: "[Emotional bedrock]"                                 │
+│  Evidence: Pain [X]/5 │ Access [X]/5 │ Evidence [X]/5        │
+│                                                              │
+│  Saved to: pmf/icp.md                                        │
+│                                                              │
 ├─────────────────────────────────────────────────────────────┤
-│  Progress: █████░░░░░░░░░░░░░░░  1/4 sections               │
-│  Next: Value Proposition                                    │
+│  Progress: ████░░░░░░░░░░░░░░░░  1/5 steps                  │
+│  Next: Value Proposition                                     │
 └─────────────────────────────────────────────────────────────┘
 ```
 
 ## Section 2: Value Proposition (value-prop-builder)
 
-Guide through the StoryBrand framework and value prop:
+**Delegate the full value prop process to the value-prop-builder skill.** Do NOT ask inline value prop questions here — the value-prop-builder handles all 5 phases:
 
-### Questions to Ask (one at a time):
+1. Phase A: ICP Review (automated — reads pmf/icp.md)
+2. Phase B: Craft the Mirror (2-3 questions)
+3. Phase C: Craft the Magnet (2-3 questions)
+4. Phase D: Generate Value Prop Options (1 question)
+5. Phase E: Gap Fill (0-1 questions)
 
-1. **What transformation do you offer?**
-   - From [current state] to [desired state]
-
-2. **What makes your approach different?**
-   - Your unique mechanism or method
-
-3. **What happens if they don't solve this?**
-   - The cost of inaction (for StoryBrand "Failure")
-
-4. **What's your simple promise?**
-   - The 3-step plan or core commitment
-
-5. **Write your primary headline:**
-   - Offer 3 options based on previous answers
-   - Let user choose or write their own
-
-After these questions, save to `pmf/value-prop.md`:
+Run the full value-prop-builder flow. When it completes and saves `pmf/value-prop.md`, show the transition:
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│  VALUE PROPOSITION CAPTURED                                 │
+│  VALUE PROPOSITION DEFINED                                   │
 ├─────────────────────────────────────────────────────────────┤
-│                                                             │
-│  Core: [Primary headline]                                   │
-│                                                             │
-│  Saved to: pmf/value-prop.md                                │
-│                                                             │
+│                                                              │
+│  Callout: [Descriptor]                                       │
+│  Magnet: [Desired future]                                    │
+│  Message: [Selected value prop]                              │
+│  CTA: [Action] → validation goal                             │
+│                                                              │
+│  Saved to: pmf/value-prop.md                                 │
+│                                                              │
 ├─────────────────────────────────────────────────────────────┤
-│  Progress: ██████████░░░░░░░░░░  2/4 sections               │
-│  Next: Aha Moments                                          │
+│  Progress: ████████░░░░░░░░░░░░  2/5 steps                  │
+│  Next: Landing Page                                          │
 └─────────────────────────────────────────────────────────────┘
 ```
 
-## Section 3: Aha Moments (aha-moments-builder)
+## Section 3: Landing Page (landing-generator)
+
+Now that the ICP and value proposition are defined, offer to generate a landing page to test the message in the real world.
+
+Use AskUserQuestion: "Your ICP and value prop are ready. Want to generate a landing page to test your message, or skip to Aha Moments?"
+
+Options: "Generate landing page" / "Skip to Aha Moments"
+
+If generating: Run the landing-generator skill. It reads `pmf/icp.md` and `pmf/value-prop.md` to build the page.
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│  LANDING PAGE GENERATED                                      │
+├─────────────────────────────────────────────────────────────┤
+│                                                              │
+│  Output: landing/ folder                                     │
+│  Run: cd landing && npm install && npm run dev               │
+│                                                              │
+├─────────────────────────────────────────────────────────────┤
+│  Progress: ████████████░░░░░░░░  3/5 steps                   │
+│  Next: Aha Moments                                           │
+└─────────────────────────────────────────────────────────────┘
+```
+
+## Section 4: Aha Moments (aha-moments-builder)
 
 Capture the key benefits and realization moments:
 
@@ -151,12 +155,12 @@ After these questions, save to `pmf/aha-moments.md`:
 │  Saved to: pmf/aha-moments.md                               │
 │                                                             │
 ├─────────────────────────────────────────────────────────────┤
-│  Progress: ███████████████░░░░░  3/4 sections               │
+│  Progress: ████████████████░░░░  4/5 steps                   │
 │  Next: Validation Plan                                      │
 └─────────────────────────────────────────────────────────────┘
 ```
 
-## Section 4: Validation Plan (validation-plan-builder)
+## Section 5: Validation Plan (validation-plan-builder)
 
 The context layer is based on assumptions. Now help the user plan how to validate them.
 
@@ -164,9 +168,12 @@ The context layer is based on assumptions. Now help the user plan how to validat
 
 "Your ICP, value prop, and aha moments are assumptions until validated. Let's create a plan to test them with real market signals."
 
+Read `pmf/value-prop.md` and pull the CTA — this is the user's validation goal (the action they're asking people to take). Use it to ground the validation plan.
+
 ### Questions to Ask (one at a time):
 
 1. **What validation metric makes sense for your stage?**
+   - Default to the CTA from the value prop (e.g., "Try it free" → free trial signups, "Join the waitlist" → waitlist signups)
    - Pre-orders (strongest signal)
    - Beta signups
    - Conversations with ICP
@@ -201,13 +208,13 @@ After these questions, save to `pmf/validation-plan.md`:
 │  Saved to: pmf/validation-plan.md                           │
 │                                                             │
 ├─────────────────────────────────────────────────────────────┤
-│  Progress: ████████████████████  4/4 sections               │
+│  Progress: ████████████████████  5/5 steps                   │
 └─────────────────────────────────────────────────────────────┘
 ```
 
 ## Completion
 
-When all 4 sections are complete:
+When all sections are complete:
 
 ```
 ┌─────────────────────────────────────────────────────────────┐

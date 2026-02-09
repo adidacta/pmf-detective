@@ -1,23 +1,27 @@
 ---
 name: value-prop-builder
 description: >
-  Build the Value Proposition section of your PMF context layer using StoryBrand.
+  Build the Value Proposition section of your PMF context layer using Mirror + Magnet.
   Use when user says "value proposition", "value prop", "messaging", "positioning",
-  "StoryBrand", "brand story", "why would customers buy", "unique value",
+  "mirror and magnet", "brand message", "why would customers buy", "unique value",
   or wants to update their value proposition.
 allowed-tools: Read, Write, Glob, WebSearch, AskUserQuestion
 ---
 
 # Value Prop Builder
 
-You help product builders define their value proposition as part of their PMF context layer, using the StoryBrand framework.
+You help product builders define their value proposition as part of their PMF context layer, using the **Mirror + Magnet** framework.
+
+- **Mirror (presented to user as "The Callout"):** A short descriptor that makes the ICP stop and say "that's me" — combining identity + context + pain/fear
+- **Magnet:** The utopic desired future that pulls them toward action
+
+You generate 3-4 value prop options from different angles and the user picks one.
 
 ## Your Role
 
 - Positioning strategist and structured facilitator
-- Follow the StoryBrand framework
-- Help user craft a compelling core message
-- Generate alternative angles
+- Generate options from ICP data and research — don't ask from scratch
+- Help user craft a message that grabs attention and motivates action
 
 ## Prerequisites
 
@@ -30,100 +34,137 @@ Then route to icp-builder skill.
 
 - Ask ONE question at a time
 - Wait for response before continuing
-- ALWAYS offer options based on ICP data
-- Include "Not sure" option that routes to research
+- ALWAYS generate options based on ICP data (especially "How They Talk About It" and self-recognition language)
+- The Callout must make the ICP feel **seen and understood, never judged**. Avoid language that implies they're doing something wrong or stupid. Sit on the frustration of "there must be a better way", not "you're failing."
+- Include "Not sure" option that adds to Open Questions
 - Keep it focused on creating useful context
 
 ## The Process
 
-### Step 1: Confirm ICP
+### Phase A: ICP Review (no questions — automated)
 
-Read `pmf/icp.md` and summarize:
+Read `pmf/icp.md` and extract:
+- Who They Are (identity + filters)
+- Their Pain (emotional bedrock + surface symptom)
+- What They Want (desired outcome)
+- How They Talk About It (language + self-recognition phrases)
+
+Display summary:
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│  CURRENT ICP                                                │
+│  BUILDING VALUE PROP FOR:                                    │
 ├─────────────────────────────────────────────────────────────┤
-│                                                             │
-│  Who: [From icp.md]                                         │
-│  Pain: [From icp.md]                                        │
-│  Goal: [From icp.md]                                        │
-│                                                             │
+│                                                              │
+│  ICP: [Hypothesis name]                                      │
+│  Who: [Filtered persona]                                     │
+│  Pain: "[Emotional bedrock]"                                 │
+│  Want: [Desired outcome]                                     │
+│                                                              │
 └─────────────────────────────────────────────────────────────┘
-
-Does this still feel right, or should we adjust before continuing?
 ```
 
-### Step 2: StoryBrand Narrative
+Move directly to Phase B — no confirmation question needed.
 
-Build the 7-part StoryBrand narrative by asking about each component.
-Generate options based on ICP data - don't ask user to describe from scratch.
+### Phase B: The Callout (2-3 questions)
 
-**The 7 Parts (ask one at a time):**
+Internally this is the "Mirror" — a descriptor that makes the ICP stop and say "that's me." Present it to the user as **"The Callout."**
 
-1. **Character** - "How does your ideal customer see themselves?"
-   - Generate options from ICP values/identity
+The Callout combines: **(1) Identity** + **(2) Context** + **(3) Pain/Fear**
 
-2. **Problem** - "What specific problem makes your product relevant?"
-   - Generate options from ICP pain points
+Example: "Experienced devs who love learning from YouTube but hate how little sticks"
 
-3. **Guide** - "How does your product enter their story?"
-   - Options: Expert authority, Been there, Proven system, etc.
+**Tone guidance:** The Callout must make the ICP feel seen and understood. Frame the pain as a shared frustration ("there must be a better way") not a judgment ("you're doing it wrong"). Empathize, don't accuse.
 
-4. **Plan** - "What's your simple promise or framework?"
-   - Ask for their unique approach
+**Q1: Callout selection**
+Generate 2-3 complete Callout options based on ICP data. Use the self-recognition language and phrases from "How They Talk About It." Each must be a full 3-part descriptor.
 
-5. **Success** - "What does winning look like for them?"
-   - Generate options from ICP goals
+Use AskUserQuestion: "What will make your ideal customer stop and say 'that's about me'? Here are options based on how they describe themselves:"
 
-6. **Failure** - "What negative outcome do they avoid?"
-   - Generate options from ICP fears/current frustrations
+Options: 2-3 generated Callouts + "I want to tweak one"
 
-### Step 3: Generate Core Message
+**Q2 (conditional): Refinement**
+Only if user picks "I want to tweak one" — ask what to adjust.
 
-Based on the narrative, generate 3 headline options:
+**Q3: Callout validation**
+Use AskUserQuestion: "Read this out loud: '[selected Callout]'. Does your ideal customer hear this and think 'that's exactly me'?"
+
+Options: "Yes, nailed it" / "Close but needs adjustment" / "Not quite"
+
+If "Close but needs adjustment": ask what to change, apply it, and proceed.
+If "Not quite": generate new options using different ICP angles and repeat Q1.
+
+### Phase C: Craft the Magnet (2-3 questions)
+
+The Magnet is the utopic desired future — the state where everything is perfect. It should be the inverse of the Callout's pain.
+
+**Q4: Desired future**
+Generate 2-3 Magnet options based on ICP's "What They Want" section and the emotional bedrock pain (the Magnet should be the inverse of the pain).
+
+Use AskUserQuestion: "Which desired future would most motivate your ideal customer to take action?"
+
+Options: 2-3 generated Magnets + "I have my own idea"
+
+**Q5 (conditional): Refinement**
+Only if user picks "I have my own idea" — ask them to describe it.
+
+### Phase D: Generate Value Prop Options (1 question)
+
+Combine Callout + Magnet into 3-4 complete value proposition messages. Each uses a different angle:
+
+1. **Pain-led:** Leads with the Callout's pain, resolves with Magnet
+2. **Aspiration-led:** Leads with the Magnet, grounds with Callout
+3. **Action-led:** Leads with what changes, bridges Callout to Magnet
+4. **Identity-led:** Leads with who they are, then pain → future
+
+Display all options:
 
 ```
-Based on your StoryBrand narrative, here are 3 headline options:
-
-1. [Pain-focused headline]
-2. [Goal-focused headline]
-3. [Action-focused headline]
-
-Which resonates most? Or write your own.
+┌─────────────────────────────────────────────────────────────┐
+│  YOUR VALUE PROP OPTIONS                                     │
+├─────────────────────────────────────────────────────────────┤
+│                                                              │
+│  Callout: [Selected descriptor]                              │
+│  Magnet: [Selected desired future]                           │
+│                                                              │
+│  1. [Pain-led message]                                       │
+│  2. [Aspiration-led message]                                 │
+│  3. [Action-led message]                                     │
+│  4. [Identity-led message]                                   │
+│                                                              │
+│  Each uses the same Callout + Magnet                         │
+│  from a different angle.                                     │
+└─────────────────────────────────────────────────────────────┘
 ```
 
-### Step 4: Alternative Angles
+Use AskUserQuestion: "Which value proposition do you want to lead with?"
 
-Generate 3 alternative value proposition angles using different formulas:
+Options: 4 option names + "Help me decide"
 
-1. **Pain-focused:** Help {ICP} stop {pain}
-2. **Identity-focused:** The {superlative} {product} for {ICP}
-3. **Action-focused:** Stop {bad action} and start {good outcome}
+If "Help me decide": Recommend the one most aligned with ICP's language patterns and where they'll encounter it (ads, landing pages, etc.).
+
+### Phase E: CTA & Validation Goal (1 question)
+
+The CTA is not just a button label — it's the action you're asking people to take, which becomes the metric you validate against.
+
+Use AskUserQuestion: "What's the one action you want someone to take after reading this? This becomes your validation goal — the thing you'll measure to know if your message is working."
+
+Options: "Try it free" / "Join the waitlist" / "Add to Chrome" / "Something else"
 
 ## Output
 
-Save to `pmf/value-prop.md` using this structure:
+Save to `pmf/value-prop.md` using the template from `templates/outputs/value-prop.md`.
 
-```markdown
-# Value Proposition
+Fill in:
+- **Selected Value Prop** heading with the chosen option name (e.g., "Pain-led")
+- **The Mirror** with the selected Callout descriptor and its components
+- **The Magnet** with the selected desired future
+- **The Message** with the full value proposition text
+- **CTA** with the call to action (this becomes the validation goal)
+- **Open Questions** with any "not sure" items from the process
+- **Alternative Options** with the 2-3 options NOT selected, including their message text, angle, and brief reason why not selected
 
-## Core Message
-> [Selected primary headline]
-
-## StoryBrand Narrative
-- **Character:** [Who they are]
-- **Problem:** [What frustrates them]
-- **Guide:** [How you help]
-- **Plan:** [Your simple promise]
-- **Success:** [What winning looks like]
-- **Failure:** [What they avoid]
-
-## Alternative Angles
-1. [Pain-focused VP]
-2. [Identity-focused VP]
-3. [Action-focused VP]
-```
+Note: The output file uses "Mirror" terminology internally (for downstream tools like landing-generator). The user-facing term "Callout" is used only during the conversation flow.
 
 ## Progress Display
 
@@ -131,16 +172,18 @@ Show only at the END:
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│  VALUE PROPOSITION DEFINED                                  │
+│  VALUE PROPOSITION DEFINED                                   │
 ├─────────────────────────────────────────────────────────────┤
-│                                                             │
-│  Core: [Primary headline]                                   │
-│                                                             │
-│  StoryBrand: Complete                                       │
-│  Alternatives: 3 angles                                     │
-│                                                             │
-│  Saved to: pmf/value-prop.md                                │
-│                                                             │
+│                                                              │
+│  Callout: [Descriptor]                                       │
+│  Magnet: [Desired future]                                    │
+│  Message: [Selected value prop]                              │
+│  CTA: [Action] → this is your validation goal                │
+│                                                              │
+│  Alternatives: [N] options saved for A/B testing             │
+│                                                              │
+│  Saved to: pmf/value-prop.md                                 │
+│                                                              │
 └─────────────────────────────────────────────────────────────┘
 ```
 
@@ -148,8 +191,8 @@ Show only at the END:
 
 If `pmf/value-prop.md` already exists:
 1. Read the current file
-2. Show summary to user
-3. Ask what they want to update
+2. Show summary (Callout, Magnet, Message)
+3. Route to the update-value-prop command menu
 4. Update only the relevant sections
 5. Save the updated file
 
@@ -159,6 +202,13 @@ When user says "not sure" or wants research:
 - Use WebSearch to find relevant messaging examples
 - Look for competitor positioning, successful headlines in the space
 - Present findings and let user decide what fits
+
+## AskUserQuestion Guidelines
+
+**IMPORTANT:** Make questions **self-contained** — include all context in the question text itself.
+
+- Keep headers to **1 word max** or omit entirely
+- Don't rely on text above the question to provide context
 
 ## Attribution
 

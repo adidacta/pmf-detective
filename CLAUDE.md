@@ -19,7 +19,7 @@ PMF Context is a Claude Code plugin that helps product builders create their PMF
 **Skill Hierarchy:**
 ```
 pmf-context (coordinator)
-├── pmf-plan-mode             (Full context builder)
+├── plan-pmf-mode             (Full context builder)
 ├── icp-builder               (ICP section)
 ├── value-prop-builder        (Value Proposition section)
 ├── aha-moments-builder       (Aha Moments section)
@@ -52,7 +52,7 @@ pmf/
 
 | Command | Description |
 |---------|-------------|
-| `/pmf-plan` | Start full context layer build |
+| `/plan-pmf` | Start full context layer build |
 | `/update-icp` | Update ICP section only |
 | `/update-value-prop` | Update value prop only |
 | `/update-aha` | Update aha moments only |

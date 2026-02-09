@@ -15,8 +15,7 @@ Generate a complete, production-ready landing page based on the user's PMF conte
 
 Requires the PMF context layer:
 - `pmf/icp.md` - Who the customer is
-- `pmf/value-prop.md` - Why they should care
-- `pmf/aha-moments.md` - Key benefits to highlight
+- `pmf/value-prop.md` - Why they should care (Mirror + Magnet + Message)
 
 If any are missing, inform the user:
 ```
@@ -25,10 +24,12 @@ To generate a landing page, I need your PMF context layer.
 Missing:
 [ ] pmf/icp.md
 [✓] pmf/value-prop.md
-[ ] pmf/aha-moments.md
 
-Use /pmf-plan to build your context layer first.
+Use /plan-pmf to build your context layer first.
 ```
+
+Optional (enhances the page if present):
+- `pmf/aha-moments.md` - Key benefits to highlight in the Benefits section
 
 ## Framework Options
 
@@ -54,35 +55,35 @@ Reply with 1 or 2.
 Generate these sections using the PMF context:
 
 ### 1. Hero Section
-- **Headline:** Core Message from `pmf/value-prop.md`
-- **Subheadline:** Problem statement from StoryBrand
-- **CTA button:** Based on Plan from StoryBrand
+- **Headline:** "The Message" from `pmf/value-prop.md`
+- **Subheadline:** "The Mirror" — the 3-part descriptor that makes the ICP say "that's me"
+- **CTA button:** "CTA" from `pmf/value-prop.md`
 - Optional: Hero image placeholder
 
 ### 2. Problem Section
-- From StoryBrand "Problem" in `pmf/value-prop.md`
-- Agitate the pain using language from `pmf/icp.md`
+- From "The Mirror" Pain/Fear in `pmf/value-prop.md`
+- Agitate the pain using language from `pmf/icp.md` "How They Talk About It"
 - Show you understand their frustration
 
 ### 3. Solution Section
-- From StoryBrand "Guide" and "Plan" components
-- How you solve it
-- Your unique approach
+- From "The Magnet" in `pmf/value-prop.md` — the desired future
+- How your product gets them there
+- Bridge from current pain to the utopic outcome
 
 ### 4. Benefits Section
-- From `pmf/aha-moments.md` Must-Deliver Benefits
-- 3 key benefits with explanations
+- If `pmf/aha-moments.md` exists: use Must-Deliver Benefits
+- If not: derive 3 key benefits from the Mirror (what pain goes away) and Magnet (what they gain)
 - Icon placeholders
 
 ### 5. Social Proof (Placeholder)
-- From `pmf/aha-moments.md` Proof Points
-- Testimonial placeholders
+- If `pmf/aha-moments.md` exists: use Proof Points
+- Otherwise: generic testimonial placeholders
 - Trust indicators
 
 ### 6. CTA Section
-- Repeat Core Message from `pmf/value-prop.md`
-- Clear action button
-- Reference Success from StoryBrand
+- Repeat "The Message" from `pmf/value-prop.md`
+- Clear action button using "CTA" from `pmf/value-prop.md`
+- Reinforce "The Magnet" — the desired future they'll reach
 
 ### 7. Footer
 - Simple contact/links
@@ -138,18 +139,18 @@ landing/
 
 ## Generation Process
 
-1. Read all PMF context files:
-   - `pmf/icp.md`
-   - `pmf/value-prop.md`
-   - `pmf/aha-moments.md`
+1. Read PMF context files:
+   - `pmf/icp.md` (required)
+   - `pmf/value-prop.md` (required)
+   - `pmf/aha-moments.md` (optional — enhances Benefits & Social Proof)
 
 2. Extract content for each section:
-   - Hero: Core Message, Problem
-   - Problem: Pain points, current frustrations
-   - Solution: Guide, Plan
-   - Benefits: Must-Deliver Benefits
-   - Social Proof: Proof Points
-   - CTA: Success, call to action
+   - Hero: The Message (headline), The Mirror (subheadline), CTA (button)
+   - Problem: Mirror Pain/Fear, ICP language
+   - Solution: The Magnet (desired future)
+   - Benefits: Aha moments (if available) or derived from Mirror + Magnet
+   - Social Proof: Proof Points (if available) or placeholders
+   - CTA: The Message + CTA + The Magnet reinforcement
 
 3. Generate component files with real content
 
@@ -176,8 +177,7 @@ npm run dev
 
 The page uses your PMF context:
 - ICP from pmf/icp.md
-- Value Prop from pmf/value-prop.md
-- Benefits from pmf/aha-moments.md
+- Value Prop (Mirror + Magnet) from pmf/value-prop.md
 
 Feel free to customize the design and copy!
 

@@ -64,7 +64,7 @@ Show welcome and suggest starting the full context build:
 │  anything for your product.                                 │
 │                                                             │
 ├─────────────────────────────────────────────────────────────┤
-│  Start: /pmf-plan to build your full context layer          │
+│  Start: /plan-pmf to build your full context layer          │
 └─────────────────────────────────────────────────────────────┘
 ```
 
@@ -133,9 +133,9 @@ When showing status:
 When user wants to work on a specific section:
 
 - ICP, customer, target audience → icp-builder
-- Value prop, messaging, StoryBrand → value-prop-builder
+- Value prop, messaging, Mirror + Magnet → value-prop-builder
 - Aha moments, benefits, key value → aha-moments-builder
-- Full context build → pmf-plan-mode
+- Full context build → plan-pmf-mode
 
 ## Important Rules
 

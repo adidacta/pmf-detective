@@ -51,7 +51,7 @@ Just tell Claude what you want to do:
 
 Or use slash commands:
 
-- `/pmf-plan` - Build your full context layer
+- `/plan-pmf` - Build your full context layer
 - `/pmf-status` - Check your context status
 - `/update-icp` - Update your ICP
 - `/update-value-prop` - Update your value proposition

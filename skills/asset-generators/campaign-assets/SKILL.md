@@ -28,7 +28,7 @@ Missing:
 [✓] pmf/value-prop.md
 [ ] pmf/aha-moments.md
 
-Use /pmf-plan to build your context layer first.
+Use /plan-pmf to build your context layer first.
 ```
 
 ## Platform Options

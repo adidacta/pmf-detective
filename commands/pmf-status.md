@@ -39,7 +39,7 @@ Check the status of the user's PMF context layer.
 │  • validation-plan.md - How you'll test these assumptions   │
 │                                                             │
 ├─────────────────────────────────────────────────────────────┤
-│  Start: /pmf-plan to build your context layer               │
+│  Start: /plan-pmf to build your context layer               │
 └─────────────────────────────────────────────────────────────┘
 
 Created by Adi Shmorak, The P/MF Detective

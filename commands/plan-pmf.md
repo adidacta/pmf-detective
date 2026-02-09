@@ -9,12 +9,12 @@ Start the guided flow to build your complete PMF context layer.
 
 ## Instructions
 
-This command triggers the pmf-plan-mode skill which guides users through:
+This command triggers the plan-pmf-mode skill which guides users through:
 1. ICP (Who your customer is)
 2. Value Proposition (Why they should care)
 3. Aha Moments (Key benefits you must deliver)
 
-Read the pmf-plan-mode SKILL.md and follow its process.
+Read the plan-pmf-mode SKILL.md and follow its process.
 
 ## Check for Existing Context
 
@@ -51,4 +51,4 @@ Begin with the welcome message:
 └─────────────────────────────────────────────────────────────┘
 ```
 
-Then proceed through the pmf-plan-mode skill's question flow.
+Then proceed through the plan-pmf-mode skill's question flow.

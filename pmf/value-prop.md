@@ -1,17 +1,49 @@
 # Value Proposition
 
-## Core Message
-> Learn 2x faster from YouTube
+<!-- AI_INSTRUCTION: Use the SELECTED value prop for landing pages, ads,
+     and asset generation. Alternative options are reference material
+     for A/B testing or future iteration. -->
 
-## StoryBrand Narrative
-- **Character:** Professionals upskilling via YouTube - motivated to grow but time-conscious
-- **Problem:** YouTube learning feels inefficient. They watch hours of content but forget everything. Using separate notes apps creates friction.
-- **Guide:** A note-taking app that lives inside YouTube - no context switching
-- **Plan:** Take timestamped notes without leaving the video. Every insight is captured and instantly findable.
-- **Success:** Building expertise over time. Knowledge compounds instead of leaking away.
-- **Failure:** Feel frustrated and unproductive. Learning becomes a chore, not a joy.
+## Selected Value Prop: Identity-led
 
-## Alternative Angles
-1. **Pain-focused:** Stop forgetting what you watch
-2. **Benefit-focused:** YouTube notes that actually stick
-3. **Action-focused:** Take notes without leaving YouTube
+### The Mirror
+> Experienced devs who love learning from YouTube but hate how little sticks
+
+- **Identity:** Experienced devs
+- **Context:** Love learning from YouTube
+- **Pain/Fear:** Hate how little sticks
+
+### The Magnet
+> Turn passive watching into active learning
+
+### The Message
+> You love learning from YouTube. You just hate how little sticks. Time to turn watching into learning.
+
+### CTA
+Try it free
+
+### Open Questions
+- [ ] Is "experienced devs" too broad — should it specify "senior" or "mid-to-senior"?
+- [ ] Does "how little sticks" land equally well in ad copy vs. landing page vs. in-product?
+
+---
+
+<!-- AI_INSTRUCTION: The options below were generated but NOT selected.
+     They are kept for A/B testing and future iteration only. -->
+
+## Alternative Options (Reference Only)
+
+### Pain-led
+- **Message:** Tired of watching tutorials that don't stick? Turn passive watching into active learning.
+- **Angle:** Pain-led — leads with frustration, resolves with Magnet
+- **Why not selected:** Strong but generic opener ("Tired of...") — less distinctive than identity-led
+
+### Aspiration-led
+- **Message:** Turn passive watching into active learning — so every YouTube tutorial actually pays off.
+- **Angle:** Aspiration-led — leads with the future, grounds in payoff
+- **Why not selected:** Good for ads but doesn't create the "that's me" moment as strongly
+
+### Action-led
+- **Message:** Stop watching. Start learning. YouNote turns YouTube tutorials into active learning.
+- **Angle:** Action-led — punchy imperative, Stop/Start contrast
+- **Why not selected:** Punchy but slightly aggressive — "stop watching" could feel judgmental
