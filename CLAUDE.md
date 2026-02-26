@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What This Is
 
-PMF Context is a Claude Code plugin that helps product builders create their PMF context layer - a set of reference files that capture the "WHY" behind their product. Claude references these files when building anything for the product.
+Plan PMF is a Claude Code plugin that helps product builders create their PMF context layer - a set of reference files that capture the "WHY" behind their product. Claude references these files when building anything for the product.
 
 ## Architecture
 
