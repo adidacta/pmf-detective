@@ -44,6 +44,7 @@ This page has one job — get the visitor to click the CTA. Every section exists
 Requires the PMF context layer:
 - `pmf/icp.md` - Who the customer is
 - `pmf/value-prop.md` - Why they should care (Callout + Magnet + Message)
+- `pmf/mvp.md` - MVP PRD with aha moment and path to highlight
 
 If any are missing, inform the user:
 ```
@@ -52,12 +53,10 @@ To generate a landing page, I need your PMF context layer.
 Missing:
 [ ] pmf/icp.md
 [✓] pmf/value-prop.md
+[ ] pmf/mvp.md
 
 Use /plan-pmf to build your context layer first.
 ```
-
-Optional (enhances the page if present):
-- `pmf/mvp.md` - MVP PRD with aha moment and path to highlight
 
 ## Page Structure
 
@@ -80,14 +79,12 @@ Generate these sections using the PMF context:
 - Bridge from current pain to the utopic outcome
 
 ### 4. Benefits Section
-- If `pmf/mvp.md` exists: use the Path to Aha steps as benefit headlines (what the user gets at each step, not how it works)
-- If not: derive 3 key benefits from the Callout (what pain goes away) and Magnet (what they gain)
+- Use the Path to Aha steps from `pmf/mvp.md` as benefit headlines (what the user gets at each step, not how it works)
 - For B2B ICPs: if "How They Measure Success" exists in `pmf/icp.md`, frame benefits around their KPIs (e.g., "Cut deployment time by 50%" rather than "Deploy faster")
 - Icon placeholders
 
 ### 5. Social Proof (Placeholder)
-- If `pmf/mvp.md` exists: frame around the Core Aha Moment and Success Criteria
-- Otherwise: generic testimonial placeholders
+- Frame around the Core Aha Moment and Success Criteria from `pmf/mvp.md`
 - Trust indicators
 
 ### 6. CTA Section
@@ -98,6 +95,18 @@ Generate these sections using the PMF context:
 ### 7. Footer
 - Simple contact/links
 - Attribution
+
+## SEO & Social Tags
+
+The `index.html` must include:
+- `<meta name="description">` — derived from "The Message" in `pmf/value-prop.md`
+- `<meta property="og:title">` — product name + headline
+- `<meta property="og:description">` — "The Message" from `pmf/value-prop.md`
+- `<meta property="og:type" content="website">`
+- `<meta property="og:image">` — placeholder path (e.g., `/og-image.png`) with a comment to replace
+- `<meta name="twitter:card" content="summary_large_image">`
+- `<meta name="twitter:title">` and `<meta name="twitter:description">` — same as OG
+- Favicon link — placeholder path with a comment to replace
 
 ## Tech Stack
 
@@ -128,7 +137,7 @@ landing/
 1. Read PMF context files:
    - `pmf/icp.md` (required)
    - `pmf/value-prop.md` (required)
-   - `pmf/mvp.md` (optional — MVP PRD with aha moment and path)
+   - `pmf/mvp.md` (required — MVP PRD with aha moment and path)
 
 2. Extract content for each section:
    - Hero: The Message (headline), The Callout (subheadline), CTA (button)
@@ -164,6 +173,7 @@ npm run dev
 The page uses your PMF context:
 - ICP from pmf/icp.md
 - Value Prop (Callout + Magnet) from pmf/value-prop.md
+- MVP PRD (Path to Aha + features) from pmf/mvp.md
 
 Feel free to customize the design and copy!
 

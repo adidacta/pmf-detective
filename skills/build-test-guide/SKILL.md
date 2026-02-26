@@ -5,7 +5,7 @@ description: >
   Use when user says "build it", "start building", "how do I build this",
   "BMAD", "implement", "code it", "create the app",
   or when the validation plan method is "build & test".
-allowed-tools: Read, Glob, Bash, AskUserQuestion
+allowed-tools: Read, Glob, AskUserQuestion
 ---
 
 # Build & Test Guide

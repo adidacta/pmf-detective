@@ -1,4 +1,4 @@
-# PMF Context
+# Plan PMF
 
 A Claude Code plugin that helps you build your **PMF context layer** — reference files that capture the "WHY" behind your product, then guides you to validate it.
 

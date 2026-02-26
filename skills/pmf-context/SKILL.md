@@ -4,7 +4,7 @@ description: >
   Build your PMF context layer - reference files that capture the "WHY" behind your product.
   Use when user mentions "PMF", "product market fit", "define my PMF context", "PMF context",
   "ICP", "value prop", "aha moments", or asks about understanding customers or market positioning.
-allowed-tools: Read, Write, Glob, AskUserQuestion
+allowed-tools: Read, Write, Glob, WebSearch, AskUserQuestion
 ---
 
 # PMF Context - Coordinator Skill

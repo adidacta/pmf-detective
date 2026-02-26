@@ -4,7 +4,7 @@ description: >
   Create a validation plan to test your PMF assumptions, then route to the right next step.
   Use when user says "validate", "test my assumptions", "validation plan",
   "how do I know if this works", or after completing the MVP PRD.
-allowed-tools: Read, Write, Glob, AskUserQuestion
+allowed-tools: Read, Write, Glob, WebSearch, AskUserQuestion
 ---
 
 # Validation Plan Builder

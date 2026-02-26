@@ -1,5 +1,5 @@
 {
-  "name": "pmf-context",
+  "name": "plan-pmf",
   "description": "Build your PMF context layer - reference files that capture the 'WHY' behind your product. Claude uses these files when building anything for your product.",
   "version": "3.1.0",
   "author": {

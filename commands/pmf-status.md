@@ -12,7 +12,7 @@ Check the status of the user's PMF context layer.
 1. Use Glob to check for files in the `pmf/` directory:
    - `pmf/icp.md` → ICP defined (assumption)
    - `pmf/value-prop.md` → Value proposition defined (assumption)
-   - `pmf/mvp.md` → Aha moments captured (assumption)
+   - `pmf/mvp.md` → MVP scope defined (assumption)
    - `pmf/validation-plan.md` → Validation plan set
 
 2. If files exist, read them to show summaries.
