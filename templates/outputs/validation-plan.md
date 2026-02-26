@@ -1,22 +1,41 @@
 # Validation Plan
 
-## What We're Testing
-[Core assumption from the context layer]
+<!-- AI_INSTRUCTION: This plan determines the next step in the PMF process.
+     Check the Validation Method to know which execution skill to use. -->
+
+## Assumptions Being Tested
+
+1. **ICP:** [Identity] experiences "[pain]"
+2. **Value Prop:** "[Message]" will make them say "that's me"
+3. **MVP:** "[Aha moment]" is the experience that converts them
+
+## Validation Method
+
+**Method:** [Landing page / Conversations / Build & test]
 
 ## Success Metric
-**Goal:** [e.g., 10 pre-orders, 30 beta signups, 25 conversations]
 
-| Result | Meaning | Next Step |
-|--------|---------|-----------|
-| **GO:** [threshold]+ | Strong signal | Scale up |
-| **ITERATE:** [range] | Partial signal | Adjust and retry |
-| **PIVOT:** <[threshold] | Weak signal | Revisit ICP or value prop |
+**Signal:** [What counts as validation]
+**Goal:** [N] [metric] in [timeframe]
 
-## Validation Approach
-[e.g., Landing page, outreach, beta access]
+| Result | Threshold | Next Step |
+|--------|-----------|-----------|
+| **GO** | [X]+ | Invest in building / scaling |
+| **ITERATE** | [Y]-[X] | Adjust message, channel, or approach and retry |
+| **PIVOT** | <[Y] | Revisit ICP or value prop assumptions |
 
 ## Timeline
-[e.g., 2 weeks]
 
-## What You'll Learn
-- [Key question this will answer]
+[X] weeks starting [date or "when ready"]
+
+## What's Next
+
+Based on your validation method:
+
+- **Landing page** → Use the landing page generator to create your page
+- **Conversations** → Use the outreach builder for your outreach plan + Mom Test questions
+- **Build & test** → Use the build & test guide to set up BMAD with your PMF context
+
+## Open Questions
+
+[Unresolved items]

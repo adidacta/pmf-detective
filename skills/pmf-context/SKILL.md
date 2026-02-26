@@ -94,9 +94,9 @@ Show complete status and explain how to update:
 │  Run your validation plan to test your assumptions.           │
 │                                                               │
 │  To update:                                                   │
-│  • /update-icp - Refine your ICP                              │
+│  • /update-icp - Refine your ICP                               │
 │  • /update-value-prop - Update your value proposition         │
-│  • /update-mvp - Revise MVP scope                             │
+│  • /update-mvp - Revise MVP scope                              │
 └───────────────────────────────────────────────────────────────┘
 ```
 
@@ -115,7 +115,7 @@ When showing status:
 │  [✓] Value Proposition (assumption)                           │
 │      Core: [Primary message from value-prop.md]               │
 │                                                               │
-│  [ ] Aha Moments (assumption)                                 │
+│  [ ] MVP (assumption)                                         │
 │      Not yet defined                                          │
 │                                                               │
 │  [ ] Validation Plan                                          │
@@ -124,7 +124,7 @@ When showing status:
 ├───────────────────────────────────────────────────────────────┤
 │  Progress: ██████████░░░░░░░░░░  2/4 sections                 │
 ├───────────────────────────────────────────────────────────────┤
-│  Next: /update-aha to define aha moments                      │
+│  Next: /update-mvp to define MVP scope                        │
 └───────────────────────────────────────────────────────────────┘
 ```
 

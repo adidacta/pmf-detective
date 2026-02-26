@@ -10,7 +10,7 @@ Generate marketing assets based on your PMF context layer.
 
 ## Available Asset Types
 
-- `landing` - Generate a Next.js or React landing page
+- `landing` - Generate a React + Vite landing page
 
 ## Instructions
 
@@ -42,7 +42,7 @@ The user invoked this command with: $ARGUMENTS
 ### Landing Page
 Read:
 - `pmf/icp.md` - For targeting and language
-- `pmf/value-prop.md` - For hero copy, StoryBrand sections
+- `pmf/value-prop.md` - For hero copy, Callout + Magnet messaging
 - `pmf/mvp.md` - For benefits and proof points
 
 Generate using the landing-generator skill.
@@ -54,7 +54,7 @@ Ask the user what they'd like to generate:
 ```
 What assets would you like to generate?
 
-1. Landing page (Next.js or React)
+1. Landing page (React + Vite)
 
 Reply with a number or asset type.
 ```

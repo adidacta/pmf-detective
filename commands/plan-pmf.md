@@ -1,6 +1,6 @@
 ---
 description: Start building your full PMF context layer
-allowed-tools: Read, Write, Glob, WebSearch, AskUserQuestion
+allowed-tools: Read, Write, Glob, WebSearch, AskUserQuestion, Task
 ---
 
 # PMF Plan
@@ -13,6 +13,7 @@ This command triggers the plan-pmf-mode skill which guides users through:
 1. ICP (Who your customer is)
 2. Value Proposition (Why they should care)
 3. MVP (Scope, features & requirements)
+4. Validation Plan (How you'll test your assumptions)
 
 Read the plan-pmf-mode SKILL.md and follow its process.
 
@@ -40,10 +41,11 @@ Begin with the welcome message:
 │                                                               │
 │  Let's build your PMF context layer.                          │
 │                                                               │
-│  We'll work through 3 sections:                               │
+│  We'll work through 4 sections:                               │
 │  1. ICP - Who your customer is                                │
 │  2. Value Proposition - Why they should care                  │
 │  3. MVP - Scope, features & requirements                      │
+│  4. Validation Plan - How you'll test assumptions             │
 │                                                               │
 │  Each section becomes a reference file Claude uses            │
 │  when building anything for your product.                     │

@@ -99,9 +99,9 @@ Created by Adi Shmorak, The P/MF Detective
 │  Run your validation plan to test your assumptions.           │
 │                                                               │
 │  To update:                                                   │
-│  • /update-icp - Refine your ICP                              │
+│  • /update-icp - Refine your ICP                               │
 │  • /update-value-prop - Update your value proposition         │
-│  • /update-mvp - Revise MVP scope                             │
+│  • /update-mvp - Revise MVP scope                              │
 │                                                               │
 │  To generate assets:                                          │
 │  • /generate-assets landing - Create a landing page           │

@@ -1,43 +1,39 @@
-# MVP PRD
+# MVP PRD — [Product Name]
 
-<!-- AI_INSTRUCTION: This file defines the minimum viable product scope.
-     The Core Aha Moment is the destination — the experience the MVP must deliver.
-     The Path to Aha is reverse-engineered from that moment: each step is
-     a requirement the product must fulfill to get the user there.
-     Out of Scope prevents scope creep. Use this file when building features,
-     prioritizing work, or evaluating what to cut. If it's not on the path,
-     it's not in v1. -->
+<!-- AI_INSTRUCTION: Use this file as project context for building the MVP.
+     Everything exists to deliver the aha moment. Features and requirements
+     are scoped to the Path to Aha — anything not listed here is out of scope. -->
 
-## The Core Aha Moment
-> [The single moment when users think "THIS is why I need this"]
-
-**Why this is the highest-value moment:** [Brief explanation of why this aha moment matters most to the ICP]
+## The Aha Moment
+[Name and description]
+[Why this moment — timing, emotional impact]
 
 ## Path to Aha
 
-<!-- AI_INSTRUCTION: This is the MVP scope. Each step was reverse-engineered
-     from the aha moment. The product must deliver every step on this path.
-     Steps are ordered from the user's starting point to the aha moment. -->
+### Step 1: [Step name]
+[What happens from the user's perspective]
 
-### 1. [First step — where the user starts]
-> [What the product needs to deliver at this step]
+**Features:**
 
-### 2. [Next step]
-> [What the product needs to deliver at this step]
+**[Feature name]**
+- [Requirement]
+- [Requirement]
 
-### 3. [Next step]
-> [What the product needs to deliver at this step]
+**[Feature name]**
+- [Requirement]
+- [Requirement]
 
-### N. [The aha moment]
-> [The experience that makes it all click]
+### Step 2: [Step name]
+...
 
-## Out of Scope (v1)
-- [Capability explicitly NOT in v1]
-- [Capability explicitly NOT in v1]
-- [Capability explicitly NOT in v1]
+## In Scope for v1 (Beyond Path to Aha)
+[Additional features that support the ICP need but aren't on the critical path]
+
+## Out of Scope (v2+)
+[Explicitly deferred items with brief rationale]
 
 ## Success Criteria
-**The aha moment has landed when:** [Observable user behavior that proves they "got it"]
+[Observable user behavior that proves the aha moment landed]
 
-### Open Questions
-- [ ] [Any gaps or "not sure" items]
+## Open Questions
+[Unresolved decisions]
