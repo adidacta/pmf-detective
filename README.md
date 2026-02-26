@@ -17,7 +17,7 @@ PMF Context walks you through defining your market thesis, then helps you test i
 ```
 1. ICP                → pmf/icp.md           (assumption)
 2. Value Proposition  → pmf/value-prop.md     (assumption)
-3. MVP PRD            → pmf/aha-moments.md    (assumption)
+3. MVP PRD            → pmf/mvp.md             (assumption)
 4. Validation Plan    → pmf/validation-plan.md (decides HOW to test)
    │
    ├─→ Landing Page     (signups / pre-orders)
@@ -35,12 +35,14 @@ All outputs are saved to a `pmf/` folder in your project:
 pmf/
 ├── icp.md              # Who you believe your customer is
 ├── value-prop.md       # Why they should care
-├── aha-moments.md      # MVP PRD — aha moment, features & requirements
+├── mvp.md              # MVP scope — aha moment, features & requirements
 ├── validation-plan.md  # How you'll test + chosen method
 └── outreach-plan.md    # (if conversations) Mom Test questions + channels
 ```
 
 Claude references these files when building anything for your product — landing pages, copy, features, documentation.
+
+**Should you commit `pmf/`?** Yes — these files are your product context and are valuable for the whole team. Committing them means every team member (and every Claude session) has the same context. Update them as you learn from validation.
 
 ## Quick Start
 
@@ -58,7 +60,7 @@ Or use slash commands:
 - `/pmf-status` — Check your context status
 - `/update-icp` — Update your ICP
 - `/update-value-prop` — Update your value proposition
-- `/update-aha` — Update your MVP PRD
+- `/update-mvp` — Update your MVP scope
 - `/generate-assets landing` — Generate a landing page
 
 ## The 4 Sections
@@ -92,7 +94,7 @@ Define what to build by working backwards from the core aha moment (assumption):
 
 The output is a high-level PRD that an AI coding agent can use as project context.
 
-**Output:** `pmf/aha-moments.md`
+**Output:** `pmf/mvp.md`
 
 ### 4. Validation Plan
 

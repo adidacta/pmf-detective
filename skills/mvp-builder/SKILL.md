@@ -1,14 +1,14 @@
 ---
-name: aha-moments-builder
+name: mvp-builder
 description: >
-  Build the MVP PRD from your PMF context layer.
-  Use when user says "aha moment", "key benefits", "must-deliver",
-  "MVP", "PRD", "what to build", "scope", "features",
+  Build your MVP scope by finding the core aha moment and reverse-engineering features from it.
+  Use when user says "MVP", "PRD", "what to build", "scope", "features",
+  "aha moment", "key benefits", "must-deliver",
   or wants to define what the product must deliver.
 allowed-tools: Read, Write, Glob, WebSearch, AskUserQuestion
 ---
 
-# Aha Moments Builder (MVP PRD)
+# MVP Builder
 
 You help product builders create a high-level MVP PRD that an AI coding agent can use as project context. The PRD cascades from the core aha moment down to features and requirements — grounding every line in "why does this matter to the ICP?"
 
@@ -44,7 +44,7 @@ Use /plan-pmf to build your context layer first.
 - Ask ONE question at a time
 - Wait for response before continuing
 - Ground all options in ICP and value prop data — don't ask from scratch
-- Include "Not sure" option that adds to Open Questions
+- Include "Not sure (needs research)" option on every question — adds to Open Questions with context
 - Always work backwards from the aha moment — never forward from features
 
 ## The Flow
@@ -59,17 +59,17 @@ Read `pmf/icp.md` and `pmf/value-prop.md`. Extract:
 Display the value proposition back to the user as the anchor for everything that follows:
 
 ```
-┌─────────────────────────────────────────────────────────────┐
-│  YOUR VALUE PROPOSITION                                      │
-├─────────────────────────────────────────────────────────────┤
-│                                                              │
-│  ICP: [Hypothesis name]                                      │
-│  Promise: "[The full value prop message]"                    │
-│                                                              │
-│  Now let's find the moment your ICP feels this               │
-│  promise was delivered.                                      │
-│                                                              │
-└─────────────────────────────────────────────────────────────┘
+┌───────────────────────────────────────────────────────────────┐
+│  YOUR VALUE PROPOSITION                                       │
+├───────────────────────────────────────────────────────────────┤
+│                                                               │
+│  ICP: [Hypothesis name]                                       │
+│  Promise: "[The full value prop message]"                     │
+│                                                               │
+│  Now let's find the moment your ICP feels this                │
+│  promise was delivered.                                       │
+│                                                               │
+└───────────────────────────────────────────────────────────────┘
 ```
 
 ### Phase B: Diverge — Explore Aha Moments (2-4 questions)
@@ -141,7 +141,7 @@ Path to Aha:
 
 Use AskUserQuestion: "Here's the full path. Does it look right?"
 
-Options: "Looks right" / "Something's missing" / "Something doesn't belong" / "Not sure"
+Options: "Looks right" / "Something's missing" / "Something doesn't belong" / "Not sure (needs research)"
 
 Adjust if needed. The final chain becomes the MVP scope.
 
@@ -169,7 +169,7 @@ Aha Moment (why)
 
 Use AskUserQuestion: "Here are the features needed for step [N]: '[step name]'. Does this look right?"
 
-Options: "Looks right" / "Something's missing" / "Too much — simplify" / "Not sure"
+Options: "Looks right" / "Something's missing" / "Too much — simplify" / "Not sure (needs research)"
 
 Adjust based on feedback before moving to the next step.
 
@@ -182,6 +182,8 @@ Equally important as what's in scope: what's NOT in v1.
 Based on the ICP's broader wants (from icp.md) and the Magnet, generate 3-4 things that might seem important but should wait for v2+.
 
 Use AskUserQuestion: "Which of these should be explicitly OUT of scope for v1?" (multiSelect: true)
+
+Include "Not sure (needs research)" as one of the options — if selected, add the scope question to Open Questions.
 
 Frame it as: "Saying 'no' to these now means you ship faster and learn sooner."
 
@@ -200,7 +202,7 @@ Examples of good success criteria:
 
 ## Output
 
-Save to `pmf/aha-moments.md` with the following structure:
+Save to `pmf/mvp.md` with the following structure:
 
 ```markdown
 # MVP PRD — [Product Name]
@@ -251,27 +253,27 @@ Save to `pmf/aha-moments.md` with the following structure:
 Show only at the END:
 
 ```
-┌─────────────────────────────────────────────────────────────┐
-│  MVP PRD COMPLETE                                            │
-├─────────────────────────────────────────────────────────────┤
-│                                                              │
-│  Aha Moment: [The key experience]                            │
-│                                                              │
-│  Path to Aha: [N] steps                                      │
-│  Features: [N] features across all steps                     │
-│  Requirements: [N] total requirements                        │
-│                                                              │
-│  Out of Scope: [N] items deferred to v2+                     │
-│  Success: [Behavioral signal]                                │
-│                                                              │
-│  Saved to: pmf/aha-moments.md                                │
-│                                                              │
-└─────────────────────────────────────────────────────────────┘
+┌───────────────────────────────────────────────────────────────┐
+│  MVP PRD COMPLETE                                             │
+├───────────────────────────────────────────────────────────────┤
+│                                                               │
+│  Aha Moment: [The key experience]                             │
+│                                                               │
+│  Path to Aha: [N] steps                                       │
+│  Features: [N] features across all steps                      │
+│  Requirements: [N] total requirements                         │
+│                                                               │
+│  Out of Scope: [N] items deferred to v2+                      │
+│  Success: [Behavioral signal]                                 │
+│                                                               │
+│  Saved to: pmf/mvp.md                                         │
+│                                                               │
+└───────────────────────────────────────────────────────────────┘
 ```
 
 ## Updating Existing MVP PRD
 
-If `pmf/aha-moments.md` already exists:
+If `pmf/mvp.md` already exists:
 1. Read the current file
 2. Show summary to user
 3. Ask what they want to update

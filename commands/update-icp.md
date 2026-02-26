@@ -16,20 +16,20 @@ Update the ICP (Ideal Customer Profile) section of your PMF context layer.
 2. If file exists, show current state:
 
 ```
-┌─────────────────────────────────────────────────────────────┐
-│  CURRENT ICP                                                 │
-├─────────────────────────────────────────────────────────────┤
-│                                                              │
-│  Selected: [Hypothesis name]                                 │
-│  Who: [Filtered persona summary]                             │
-│  Pain: "[Emotional bedrock]"                                 │
-│  Evidence: Pain [X]/5 │ Access [X]/5 │ Evidence [X]/5        │
-│                                                              │
-│  Alternatives on file:                                       │
-│  • [Hypothesis B name]                                       │
-│  • [Hypothesis C name]                                       │
-│                                                              │
-└─────────────────────────────────────────────────────────────┘
+┌───────────────────────────────────────────────────────────────┐
+│  CURRENT ICP                                                  │
+├───────────────────────────────────────────────────────────────┤
+│                                                               │
+│  Selected: [Hypothesis name]                                  │
+│  Who: [Filtered persona summary]                              │
+│  Pain: "[Emotional bedrock]"                                  │
+│  Evidence: Pain [X]/5 │ Access [X]/5 │ Evidence [X]/5         │
+│                                                               │
+│  Alternatives on file:                                        │
+│  • [Hypothesis B name]                                        │
+│  • [Hypothesis C name]                                        │
+│                                                               │
+└───────────────────────────────────────────────────────────────┘
 ```
 
 3. Use AskUserQuestion with this menu:

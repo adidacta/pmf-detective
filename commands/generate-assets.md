@@ -21,7 +21,7 @@ The user invoked this command with: $ARGUMENTS
 2. Check that required PMF context files exist:
    - `pmf/icp.md` - Who your customer is
    - `pmf/value-prop.md` - Why they should care
-   - `pmf/aha-moments.md` - Key benefits to highlight
+   - `pmf/mvp.md` - MVP scope & features
 
 3. If prerequisites missing:
    ```
@@ -30,7 +30,7 @@ The user invoked this command with: $ARGUMENTS
    Missing:
    [ ] pmf/icp.md
    [✓] pmf/value-prop.md
-   [ ] pmf/aha-moments.md
+   [ ] pmf/mvp.md
 
    Use /plan-pmf to build your context layer first.
    ```
@@ -43,7 +43,7 @@ The user invoked this command with: $ARGUMENTS
 Read:
 - `pmf/icp.md` - For targeting and language
 - `pmf/value-prop.md` - For hero copy, StoryBrand sections
-- `pmf/aha-moments.md` - For benefits and proof points
+- `pmf/mvp.md` - For benefits and proof points
 
 Generate using the landing-generator skill.
 

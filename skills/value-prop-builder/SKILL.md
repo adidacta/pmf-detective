@@ -36,7 +36,7 @@ Then route to icp-builder skill.
 - Wait for response before continuing
 - ALWAYS generate options based on ICP data (especially "How They Talk About It" and self-recognition language)
 - The Callout must make the ICP feel **seen and understood, never judged**. Avoid language that implies they're doing something wrong or stupid. Sit on the frustration of "there must be a better way", not "you're failing."
-- Include "Not sure" option that adds to Open Questions
+- Include "Not sure (needs research)" option on every question — adds to Open Questions with context
 - Keep it focused on creating useful context
 
 ## The Process
@@ -48,20 +48,21 @@ Read `pmf/icp.md` and extract:
 - Their Pain (emotional bedrock + surface symptom)
 - What They Want (desired outcome)
 - How They Talk About It (language + self-recognition phrases)
+- How They Measure Success (B2B only — KPIs, who they report to)
 
 Display summary:
 
 ```
-┌─────────────────────────────────────────────────────────────┐
-│  BUILDING VALUE PROP FOR:                                    │
-├─────────────────────────────────────────────────────────────┤
-│                                                              │
-│  ICP: [Hypothesis name]                                      │
-│  Who: [Filtered persona]                                     │
-│  Pain: "[Emotional bedrock]"                                 │
-│  Want: [Desired outcome]                                     │
-│                                                              │
-└─────────────────────────────────────────────────────────────┘
+┌───────────────────────────────────────────────────────────────┐
+│  BUILDING VALUE PROP FOR:                                     │
+├───────────────────────────────────────────────────────────────┤
+│                                                               │
+│  ICP: [Hypothesis name]                                       │
+│  Who: [Filtered persona]                                      │
+│  Pain: "[Emotional bedrock]"                                  │
+│  Want: [Desired outcome]                                      │
+│                                                               │
+└───────────────────────────────────────────────────────────────┘
 ```
 
 Move directly to Phase B — no confirmation question needed.
@@ -99,7 +100,7 @@ If "Not quite": generate new options using different ICP angles and repeat Q1.
 The Magnet is the utopic desired future — the state where everything is perfect. It should be the inverse of the Callout's pain.
 
 **Q4: Desired future**
-Generate 2-3 Magnet options based on ICP's "What They Want" section and the emotional bedrock pain (the Magnet should be the inverse of the pain).
+Generate 2-3 Magnet options based on ICP's "What They Want" section and the emotional bedrock pain (the Magnet should be the inverse of the pain). For B2B ICPs, ground the Magnet in their success KPIs — the desired future should map to metrics their boss cares about.
 
 Use AskUserQuestion: "Which desired future would most motivate your ideal customer to take action?"
 
@@ -120,21 +121,21 @@ Combine Callout + Magnet into 3-4 complete value proposition messages. Each uses
 Display all options:
 
 ```
-┌─────────────────────────────────────────────────────────────┐
-│  YOUR VALUE PROP OPTIONS                                     │
-├─────────────────────────────────────────────────────────────┤
-│                                                              │
-│  Callout: [Selected descriptor]                              │
-│  Magnet: [Selected desired future]                           │
-│                                                              │
-│  1. [Pain-led message]                                       │
-│  2. [Aspiration-led message]                                 │
-│  3. [Action-led message]                                     │
-│  4. [Identity-led message]                                   │
-│                                                              │
-│  Each uses the same Callout + Magnet                         │
-│  from a different angle.                                     │
-└─────────────────────────────────────────────────────────────┘
+┌───────────────────────────────────────────────────────────────┐
+│  YOUR VALUE PROP OPTIONS                                      │
+├───────────────────────────────────────────────────────────────┤
+│                                                               │
+│  Callout: [Selected descriptor]                               │
+│  Magnet: [Selected desired future]                            │
+│                                                               │
+│  1. [Pain-led message]                                        │
+│  2. [Aspiration-led message]                                  │
+│  3. [Action-led message]                                      │
+│  4. [Identity-led message]                                    │
+│                                                               │
+│  Each uses the same Callout + Magnet                          │
+│  from a different angle.                                      │
+└───────────────────────────────────────────────────────────────┘
 ```
 
 Use AskUserQuestion: "Which value proposition do you want to lead with?"
@@ -169,20 +170,20 @@ Fill in:
 Show only at the END:
 
 ```
-┌─────────────────────────────────────────────────────────────┐
-│  VALUE PROPOSITION DEFINED                                   │
-├─────────────────────────────────────────────────────────────┤
-│                                                              │
-│  Callout: [Descriptor]                                       │
-│  Magnet: [Desired future]                                    │
-│  Message: [Selected value prop]                              │
-│  CTA: [Action] → this is your validation goal                │
-│                                                              │
-│  Alternatives: [N] options saved for A/B testing             │
-│                                                              │
-│  Saved to: pmf/value-prop.md                                 │
-│                                                              │
-└─────────────────────────────────────────────────────────────┘
+┌───────────────────────────────────────────────────────────────┐
+│  VALUE PROPOSITION DEFINED                                    │
+├───────────────────────────────────────────────────────────────┤
+│                                                               │
+│  Callout: [Descriptor]                                        │
+│  Magnet: [Desired future]                                     │
+│  Message: [Selected value prop]                               │
+│  CTA: [Action] → this is your validation goal                 │
+│                                                               │
+│  Alternatives: [N] options saved for A/B testing              │
+│                                                               │
+│  Saved to: pmf/value-prop.md                                  │
+│                                                               │
+└───────────────────────────────────────────────────────────────┘
 ```
 
 ## Updating Existing Value Prop

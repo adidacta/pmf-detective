@@ -12,7 +12,7 @@ Check the status of the user's PMF context layer.
 1. Use Glob to check for files in the `pmf/` directory:
    - `pmf/icp.md` → ICP defined (assumption)
    - `pmf/value-prop.md` → Value proposition defined (assumption)
-   - `pmf/aha-moments.md` → Aha moments captured (assumption)
+   - `pmf/mvp.md` → Aha moments captured (assumption)
    - `pmf/validation-plan.md` → Validation plan set
 
 2. If files exist, read them to show summaries.
@@ -22,25 +22,25 @@ Check the status of the user's PMF context layer.
 ### If no pmf/ folder exists:
 
 ```
-┌─────────────────────────────────────────────────────────────┐
-│  PMF CONTEXT STATUS                                         │
-├─────────────────────────────────────────────────────────────┤
-│                                                             │
-│  No PMF context layer found.                                │
-│                                                             │
-│  The PMF context layer captures the "WHY" behind your       │
-│  product. Claude references these files when building       │
-│  anything for your product.                                 │
-│                                                             │
-│  The context layer:                                         │
-│  • icp.md - Who your customer is (assumption)               │
-│  • value-prop.md - Why they should care (assumption)        │
-│  • aha-moments.md - Key benefits you must deliver (assump.) │
-│  • validation-plan.md - How you'll test these assumptions   │
-│                                                             │
-├─────────────────────────────────────────────────────────────┤
-│  Start: /plan-pmf to build your context layer               │
-└─────────────────────────────────────────────────────────────┘
+┌───────────────────────────────────────────────────────────────┐
+│  PMF CONTEXT STATUS                                           │
+├───────────────────────────────────────────────────────────────┤
+│                                                               │
+│  No PMF context layer found.                                  │
+│                                                               │
+│  The PMF context layer captures the "WHY" behind your         │
+│  product. Claude references these files when building         │
+│  anything for your product.                                   │
+│                                                               │
+│  The context layer:                                           │
+│  • icp.md - Who your customer is (assumption)                 │
+│  • value-prop.md - Why they should care (assumption)          │
+│  • mvp.md - MVP scope & features (assumption)                 │
+│  • validation-plan.md - How you'll test these assumptions     │
+│                                                               │
+├───────────────────────────────────────────────────────────────┤
+│  Start: /plan-pmf to build your context layer                 │
+└───────────────────────────────────────────────────────────────┘
 
 Created by Adi Shmorak, The P/MF Detective
 ```
@@ -48,27 +48,27 @@ Created by Adi Shmorak, The P/MF Detective
 ### If partial context exists:
 
 ```
-┌─────────────────────────────────────────────────────────────┐
-│  PMF CONTEXT STATUS                                         │
-├─────────────────────────────────────────────────────────────┤
-│                                                             │
-│  [✓] ICP (assumption)                                       │
-│      Who: [Brief summary from icp.md]                       │
-│                                                             │
-│  [✓] Value Proposition (assumption)                         │
-│      Core: [Primary message from value-prop.md]             │
-│                                                             │
-│  [ ] Aha Moments (assumption)                               │
-│      Not yet defined                                        │
-│                                                             │
-│  [ ] Validation Plan                                        │
-│      Not yet defined                                        │
-│                                                             │
-├─────────────────────────────────────────────────────────────┤
-│  Progress: ██████████░░░░░░░░░░  2/4 sections               │
-├─────────────────────────────────────────────────────────────┤
-│  Next: /update-aha to define aha moments                    │
-└─────────────────────────────────────────────────────────────┘
+┌───────────────────────────────────────────────────────────────┐
+│  PMF CONTEXT STATUS                                           │
+├───────────────────────────────────────────────────────────────┤
+│                                                               │
+│  [✓] ICP (assumption)                                         │
+│      Who: [Brief summary from icp.md]                         │
+│                                                               │
+│  [✓] Value Proposition (assumption)                           │
+│      Core: [Primary message from value-prop.md]               │
+│                                                               │
+│  [ ] MVP (assumption)                                         │
+│      Not yet defined                                          │
+│                                                               │
+│  [ ] Validation Plan                                          │
+│      Not yet defined                                          │
+│                                                               │
+├───────────────────────────────────────────────────────────────┤
+│  Progress: ██████████░░░░░░░░░░  2/4 sections                 │
+├───────────────────────────────────────────────────────────────┤
+│  Next: /update-mvp to define your MVP scope                   │
+└───────────────────────────────────────────────────────────────┘
 
 Created by Adi Shmorak, The P/MF Detective
 ```
@@ -76,36 +76,36 @@ Created by Adi Shmorak, The P/MF Detective
 ### If all context complete:
 
 ```
-┌─────────────────────────────────────────────────────────────┐
-│  PMF CONTEXT LAYER - COMPLETE                               │
-├─────────────────────────────────────────────────────────────┤
-│                                                             │
-│  [✓] ICP - pmf/icp.md (assumption)                          │
-│      Who: [Brief summary]                                   │
-│                                                             │
-│  [✓] Value Proposition - pmf/value-prop.md (assumption)     │
-│      Core: [Primary message]                                │
-│                                                             │
-│  [✓] Aha Moments - pmf/aha-moments.md (assumption)          │
-│      Core Aha: [Key realization]                            │
-│                                                             │
-│  [✓] Validation Plan - pmf/validation-plan.md               │
-│      Goal: [N] [metric] | GO/ITERATE/PIVOT thresholds       │
-│                                                             │
-├─────────────────────────────────────────────────────────────┤
-│  Progress: ████████████████████  4/4 sections               │
-├─────────────────────────────────────────────────────────────┤
-│  Your context layer is ready.                               │
-│  Run your validation plan to test your assumptions.         │
-│                                                             │
-│  To update:                                                 │
-│  • /update-icp - Refine your ICP                            │
-│  • /update-value-prop - Update your value proposition       │
-│  • /update-aha - Revise aha moments                         │
-│                                                             │
-│  To generate assets:                                        │
-│  • /generate-assets landing - Create a landing page         │
-└─────────────────────────────────────────────────────────────┘
+┌───────────────────────────────────────────────────────────────┐
+│  PMF CONTEXT LAYER - COMPLETE                                 │
+├───────────────────────────────────────────────────────────────┤
+│                                                               │
+│  [✓] ICP - pmf/icp.md (assumption)                            │
+│      Who: [Brief summary]                                     │
+│                                                               │
+│  [✓] Value Proposition - pmf/value-prop.md (assumption)       │
+│      Core: [Primary message]                                  │
+│                                                               │
+│  [✓] MVP - pmf/mvp.md (assumption)                            │
+│      Aha Moment: [Key experience]                             │
+│                                                               │
+│  [✓] Validation Plan - pmf/validation-plan.md                 │
+│      Goal: [N] [metric] | GO/ITERATE/PIVOT thresholds         │
+│                                                               │
+├───────────────────────────────────────────────────────────────┤
+│  Progress: ████████████████████  4/4 sections                 │
+├───────────────────────────────────────────────────────────────┤
+│  Your context layer is ready.                                 │
+│  Run your validation plan to test your assumptions.           │
+│                                                               │
+│  To update:                                                   │
+│  • /update-icp - Refine your ICP                              │
+│  • /update-value-prop - Update your value proposition         │
+│  • /update-mvp - Revise MVP scope                             │
+│                                                               │
+│  To generate assets:                                          │
+│  • /generate-assets landing - Create a landing page           │
+└───────────────────────────────────────────────────────────────┘
 
 Created by Adi Shmorak, The P/MF Detective
 For feedback: adi@adidacta.com

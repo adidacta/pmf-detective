@@ -57,7 +57,7 @@ Use /plan-pmf to build your context layer first.
 ```
 
 Optional (enhances the page if present):
-- `pmf/aha-moments.md` - MVP PRD with aha moment and path to highlight
+- `pmf/mvp.md` - MVP PRD with aha moment and path to highlight
 
 ## Page Structure
 
@@ -80,12 +80,13 @@ Generate these sections using the PMF context:
 - Bridge from current pain to the utopic outcome
 
 ### 4. Benefits Section
-- If `pmf/aha-moments.md` exists: use the Path to Aha steps as benefit headlines (what the user gets at each step, not how it works)
+- If `pmf/mvp.md` exists: use the Path to Aha steps as benefit headlines (what the user gets at each step, not how it works)
 - If not: derive 3 key benefits from the Callout (what pain goes away) and Magnet (what they gain)
+- For B2B ICPs: if "How They Measure Success" exists in `pmf/icp.md`, frame benefits around their KPIs (e.g., "Cut deployment time by 50%" rather than "Deploy faster")
 - Icon placeholders
 
 ### 5. Social Proof (Placeholder)
-- If `pmf/aha-moments.md` exists: frame around the Core Aha Moment and Success Criteria
+- If `pmf/mvp.md` exists: frame around the Core Aha Moment and Success Criteria
 - Otherwise: generic testimonial placeholders
 - Trust indicators
 
@@ -115,7 +116,10 @@ landing/
 │   └── index.css
 ├── index.html
 ├── package.json
+├── vite.config.ts
+├── tsconfig.json
 ├── tailwind.config.js
+├── postcss.config.js
 └── README.md
 ```
 
@@ -124,7 +128,7 @@ landing/
 1. Read PMF context files:
    - `pmf/icp.md` (required)
    - `pmf/value-prop.md` (required)
-   - `pmf/aha-moments.md` (optional — MVP PRD with aha moment and path)
+   - `pmf/mvp.md` (optional — MVP PRD with aha moment and path)
 
 2. Extract content for each section:
    - Hero: The Message (headline), The Callout (subheadline), CTA (button)

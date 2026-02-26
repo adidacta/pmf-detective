@@ -20,7 +20,7 @@ The PMF context layer (ICP, Value Prop, MVP PRD) is based on **assumptions**. Th
 Check if the context layer exists:
 - `pmf/icp.md` (required)
 - `pmf/value-prop.md` (required)
-- `pmf/aha-moments.md` (required — the MVP PRD)
+- `pmf/mvp.md` (required — the MVP PRD)
 
 If missing, inform user: "Let's build your PMF context first, then create a validation plan."
 
@@ -29,7 +29,7 @@ If missing, inform user: "Let's build your PMF context first, then create a vali
 - Ask ONE question at a time
 - Wait for response before continuing
 - Ground options in ICP data (where to find them, how they talk, pain intensity)
-- Include "Not sure" option that adds to Open Questions
+- Include "Not sure (needs research)" option on every question — adds to Open Questions with context
 
 ## The Flow
 
@@ -44,18 +44,18 @@ Read all three context files and extract the core assumptions being tested:
 Display:
 
 ```
-┌─────────────────────────────────────────────────────────────┐
-│  YOUR ASSUMPTIONS                                            │
-├─────────────────────────────────────────────────────────────┤
-│                                                              │
-│  1. [ICP identity] experiences "[pain]"                      │
+┌───────────────────────────────────────────────────────────────┐
+│  YOUR ASSUMPTIONS                                             │
+├───────────────────────────────────────────────────────────────┤
+│                                                               │
+│  1. [ICP identity] experiences "[pain]"                       │
 │  2. "[Value prop message]" will grab their attention          │
-│  3. "[Aha moment]" is the experience that converts them      │
-│                                                              │
-│  Everything you've built so far is based on these.           │
-│  Now let's figure out how to test them.                      │
-│                                                              │
-└─────────────────────────────────────────────────────────────┘
+│  3. "[Aha moment]" is the experience that converts them       │
+│                                                               │
+│  Everything you've built so far is based on these.            │
+│  Now let's figure out how to test them.                       │
+│                                                               │
+└───────────────────────────────────────────────────────────────┘
 ```
 
 ### Phase B: Choose Validation Method (1-2 questions)
@@ -68,9 +68,9 @@ Options:
 - **"Landing page"** — "Put your value prop in front of real people. Measure signups, waitlist, or pre-orders. Tests whether your message resonates. Fastest to set up."
 - **"Conversations"** — "Talk to 15-30 people who match your ICP. Validate the pain is real and acute. Deepest learning. Uses the Mom Test — no pitching, just listening."
 - **"Build & test"** — "Build the MVP and put it in people's hands. Tests the aha moment directly. Highest effort, highest signal."
-- **"Not sure"** — "Add to open questions and help me decide."
+- **"Not sure (needs research)"** — "Add to open questions and help me decide."
 
-**If "Not sure":** Help them decide based on:
+**If "Not sure (needs research)":** Help them decide based on:
 - How confident they are the pain exists → Low confidence = conversations first
 - Whether they have access to ICP → Easy access = conversations; hard to reach = landing page
 - Time/budget → Landing page is fastest; build is slowest but most definitive
@@ -81,15 +81,15 @@ Options:
 
 **If landing page:**
 Use AskUserQuestion: "What action on the landing page counts as validation?"
-Options: "Email signup / waitlist" / "Pre-order / deposit" / "Free trial signup" / "Something else"
+Options: "Email signup / waitlist" / "Pre-order / deposit" / "Free trial signup" / "Not sure (needs research)"
 
 **If conversations:**
 Use AskUserQuestion: "What would you need to hear in conversations to feel confident the pain is real?"
-Options: "They've tried to solve it before (spent time/money)" / "They describe the pain unprompted" / "They ask when they can use the product" / "Something else"
+Options: "They've tried to solve it before (spent time/money)" / "They describe the pain unprompted" / "They ask when they can use the product" / "Not sure (needs research)"
 
 **If build & test:**
 Use AskUserQuestion: "What user behavior would prove the aha moment is working?"
-Options: Pull from success criteria in `pmf/aha-moments.md` if it exists, plus "Something else"
+Options: Pull from success criteria in `pmf/mvp.md` if it exists, plus "Not sure (needs research)"
 
 **Q3:** "How many [signals] would be a strong enough signal?"
 
@@ -107,6 +107,7 @@ Options:
 - "1 week" — "Fast learning, smaller numbers. Good for landing pages with paid traffic."
 - "2 weeks" — "Recommended for most. Enough time for organic reach and conversations."
 - "4 weeks" — "Larger sample. Good for build & test or if you need time to set up outreach."
+- "Not sure (needs research)" — adds timeline decision to Open Questions
 
 ## Output
 
@@ -161,21 +162,21 @@ Based on your validation method:
 Show at the END, then route to the next skill:
 
 ```
-┌─────────────────────────────────────────────────────────────┐
-│  VALIDATION PLAN SET                                         │
-├─────────────────────────────────────────────────────────────┤
-│                                                              │
-│  Method: [Landing page / Conversations / Build & test]       │
-│  Goal: [N] [metric] in [timeframe]                           │
-│                                                              │
-│  GO: [X]+  |  ITERATE: [Y-Z]  |  PIVOT: <[Y]                │
-│                                                              │
-│  Saved to: pmf/validation-plan.md                            │
-│                                                              │
-│  NEXT STEP:                                                  │
-│  → [Appropriate next action based on method]                 │
-│                                                              │
-└─────────────────────────────────────────────────────────────┘
+┌───────────────────────────────────────────────────────────────┐
+│  VALIDATION PLAN SET                                          │
+├───────────────────────────────────────────────────────────────┤
+│                                                               │
+│  Method: [Landing page / Conversations / Build & test]        │
+│  Goal: [N] [metric] in [timeframe]                            │
+│                                                               │
+│  GO: [X]+  |  ITERATE: [Y-Z]  |  PIVOT: <[Y]                  │
+│                                                               │
+│  Saved to: pmf/validation-plan.md                             │
+│                                                               │
+│  NEXT STEP:                                                   │
+│  → [Appropriate next action based on method]                  │
+│                                                               │
+└───────────────────────────────────────────────────────────────┘
 ```
 
 **After saving, immediately ask:**

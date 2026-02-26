@@ -26,13 +26,13 @@ GitHub: https://github.com/bmad-code-org/BMAD-METHOD
 Check that the PMF context layer exists:
 - `pmf/icp.md` (required)
 - `pmf/value-prop.md` (required)
-- `pmf/aha-moments.md` (required — this is the MVP PRD with features & requirements)
+- `pmf/mvp.md` (required — this is the MVP PRD with features & requirements)
 
-If `pmf/aha-moments.md` is missing, inform the user:
+If `pmf/mvp.md` is missing, inform the user:
 ```
 To start building, you need your MVP PRD first — it defines what to build.
 
-Missing: pmf/aha-moments.md
+Missing: pmf/mvp.md
 
 Use /plan-pmf to build your context layer, or tell me to
 "define my MVP PRD" to start from the aha moment.
@@ -42,22 +42,22 @@ Use /plan-pmf to build your context layer, or tell me to
 
 ### Step 1: Review the MVP PRD (automated — no questions)
 
-Read `pmf/aha-moments.md` and display a summary of what will be built:
+Read `pmf/mvp.md` and display a summary of what will be built:
 
 ```
-┌─────────────────────────────────────────────────────────────┐
-│  READY TO BUILD                                              │
-├─────────────────────────────────────────────────────────────┤
-│                                                              │
-│  Aha Moment: [Name]                                          │
-│  Steps: [N] steps in the Path to Aha                         │
-│  Features: [N] features                                      │
-│  Requirements: [N] requirements                              │
-│                                                              │
-│  Your MVP PRD (pmf/aha-moments.md) has everything            │
-│  you need to start building. Here's how.                     │
-│                                                              │
-└─────────────────────────────────────────────────────────────┘
+┌───────────────────────────────────────────────────────────────┐
+│  READY TO BUILD                                               │
+├───────────────────────────────────────────────────────────────┤
+│                                                               │
+│  Aha Moment: [Name]                                           │
+│  Steps: [N] steps in the Path to Aha                          │
+│  Features: [N] features                                       │
+│  Requirements: [N] requirements                               │
+│                                                               │
+│  Your MVP PRD (pmf/mvp.md) has everything                     │
+│  you need to start building. Here's how.                      │
+│                                                               │
+└───────────────────────────────────────────────────────────────┘
 ```
 
 ### Step 2: Install BMAD
@@ -94,7 +94,7 @@ Use AskUserQuestion: "Your PMF context files already contain your product defini
 
 Options:
 - **"Feed into BMAD's product brief"** — "Run /product-brief and reference pmf/ files as input. BMAD will restructure into its format."
-- **"Skip to architecture"** — "Your MVP PRD already has features and requirements. Jump straight to /create-architecture and reference pmf/aha-moments.md."
+- **"Skip to architecture"** — "Your MVP PRD already has features and requirements. Jump straight to /create-architecture and reference pmf/mvp.md."
 - **"Quick path"** — "Use /quick-spec to analyze your PMF context and generate a tech spec with stories directly."
 
 ### Step 4: Provide the Prompt
@@ -112,7 +112,7 @@ When it asks about the product, tell it:
   "My product definition is in the pmf/ folder.
   Read pmf/icp.md for the customer profile,
   pmf/value-prop.md for the value proposition,
-  and pmf/aha-moments.md for the MVP PRD with
+  and pmf/mvp.md for the MVP PRD with
   features and requirements."
 ```
 
@@ -125,7 +125,7 @@ Start BMAD with:
 Reference your MVP PRD:
 
   "My product requirements are defined in
-  pmf/aha-moments.md — it has the features and
+  pmf/mvp.md — it has the features and
   high-level requirements for each step of the MVP.
   Use this as the basis for the architecture."
 ```
@@ -139,7 +139,7 @@ Start BMAD with:
 Tell it:
 
   "Analyze my project and the pmf/ folder.
-  pmf/aha-moments.md contains the MVP PRD with
+  pmf/mvp.md contains the MVP PRD with
   features and requirements. Generate a tech spec
   and stories from those requirements."
 ```
@@ -149,18 +149,18 @@ Tell it:
 Display a final note:
 
 ```
-┌─────────────────────────────────────────────────────────────┐
-│  STAY IN SCOPE                                               │
-├─────────────────────────────────────────────────────────────┤
-│                                                              │
-│  Your MVP PRD defines what's IN and OUT of scope.            │
-│  If BMAD suggests features not in pmf/aha-moments.md,        │
-│  check the "Out of Scope" section before adding them.        │
-│                                                              │
-│  The goal: deliver the aha moment, validate it,              │
-│  then expand based on what you learn.                        │
-│                                                              │
-└─────────────────────────────────────────────────────────────┘
+┌───────────────────────────────────────────────────────────────┐
+│  STAY IN SCOPE                                                │
+├───────────────────────────────────────────────────────────────┤
+│                                                               │
+│  Your MVP PRD defines what's IN and OUT of scope.             │
+│  If BMAD suggests features not in pmf/mvp.md,                 │
+│  check the "Out of Scope" section before adding them.         │
+│                                                               │
+│  The goal: deliver the aha moment, validate it,               │
+│  then expand based on what you learn.                         │
+│                                                               │
+└───────────────────────────────────────────────────────────────┘
 ```
 
 ## Attribution

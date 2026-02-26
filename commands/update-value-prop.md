@@ -16,18 +16,18 @@ Update the Value Proposition section of your PMF context layer.
 2. If file exists, show current state:
 
 ```
-┌─────────────────────────────────────────────────────────────┐
-│  CURRENT VALUE PROPOSITION                                   │
-├─────────────────────────────────────────────────────────────┤
-│                                                              │
-│  Callout: [3-part descriptor]                                │
-│  Magnet: [Desired future]                                    │
-│  Message: [Selected value prop]                              │
-│  CTA: [Call to action] → validation goal                     │
-│                                                              │
-│  Alternatives: [N] saved for A/B testing                     │
-│                                                              │
-└─────────────────────────────────────────────────────────────┘
+┌───────────────────────────────────────────────────────────────┐
+│  CURRENT VALUE PROPOSITION                                    │
+├───────────────────────────────────────────────────────────────┤
+│                                                               │
+│  Callout: [3-part descriptor]                                 │
+│  Magnet: [Desired future]                                     │
+│  Message: [Selected value prop]                               │
+│  CTA: [Call to action] → validation goal                      │
+│                                                               │
+│  Alternatives: [N] saved for A/B testing                      │
+│                                                               │
+└───────────────────────────────────────────────────────────────┘
 ```
 
 3. Use AskUserQuestion: "What would you like to update about your value proposition?"

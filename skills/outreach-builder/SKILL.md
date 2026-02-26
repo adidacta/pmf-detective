@@ -37,7 +37,7 @@ The Mom Test by Rob Fitzpatrick: Talk about their life, not your idea. Good ques
 Check that the PMF context layer exists:
 - `pmf/icp.md` (required)
 - `pmf/value-prop.md` (required)
-- `pmf/aha-moments.md` (optional — enriches the questions)
+- `pmf/mvp.md` (optional — enriches the questions)
 - `pmf/validation-plan.md` (optional — contains target numbers and timeline)
 
 If `pmf/icp.md` is missing, inform the user and route to icp-builder.
@@ -48,7 +48,7 @@ If `pmf/icp.md` is missing, inform the user and route to icp-builder.
 - Wait for response before continuing
 - Ground everything in the ICP — who they are, where to find them, how they talk
 - Interview questions must follow the Mom Test — never ask about the product idea directly
-- Include "Not sure" option that adds to Open Questions
+- Include "Not sure (needs research)" option on every question — adds to Open Questions with context
 
 ## The Flow
 
@@ -60,7 +60,7 @@ Read `pmf/icp.md` and extract:
 - How They Talk About It
 - Where To Find Them
 
-If `pmf/aha-moments.md` exists, also extract:
+If `pmf/mvp.md` exists, also extract:
 - The aha moment (to validate whether the pain leads to the experience we expect)
 - Key assumptions embedded in the MVP PRD
 
@@ -71,16 +71,16 @@ If `pmf/validation-plan.md` exists, extract:
 Display summary:
 
 ```
-┌─────────────────────────────────────────────────────────────┐
-│  OUTREACH PLAN FOR:                                          │
-├─────────────────────────────────────────────────────────────┤
-│                                                              │
-│  ICP: [Hypothesis name]                                      │
-│  Pain: "[Emotional bedrock]"                                 │
-│  Find them: [Channels from ICP]                              │
-│  Target: [N] conversations in [timeline]                     │
-│                                                              │
-└─────────────────────────────────────────────────────────────┘
+┌───────────────────────────────────────────────────────────────┐
+│  OUTREACH PLAN FOR:                                           │
+├───────────────────────────────────────────────────────────────┤
+│                                                               │
+│  ICP: [Hypothesis name]                                       │
+│  Pain: "[Emotional bedrock]"                                  │
+│  Find them: [Channels from ICP]                               │
+│  Target: [N] conversations in [timeline]                      │
+│                                                               │
+└───────────────────────────────────────────────────────────────┘
 ```
 
 ### Phase B: Outreach Channels (1-2 questions)
@@ -100,6 +100,17 @@ Options: 3-4 specific outreach approaches grounded in ICP channels + "I have my 
 - Ask for a short conversation (15-20 min)
 - Be specific about the topic ("how experienced devs learn from YouTube")
 
+Use these templates as a starting point, adapted with ICP-specific language:
+
+**Reddit/forum post:**
+> Hey [community] — I'm researching how [ICP identity] approaches [topic]. I keep hearing that [surface pain] is a big frustration. Is that true for you? What have you tried? Would love to hear your experience (not selling anything, just learning).
+
+**DM/email:**
+> Hi [name] — I noticed you [specific thing they did/posted]. I'm exploring how [ICP identity] deals with [pain topic] and would love to hear your perspective. Would you be open to a 15-min chat this week?
+
+**Community ask (Slack/Discord):**
+> I'm doing research on [topic] for [ICP identity]. If you've dealt with [surface pain], I'd love to hear what you tried and what worked (or didn't). Happy to share what I learn with the group.
+
 ### Phase C: Mom Test Interview Questions (2-3 questions)
 
 Generate interview questions that validate the key assumptions in the PMF context layer. Questions must follow the Mom Test rules.
@@ -114,7 +125,7 @@ Generate interview questions that validate the key assumptions in the PMF contex
 
 Use AskUserQuestion: "Here are your interview questions based on the Mom Test. Do these cover what you need to learn?"
 
-Options: "Looks good" / "I need to validate something else too" / "Some questions feel leading" / "Not sure"
+Options: "Looks good" / "I need to validate something else too" / "Some questions feel leading" / "Not sure (needs research)"
 
 **Q4 (conditional):** If the user wants to add or adjust, refine the questions.
 
@@ -180,18 +191,18 @@ Save to `pmf/outreach-plan.md` with the following structure:
 Show only at the END:
 
 ```
-┌─────────────────────────────────────────────────────────────┐
-│  OUTREACH PLAN READY                                         │
-├─────────────────────────────────────────────────────────────┤
-│                                                              │
-│  Channel: [Selected approach]                                │
-│  Questions: [N] Mom Test questions                           │
-│  Must-answer: "[The key question]"                           │
-│  Target: [N] conversations in [timeline]                     │
-│                                                              │
-│  Saved to: pmf/outreach-plan.md                              │
-│                                                              │
-└─────────────────────────────────────────────────────────────┘
+┌───────────────────────────────────────────────────────────────┐
+│  OUTREACH PLAN READY                                          │
+├───────────────────────────────────────────────────────────────┤
+│                                                               │
+│  Channel: [Selected approach]                                 │
+│  Questions: [N] Mom Test questions                            │
+│  Must-answer: "[The key question]"                            │
+│  Target: [N] conversations in [timeline]                      │
+│                                                               │
+│  Saved to: pmf/outreach-plan.md                               │
+│                                                               │
+└───────────────────────────────────────────────────────────────┘
 ```
 
 ## Attribution

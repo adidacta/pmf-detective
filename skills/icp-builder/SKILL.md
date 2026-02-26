@@ -23,7 +23,7 @@ You help product builders define who their Ideal Customer Profile is as part of 
 ## Core Rules
 
 - Ask ONE question at a time. Wait for response before continuing.
-- Include "Not sure" option when relevant — add to Open Questions
+- Include "Not sure (needs research)" option on every question — adds to Open Questions with context
 - Never pressure to guess — uncertainty is valuable data
 - Reference specific previous answers in follow-up questions
 - Keep it focused — we want useful context, not exhaustive profiles
@@ -85,13 +85,13 @@ Max 5 rounds of drilling. If emotional bedrock is not reached after 5 rounds, us
 Synthesize Hypothesis 1 from the full conversation (persona + filters + emotional pain) and display it:
 
 ```
-┌─────────────────────────────────────────────────────────────┐
-│  HYPOTHESIS 1: [Short name]                                  │
-├─────────────────────────────────────────────────────────────┤
-│  Who: [Role] + [filters: company type, tools, events, etc.] │
-│  Pain: [Emotional bedrock — the visceral version]            │
-│  Surface symptom: [The technical/process problem underneath] │
-└─────────────────────────────────────────────────────────────┘
+┌───────────────────────────────────────────────────────────────┐
+│  HYPOTHESIS 1: [Short name]                                   │
+├───────────────────────────────────────────────────────────────┤
+│  Who: [Role] + [filters: company type, tools, events, etc.]   │
+│  Pain: [Emotional bedrock — the visceral version]             │
+│  Surface symptom: [The technical/process problem underneath]  │
+└───────────────────────────────────────────────────────────────┘
 ```
 
 ### Q8: Second & third hypotheses
@@ -99,22 +99,22 @@ Synthesize Hypothesis 1 from the full conversation (persona + filters + emotiona
 
 Use AskUserQuestion with 2-3 Claude-generated suggestions (different persona angles derived from the conversation) + "I have my own idea."
 
-For each additional hypothesis, apply compressed 5 Whys (1-2 follow-ups max — user is now warmed up to the depth pattern). If user picks "Not sure" for hypothesis 3, suggest one based on adjacent markets or contrasting personas.
+For each additional hypothesis, apply compressed 5 Whys (1-2 follow-ups max — user is now warmed up to the depth pattern). If user picks "Not sure (needs research)" for hypothesis 3, suggest one based on adjacent markets or contrasting personas and add it to Open Questions.
 
 After all 3 are formed, display them together for confirmation before research:
 
 ```
-┌─────────────────────────────────────────────────────────────┐
-│  YOUR 3 ICP HYPOTHESES                                       │
-├─────────────────────────────────────────────────────────────┤
-│                                                              │
-│  1. [Name]: [Filtered persona] — "[Pain]"                    │
-│  2. [Name]: [Filtered persona] — "[Pain]"                    │
-│  3. [Name]: [Filtered persona] — "[Pain]"                    │
-│                                                              │
-│  Ready to research these? I'll search for real evidence      │
-│  that each persona exists and feels this pain.               │
-└─────────────────────────────────────────────────────────────┘
+┌───────────────────────────────────────────────────────────────┐
+│  YOUR 3 ICP HYPOTHESES                                        │
+├───────────────────────────────────────────────────────────────┤
+│                                                               │
+│  1. [Name]: [Filtered persona] — "[Pain]"                     │
+│  2. [Name]: [Filtered persona] — "[Pain]"                     │
+│  3. [Name]: [Filtered persona] — "[Pain]"                     │
+│                                                               │
+│  Ready to research these? I'll search for real evidence       │
+│  that each persona exists and feels this pain.                │
+└───────────────────────────────────────────────────────────────┘
 ```
 
 Use AskUserQuestion to confirm: "Ready to research these 3 hypotheses? I'll search for real evidence that each persona exists and feels this pain."
@@ -183,14 +183,14 @@ SUGGESTED REFINEMENTS:
 While research is running, display:
 
 ```
-┌─────────────────────────────────────────────────────────────┐
-│  RESEARCHING YOUR HYPOTHESES...                              │
-├─────────────────────────────────────────────────────────────┤
-│                                                              │
-│  Searching for real-world evidence for each persona.         │
-│  This takes a moment.                                        │
-│                                                              │
-└─────────────────────────────────────────────────────────────┘
+┌───────────────────────────────────────────────────────────────┐
+│  RESEARCHING YOUR HYPOTHESES...                               │
+├───────────────────────────────────────────────────────────────┤
+│                                                               │
+│  Searching for real-world evidence for each persona.          │
+│  This takes a moment.                                         │
+│                                                               │
+└───────────────────────────────────────────────────────────────┘
 ```
 
 ---
@@ -200,32 +200,32 @@ While research is running, display:
 Display research results side by side:
 
 ```
-┌─────────────────────────────────────────────────────────────┐
-│  RESEARCH RESULTS                                            │
-├─────────────────────────────────────────────────────────────┤
-│                                                              │
-│  1. [Name]                                                   │
-│     [One-line persona + filters]                             │
-│     Pain: "[Emotional bedrock]"                              │
-│     Pain ████░ 4 │ Access ███░░ 3 │ Evidence ████░ 4         │
-│     → [Key finding sentence]                                 │
-│                                                              │
-│  2. [Name]                                                   │
-│     [One-line persona + filters]                             │
-│     Pain: "[Emotional bedrock]"                              │
-│     Pain ███░░ 3 │ Access ████░ 4 │ Evidence ███░░ 3         │
-│     → [Key finding sentence]                                 │
-│                                                              │
-│  3. [Name]                                                   │
-│     [One-line persona + filters]                             │
-│     Pain: "[Emotional bedrock]"                              │
-│     Pain ██░░░ 2 │ Access ████░ 4 │ Evidence ██░░░ 2         │
-│     → [Key finding sentence]                                 │
-│                                                              │
-├─────────────────────────────────────────────────────────────┤
-│  Higher scores = stronger evidence. But trust your gut too   │
-│  — founder resonance matters.                                │
-└─────────────────────────────────────────────────────────────┘
+┌───────────────────────────────────────────────────────────────┐
+│  RESEARCH RESULTS                                             │
+├───────────────────────────────────────────────────────────────┤
+│                                                               │
+│  1. [Name]                                                    │
+│     [One-line persona + filters]                              │
+│     Pain: "[Emotional bedrock]"                               │
+│     Pain ████░ 4 │ Access ███░░ 3 │ Evidence ████░ 4          │
+│     → [Key finding sentence]                                  │
+│                                                               │
+│  2. [Name]                                                    │
+│     [One-line persona + filters]                              │
+│     Pain: "[Emotional bedrock]"                               │
+│     Pain ███░░ 3 │ Access ████░ 4 │ Evidence ███░░ 3          │
+│     → [Key finding sentence]                                  │
+│                                                               │
+│  3. [Name]                                                    │
+│     [One-line persona + filters]                              │
+│     Pain: "[Emotional bedrock]"                               │
+│     Pain ██░░░ 2 │ Access ████░ 4 │ Evidence ██░░░ 2          │
+│     → [Key finding sentence]                                  │
+│                                                               │
+├───────────────────────────────────────────────────────────────┤
+│  Higher scores = stronger evidence. But trust your gut too    │
+│  — founder resonance matters.                                 │
+└───────────────────────────────────────────────────────────────┘
 ```
 
 **Score bar rendering:** Use filled blocks (█) for the score value and empty blocks (░) for the remainder out of 5.
@@ -241,6 +241,11 @@ After selection, check if the selected hypothesis has all downstream fields: goa
 - "What does success look like for [selected ICP]?" (if goals missing)
 - "What phrases might they use when describing this pain? How do they describe themselves?" (if language/self-recognition missing)
 - "Where can you find them online?" (if channels missing)
+
+**B2B KPIs (conditional):** If the selected ICP is a B2B persona (a role within a company, not an individual consumer), ask:
+- "How does [ICP identity] measure success in their role? What KPIs or metrics does their boss care about?"
+
+This populates the "How They Measure Success" section in the output. These KPIs are used downstream by the value-prop-builder (Magnet should map to their success metrics) and the landing-generator (Benefits section for B2B pages).
 
 ---
 
@@ -262,18 +267,18 @@ The output file must include:
 Show progress only at the END (not after each question):
 
 ```
-┌─────────────────────────────────────────────────────────────┐
-│  ICP DEFINED                                                 │
-├─────────────────────────────────────────────────────────────┤
-│                                                              │
-│  Selected: [Hypothesis name]                                 │
-│  Who: [Filtered persona summary]                             │
-│  Pain: "[Emotional bedrock]"                                 │
-│  Evidence: Pain [X]/5 │ Access [X]/5 │ Evidence [X]/5        │
-│                                                              │
-│  Saved to: pmf/icp.md                                        │
-│                                                              │
-└─────────────────────────────────────────────────────────────┘
+┌───────────────────────────────────────────────────────────────┐
+│  ICP DEFINED                                                  │
+├───────────────────────────────────────────────────────────────┤
+│                                                               │
+│  Selected: [Hypothesis name]                                  │
+│  Who: [Filtered persona summary]                              │
+│  Pain: "[Emotional bedrock]"                                  │
+│  Evidence: Pain [X]/5 │ Access [X]/5 │ Evidence [X]/5         │
+│                                                               │
+│  Saved to: pmf/icp.md                                         │
+│                                                               │
+└───────────────────────────────────────────────────────────────┘
 ```
 
 ---

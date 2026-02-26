@@ -12,7 +12,7 @@ Start the guided flow to build your complete PMF context layer.
 This command triggers the plan-pmf-mode skill which guides users through:
 1. ICP (Who your customer is)
 2. Value Proposition (Why they should care)
-3. Aha Moments (Key benefits you must deliver)
+3. MVP (Scope, features & requirements)
 
 Read the plan-pmf-mode SKILL.md and follow its process.
 
@@ -21,7 +21,7 @@ Read the plan-pmf-mode SKILL.md and follow its process.
 First, use Glob to check what already exists in `pmf/`:
 - `pmf/icp.md`
 - `pmf/value-prop.md`
-- `pmf/aha-moments.md`
+- `pmf/mvp.md`
 
 If any exist, show what's already defined and ask:
 "You already have some context defined. Would you like to:
@@ -34,21 +34,21 @@ If any exist, show what's already defined and ask:
 Begin with the welcome message:
 
 ```
-┌─────────────────────────────────────────────────────────────┐
-│  PMF CONTEXT BUILDER                                        │
-├─────────────────────────────────────────────────────────────┤
-│                                                             │
-│  Let's build your PMF context layer.                        │
-│                                                             │
-│  We'll work through 3 sections:                             │
-│  1. ICP - Who your customer is                              │
-│  2. Value Proposition - Why they should care                │
-│  3. Aha Moments - Key benefits you must deliver             │
-│                                                             │
-│  Each section becomes a reference file Claude uses          │
-│  when building anything for your product.                   │
-│                                                             │
-└─────────────────────────────────────────────────────────────┘
+┌───────────────────────────────────────────────────────────────┐
+│  PMF CONTEXT BUILDER                                          │
+├───────────────────────────────────────────────────────────────┤
+│                                                               │
+│  Let's build your PMF context layer.                          │
+│                                                               │
+│  We'll work through 3 sections:                               │
+│  1. ICP - Who your customer is                                │
+│  2. Value Proposition - Why they should care                  │
+│  3. MVP - Scope, features & requirements                      │
+│                                                               │
+│  Each section becomes a reference file Claude uses            │
+│  when building anything for your product.                     │
+│                                                               │
+└───────────────────────────────────────────────────────────────┘
 ```
 
 Then proceed through the plan-pmf-mode skill's question flow.

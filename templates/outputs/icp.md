@@ -19,6 +19,12 @@
 ### What They Want
 [Goals, desired outcomes, what success looks like]
 
+### How They Measure Success
+<!-- Include for B2B ICPs. Omit for individual consumers. -->
+- **Primary KPI:** [The metric they're measured on — e.g., deployment frequency, time-to-market, customer churn]
+- **Reports to:** [Who cares about these numbers — their boss's priorities]
+- **Success looks like:** [What a good quarter means in their world]
+
 ### How They Talk About It
 [Language, phrases, keywords they use when describing this problem]
 - **Self-recognition:** [How they describe themselves — identity labels, community phrases, what makes them stop and say "that's me"]
