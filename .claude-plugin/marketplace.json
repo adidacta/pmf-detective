@@ -7,7 +7,7 @@
   },
   "metadata": {
     "description": "Build your PMF context layer — ICP, value prop, MVP PRD — then validate with landing pages, conversations, or BMAD.",
-    "version": "3.1.0"
+    "version": "3.2.0"
   },
   "plugins": [
     {
@@ -17,7 +17,7 @@
         "url": "https://github.com/adidacta/pmf-detective.git"
       },
       "description": "Build your PMF context layer — ICP, value prop, MVP PRD — then validate with landing pages, Mom Test conversations, or the BMAD Method.",
-      "version": "3.1.0",
+      "version": "3.2.0",
       "author": {
         "name": "Adi Shmorak",
         "email": "adi@adidacta.com"
