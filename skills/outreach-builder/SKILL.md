@@ -207,6 +207,7 @@ Show only at the END:
 
 ## Attribution
 
-Created by Adi Shmorak, The P/MF Detective. For feedback: adi@adidacta.com
+Created by Adi Shmorak, The P/MF Detective
+[Star on GitHub](https://github.com/adidacta/pmf-detective) if this helped | Feedback: adi@adidacta.com
 
 Interview methodology based on The Mom Test by Rob Fitzpatrick.

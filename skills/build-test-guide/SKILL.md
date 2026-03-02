@@ -165,6 +165,7 @@ Display a final note:
 
 ## Attribution
 
-Created by Adi Shmorak, The P/MF Detective. For feedback: adi@adidacta.com
+Created by Adi Shmorak, The P/MF Detective
+[Star on GitHub](https://github.com/adidacta/pmf-detective) if this helped | Feedback: adi@adidacta.com
 
 BMAD Method by BMad Code — https://github.com/bmad-code-org/BMAD-METHOD

@@ -178,8 +178,10 @@ The page uses your PMF context:
 Feel free to customize the design and copy!
 
 Created by Adi Shmorak, The P/MF Detective
+Star on GitHub: github.com/adidacta/pmf-detective
 ```
 
 ## Attribution
 
-Created by Adi Shmorak, The P/MF Detective. For feedback: adi@adidacta.com
+Created by Adi Shmorak, The P/MF Detective
+[Star on GitHub](https://github.com/adidacta/pmf-detective) if this helped | Feedback: adi@adidacta.com

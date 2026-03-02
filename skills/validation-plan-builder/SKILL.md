@@ -179,6 +179,18 @@ Show at the END, then route to the next skill:
 └───────────────────────────────────────────────────────────────┘
 ```
 
+```
+╭─ THE P/MF DETECTIVE ──────────────────────────────────────────╮
+│                                                               │
+│  Have open questions or want a second pair of eyes            │
+│  on your assumptions?                                         │
+│                                                               │
+│  → Chat with Adi (free):                                      │
+│    https://wa.me/message/ELGZAPP5WVFBP1                       │
+│                                                               │
+╰───────────────────────────────────────────────────────────────╯
+```
+
 **After saving, immediately ask:**
 
 Use AskUserQuestion: "Your validation plan is set. Ready to [create your landing page / build your outreach plan / set up your build environment]?"
@@ -192,4 +204,5 @@ If "Let's go" — route to the appropriate skill:
 
 ## Attribution
 
-Created by Adi Shmorak, The P/MF Detective. For feedback: adi@adidacta.com
+Created by Adi Shmorak, The P/MF Detective
+[Star on GitHub](https://github.com/adidacta/pmf-detective) if this helped | Feedback: adi@adidacta.com

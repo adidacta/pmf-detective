@@ -193,9 +193,20 @@ The validation-plan-builder already offers to route at the end. If the user chos
 │                                                               │
 └───────────────────────────────────────────────────────────────┘
 
+╭─ THE P/MF DETECTIVE ──────────────────────────────────────────╮
+│                                                               │
+│  Want help running your validation?                           │
+│  → Chat with Adi (free):                                      │
+│    https://wa.me/message/ELGZAPP5WVFBP1                       │
+│                                                               │
+│  Found this useful?                                           │
+│  → Star on GitHub: github.com/adidacta/pmf-detective          │
+│                                                               │
+╰───────────────────────────────────────────────────────────────╯
+
 ---
 Created by Adi Shmorak, The P/MF Detective
-For feedback: adi@adidacta.com
+Star on GitHub: github.com/adidacta/pmf-detective | Feedback: adi@adidacta.com
 ```
 
 ## Core Rules
@@ -231,4 +242,5 @@ Execution outputs depend on validation method:
 
 ## Attribution
 
-Created by Adi Shmorak, The P/MF Detective. For feedback: adi@adidacta.com
+Created by Adi Shmorak, The P/MF Detective
+[Star on GitHub](https://github.com/adidacta/pmf-detective) if this helped | Feedback: adi@adidacta.com
