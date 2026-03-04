@@ -42,7 +42,7 @@ Use /plan-pmf to build your context layer first.
 ## Core Rules
 
 - Ask ONE question at a time
-- Wait for response before continuing
+- **STOP RULE: After calling AskUserQuestion, your turn MUST END immediately. Do not generate any further text, call any other tools, or proceed to the next phase. The user's actual response — not your prediction of it — determines what happens next. This rule is non-negotiable regardless of how much context you have. NEVER auto-answer questions.**
 - Ground all options in ICP and value prop data — don't ask from scratch
 - Include "Not sure (needs research)" option on every question — adds to Open Questions with context
 - Always work backwards from the aha moment — never forward from features

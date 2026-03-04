@@ -127,9 +127,10 @@ allowed-tools: Read, Write, Glob, WebSearch, AskUserQuestion
 
 **Core Rules:**
 - Ask ONE question at a time
-- Wait for response before continuing
+- **STOP RULE: After calling AskUserQuestion, your turn MUST END immediately. Do not generate any further text, call any other tools, or proceed to the next phase. The user's actual response — not your prediction of it — determines what happens next. This rule is non-negotiable regardless of how much context you have.**
 - Keep it simple — we're building context, not running experiments
 - Every AskUserQuestion must include a **"Not sure (needs research)"** option. When selected: add to Open Questions in the output file with enough context to act on later. Never pressure to guess — uncertainty is valuable data.
+- NEVER auto-answer questions. Even if you can predict what the user would say based on prior context, you MUST wait for their actual input. Predicting answers defeats the entire purpose of this tool.
 
 ## What's Gitignored
 

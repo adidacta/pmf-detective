@@ -33,7 +33,7 @@ Then route to icp-builder skill.
 ## Core Rules
 
 - Ask ONE question at a time
-- Wait for response before continuing
+- **STOP RULE: After calling AskUserQuestion, your turn MUST END immediately. Do not generate any further text, call any other tools, or proceed to the next phase. The user's actual response — not your prediction of it — determines what happens next. This rule is non-negotiable regardless of how much context you have. NEVER auto-answer questions.**
 - ALWAYS generate options based on ICP data (especially "How They Talk About It" and self-recognition language)
 - The Callout must make the ICP feel **seen and understood, never judged**. Avoid language that implies they're doing something wrong or stupid. Sit on the frustration of "there must be a better way", not "you're failing."
 - Include "Not sure (needs research)" option on every question — adds to Open Questions with context

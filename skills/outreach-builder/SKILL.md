@@ -45,7 +45,7 @@ If `pmf/icp.md` is missing, inform the user and route to icp-builder.
 ## Core Rules
 
 - Ask ONE question at a time
-- Wait for response before continuing
+- **STOP RULE: After calling AskUserQuestion, your turn MUST END immediately. Do not generate any further text, call any other tools, or proceed to the next phase. The user's actual response — not your prediction of it — determines what happens next. This rule is non-negotiable regardless of how much context you have. NEVER auto-answer questions.**
 - Ground everything in the ICP — who they are, where to find them, how they talk
 - Interview questions must follow the Mom Test — never ask about the product idea directly
 - Include "Not sure (needs research)" option on every question — adds to Open Questions with context

@@ -27,7 +27,7 @@ If missing, inform user: "Let's build your PMF context first, then create a vali
 ## Core Rules
 
 - Ask ONE question at a time
-- Wait for response before continuing
+- **STOP RULE: After calling AskUserQuestion, your turn MUST END immediately. Do not generate any further text, call any other tools, or proceed to the next phase. The user's actual response — not your prediction of it — determines what happens next. This rule is non-negotiable regardless of how much context you have. NEVER auto-answer questions.**
 - Ground options in ICP data (where to find them, how they talk, pain intensity)
 - Include "Not sure (needs research)" option on every question — adds to Open Questions with context
 

@@ -132,6 +132,11 @@ Claude references these files when building anything for your product — landin
 
 **Should you commit `pmf/`?** Yes. These files are your product context. Committing them means every team member and every Claude session shares the same foundation. Update them as you learn from validation.
 
+## Tips
+
+- **Compact between sections.** When running `/plan-pmf`, use `/compact` when prompted between sections. Each section's output is saved to a file, so conversation history from prior sections is safe to trim. Shorter context = better responses.
+- **Each section works standalone.** You don't have to run the full flow in one session. Use `/update-icp`, `/update-value-prop`, or `/update-mvp` to work on individual sections.
+
 ## Design Principles
 
 - **One question at a time** — Never overwhelming, always focused

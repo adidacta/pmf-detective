@@ -38,6 +38,10 @@ Use /plan-pmf to build your context layer, or tell me to
 "define my MVP PRD" to start from the aha moment.
 ```
 
+## Core Rules
+
+- **STOP RULE: After calling AskUserQuestion, your turn MUST END immediately. Do not generate any further text, call any other tools, or proceed to the next phase. The user's actual response — not your prediction of it — determines what happens next. This rule is non-negotiable regardless of how much context you have. NEVER auto-answer questions.**
+
 ## The Flow
 
 ### Step 1: Review the MVP PRD (automated — no questions)

@@ -79,6 +79,15 @@ When the icp-builder flow completes and saves `pmf/icp.md`, show the transition:
 └───────────────────────────────────────────────────────────────┘
 ```
 
+**After the progress box, prompt the user to compact:**
+
+```
+Run /compact before we continue — it keeps the conversation
+fresh. Your ICP is saved to pmf/icp.md, nothing will be lost.
+```
+
+**STOP here and wait for the user to confirm before starting Section 2.** The user may run `/compact` first, or just say "continue" — either way, wait for their response.
+
 ## Section 2: Value Proposition (value-prop-builder)
 
 **Follow the full value-prop-builder flow.** Do NOT ask inline value prop questions here — the value-prop-builder defines all 5 phases:
@@ -109,6 +118,16 @@ When the value-prop-builder flow completes and saves `pmf/value-prop.md`, show t
 └───────────────────────────────────────────────────────────────┘
 ```
 
+**After the progress box, prompt the user to compact:**
+
+```
+Run /compact before we continue — it keeps the conversation
+fresh. Your value prop is saved to pmf/value-prop.md, nothing
+will be lost.
+```
+
+**STOP here and wait for the user to confirm before starting Section 3.** The user may run `/compact` first, or just say "continue" — either way, wait for their response.
+
 ## Section 3: MVP (mvp-builder)
 
 **Follow the full mvp-builder flow.** Do NOT ask inline questions here — the mvp-builder defines all 7 phases:
@@ -138,6 +157,16 @@ When the mvp-builder flow completes and saves `pmf/mvp.md`, show the transition:
 │  Next: Validation Plan                                        │
 └───────────────────────────────────────────────────────────────┘
 ```
+
+**After the progress box, prompt the user to compact:**
+
+```
+Run /compact before we continue — it keeps the conversation
+fresh. Your MVP PRD is saved to pmf/mvp.md, nothing will be
+lost.
+```
+
+**STOP here and wait for the user to confirm before starting Section 4.** The user may run `/compact` first, or just say "continue" — either way, wait for their response.
 
 ## Section 4: Validation Plan (validation-plan-builder)
 
@@ -212,7 +241,7 @@ Star on GitHub: github.com/adidacta/pmf-detective | Feedback: adi@adidacta.com
 ## Core Rules
 
 - Ask ONE question at a time
-- Wait for response before continuing
+- **STOP RULE: After calling AskUserQuestion, your turn MUST END immediately. Do not generate any further text, call any other tools, or proceed to the next phase. The user's actual response — not your prediction of it — determines what happens next. This rule is non-negotiable regardless of how much context you have. NEVER auto-answer questions.**
 - Never skip sections without user consent
 - Save each section before moving on
 - Include "Not sure (needs research)" option on every question — adds to Open Questions with context
