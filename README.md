@@ -10,9 +10,16 @@ Most builders skip straight to code. Plan PMF forces you to answer the hard ques
 
 ## Installation
 
-```bash
-/install github:adidacta/pmf-detective
+In Claude Code, add the marketplace, then install the plugin:
+
 ```
+/plugin marketplace add adidacta/pmf-detective
+/plugin install pmf-detective@pmf-detective
+```
+
+Then run `/plan-pmf` to start the guided flow.
+
+More about the method: [adidacta.com/tools/plan-pmf](https://adidacta.com/tools/plan-pmf)
 
 ## How It Works
 
