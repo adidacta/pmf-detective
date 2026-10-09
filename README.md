@@ -1,4 +1,4 @@
-# Plan PMF
+# PMF Detective
 
 A Claude Code plugin that walks you from idea to validation. Define your ICP, craft your value proposition, scope your MVP, then validate — with landing pages, Mom Test conversations, or the BMAD Method.
 
@@ -6,7 +6,7 @@ Created by **Adi Shmorak, The P/MF Detective**
 
 ## Why This Exists
 
-Most builders skip straight to code. Plan PMF forces you to answer the hard questions first — who is this for, why would they care, and what's the smallest thing you can build to prove it? The output is a set of `pmf/` files that Claude references when building anything for your product.
+Most builders skip straight to code. PMF Detective forces you to answer the hard questions first — who is this for, why would they care, and what's the smallest thing you can build to prove it? The output is a set of `pmf/` files that Claude references when building anything for your product.
 
 ## Installation
 
@@ -19,11 +19,11 @@ In Claude Code, add the marketplace, then install the plugin:
 
 Then run `/plan-pmf` to start the guided flow.
 
-More about the method: [adidacta.com/tools/plan-pmf](https://adidacta.com/tools/plan-pmf)
+More about the method: [adidacta.com/tools/pmf-detective](https://adidacta.com/tools/pmf-detective)
 
 ## How It Works
 
-Plan PMF guides you through 4 sections, then routes you to execute:
+PMF Detective guides you through 4 sections, then routes you to execute:
 
 ```
 1. ICP                → pmf/icp.md           (assumption)
@@ -107,7 +107,7 @@ Decide how to test your assumptions before going all-in:
 
 ## Execution Paths
 
-After your validation plan, Plan PMF routes you to one of three paths:
+After your validation plan, PMF Detective routes you to one of three paths:
 
 ### Landing Page
 Generates a React + Vite landing page from your context files. Uses your Callout, Magnet, Path to Aha, CTA, and ICP language. Includes SEO and social tags.

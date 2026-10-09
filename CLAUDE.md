@@ -4,9 +4,9 @@ This file provides guidance to Claude Code when working with code in this reposi
 
 ## What This Is
 
-**Plan PMF** is a Claude Code plugin that helps product builders create their PMF context layer — reference files that capture the "WHY" behind their product. Claude references these files when building anything for the product.
+**PMF Detective** is a Claude Code plugin that helps product builders create their PMF context layer — reference files that capture the "WHY" behind their product. Claude references these files when building anything for the product.
 
-**Plugin name:** `plan-pmf` (in `plugin.json`)
+**Plugin name:** `pmf-detective` (in `plugin.json`, matching the marketplace entry). The guided flow command is still `/plan-pmf`.
 **Marketplace name:** `pmf-detective` (in `marketplace.json`)
 
 ## Architecture
